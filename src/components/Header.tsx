@@ -24,6 +24,7 @@ function HeaderNav() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    
   );
 }
 
