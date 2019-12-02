@@ -3,6 +3,9 @@ import './Header.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import styled from 'styled-components';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 const NavbarBrand = styled(Navbar.Brand)`
   margin-left: 15px;
@@ -11,20 +14,24 @@ const NavbarBrand = styled(Navbar.Brand)`
 
 function HeaderNav() {
   return (
-    <Navbar bg="#fff" expand="lg">
+    <Navbar expand="md" sticky="top">
       <NavbarBrand href="#home">ITHelpU</NavbarBrand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link bsPrefix="nav-top">프로젝트</Nav.Link>
-          <Nav.Link bsPrefix="nav-top">멘토</Nav.Link>
-          <Nav.Link bsPrefix="nav-top">고민게시판</Nav.Link>
-          <Nav.Link bsPrefix="nav-top">회원가입</Nav.Link>
-          <Nav.Link bsPrefix="nav-top nav-top-end">로그인</Nav.Link>
+          <Form className="form-position" inline>
+            <FormControl bsPrefix="form-control1" as="input" type="text" placeholder="Search" className="mr-sm-2" />
+            <Button>Search</Button>
+          </Form>
+          <Nav.Link >프로젝트</Nav.Link>
+          <Nav.Link >멘토</Nav.Link>
+          <Nav.Link>고민게시판</Nav.Link>
+          <Nav.Link>회원가입</Nav.Link>
+          <Nav.Link>로그인</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    
+
   );
 }
 
