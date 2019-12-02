@@ -1,11 +1,13 @@
 import React from 'react';
-
-import Signup from './components/signup/Signup';
-import Login from './components/login/Login';
+import Header from './components/Header'
+import ImageSlider from './components/ImageSlider'
 
 const App: React.FC = () => {
   return (
-    <Signup/>
+    <div>
+      <Header />
+      <ImageSlider />
+    </div>
   );
 }
 
