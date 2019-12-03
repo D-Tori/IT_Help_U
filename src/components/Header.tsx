@@ -14,7 +14,7 @@ const NavbarBrand = styled(Navbar.Brand)`
 
 function HeaderNav() {
   return (
-    <Navbar expand="md" sticky="top">
+    <Navbar className="md-navbar" expand="md" sticky="top">
       <NavbarBrand href="#home">ITHelpU</NavbarBrand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

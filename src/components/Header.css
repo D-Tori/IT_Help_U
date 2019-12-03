@@ -10,6 +10,16 @@ input:focus {outline:none;}
 /* navbar + navLink */
 .navbar {
   background-color: #fff;
+  justify-content: space-between;
+  padding-right: 300px;
+  padding-left: 300px;
+}
+
+@media(max-width: 1700px){
+  .md-navbar{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 
 .nav-link {
@@ -28,7 +38,7 @@ input:focus {outline:none;}
   line-height: 5px;
   background-color: #5457ff;
   border: none;
-  margin-right: 20px;
+  margin-right: 200px;
 }
 
 .btn:hover {
