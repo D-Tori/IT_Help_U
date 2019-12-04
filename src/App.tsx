@@ -12,11 +12,16 @@ import Signup from './components/signup/Signup';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Header />
-      <ImageSlider />
-      <ProjectItem />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Header} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signUp" component={Signup} />
+      </Switch>
+    </BrowserRouter>
+      // <Header />
+      // <ImageSlider />
+      // <ProjectItem />
   );
 }
 
