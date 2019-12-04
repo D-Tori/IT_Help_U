@@ -5,7 +5,7 @@ import logo from '../login/images/full-logo.svg'
 import './css/left-page.css'
 
 
-function SignupLpage(){
+function SignUpLpage(){
   return (
     <div className="col col-12 col-md-6 left ds-vertical-align">
       <img src= {logo} className="logo" alt="임시로고"/>
@@ -53,4 +53,4 @@ function SignupLpage(){
   );
 }
 
-export default SignupLpage;
+export default SignUpLpage;

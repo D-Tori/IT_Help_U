@@ -1,7 +1,7 @@
 import React from 'react';
-import LoginLpage from './Left-page';
-import LoginRpage from './Right-page';
-import './css/login.css'
+import LoginLpage from './LoginLpage';
+import LoginRpage from './LoginRpage';
+// import './css/login.css'
 
 
 function Login() {

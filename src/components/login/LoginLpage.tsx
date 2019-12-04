@@ -2,8 +2,8 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import logo from './images/full-logo.svg'
 import Form from 'react-bootstrap/Form';
-// import styled from 'styled-components';
-import './css/left-page.css'
+import styled from 'styled-components';
+// import google from './images/google-icon.svg';
 
 // col-종류-숫자 형태로 작성
 // 종류	   크기	           주로 해당되는 디바이스
@@ -16,17 +16,17 @@ import './css/left-page.css'
 
 function LoginLpage(){
   return (
-    <div className="col col-12 col-md-6 left ds-vertical-align">
+    <div className="col col-12 col-md-6 left ds-vertical-align">  
       <img src= {logo} className="logo" alt="임시로고"/>
-      <div className="inner">
+      <Inner>
         <h1>Welcome Back</h1>
         <Button variant="light" block className="btn-google">Login with Google</Button>
         <Button variant="success" block className="btn-naver">Login with Naver</Button>
         <Button variant="warning" block className="btn-kakao">Login with Kakao</Button>
         <Button variant="primary" block className="btn-facebook">Login with Facebook</Button>
-        <div className="divider">
+        <Divider>
           <span>이메일로 로그인하기</span>
-        </div>
+        </Divider>
         <Form id="login-form" method="post">
           <Form.Group controlId="loginEmail">
             <Form.Label>이메일 주소</Form.Label>
@@ -54,16 +54,84 @@ function LoginLpage(){
           </Button>
         </Form>
 
-
-        <div className="divider" />
+        <Divider />
         <p className="no-account">
           "계정이 없으신가요?"
           <a href="#">회원 가입하기</a>
         </p>
-      </div>
+      </Inner>
     </div>
+    
   );
 }
 
 export default LoginLpage;
 
+// const Leftpage = styled.div`
+//   position: relative;  
+  
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   -ms-flex-preferred-size: 0;
+//   flex-basis: 0;
+//   -ms-flex-positive: 1;
+//   flex-grow: 1;
+//   max-width: 100%;
+
+//   width: 100%;
+//   min-height: 1px;
+//   padding-right: 15px;
+//   padding-left: 15px;
+
+//   img.logo {
+//     position: absolute;
+//     top: 50px;
+//     left: 50%;
+//     margin-left: -90px;
+//     max-width: 45%;
+//   }
+
+//   .btn-google {
+//     background: url(${google}) 20px center #fff no-repeat;
+//     color: #171933;
+//   }
+
+//   .no-account {
+//     padding: 20px 0;
+//   }
+// `
+
+const Inner = styled.div`
+  padding: 150px 50px 50px;   // 위, 왼오, 아래
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  
+`
+const Divider = styled.div`
+  position: relative;
+  font-size: 11px;
+  color: #B9BBC7;
+  margin: 30px 0;
+
+  span {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 0 5px;
+    letter-spacing: 2px;
+  }
+
+  :after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: #efefef;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+`

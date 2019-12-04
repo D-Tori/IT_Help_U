@@ -1,6 +1,6 @@
 import React from 'react';
-import LoginRpage from '../login/Right-page';
-import SignupLpage from './Left-page';
+import LoginRpage from '../login/LoginRpage';
+import SignupLpage from './SignUpLpage';
 
 
 function Signup() {
