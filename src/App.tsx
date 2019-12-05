@@ -7,7 +7,7 @@ import ProjectItem from './components/ProjectItem';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
-
+import ProjectPage from './components/ProjectPage';
 
 
 const App: React.FC = () => {
@@ -16,6 +16,7 @@ const App: React.FC = () => {
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/signUp" component={Signup} />
+        <Route path="/project" component={ProjectPage} />
       </Switch>
   );
 }
