@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import logo from './images/full-logo.svg'
 import Form from 'react-bootstrap/Form';
 import styled from 'styled-components';
-// import google from './images/google-icon.svg';
+import { Link } from 'react-router-dom';
 
 // col-종류-숫자 형태로 작성
 // 종류	   크기	           주로 해당되는 디바이스
@@ -21,7 +21,7 @@ function LoginLpage(){
       <Inner>
         <h1>Welcome Back</h1>
         <Button variant="light" block className="btn-google">Login with Google</Button>
-        <Button variant="success" block className="btn-naver">Login with Naver</Button>
+        <Button variant="success" block className="btn-naver">Login with Naver</Button>  
         <Button variant="warning" block className="btn-kakao">Login with Kakao</Button>
         <Button variant="primary" block className="btn-facebook">Login with Facebook</Button>
         <Divider>
@@ -57,7 +57,7 @@ function LoginLpage(){
         <Divider />
         <p className="no-account">
           "계정이 없으신가요?"
-          <a href="#">회원 가입하기</a>
+          <Link to='/signUp'>회원 가입하기</Link>
         </p>
       </Inner>
     </div>
@@ -93,15 +93,13 @@ export default LoginLpage;
 //     max-width: 45%;
 //   }
 
-//   .btn-google {
-//     background: url(${google}) 20px center #fff no-repeat;
-//     color: #171933;
-//   }
-
 //   .no-account {
 //     padding: 20px 0;
 //   }
 // `
+
+
+
 
 const Inner = styled.div`
   padding: 150px 50px 50px;   // 위, 왼오, 아래

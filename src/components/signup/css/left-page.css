@@ -71,10 +71,7 @@ label:not(.form-check-label) {
   font-weight: bold;
 }
 
-button.btn-google {
-  background: url(../../login/images/google-icon.svg) 20px center #fff no-repeat;
-  color: #171933;
-}
+
 
 form {
   text-align: left;

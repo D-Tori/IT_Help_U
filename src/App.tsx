@@ -6,7 +6,7 @@ import ProjectItem from './components/ProjectItem';
 // import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/login/Login';
-import Signup from './components/signup/SignUp';
+import SignUp from './components/signup/SignUp';
 
 
 
@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <Route path="/signUp" component={Signup} />
+        <Route path="/signUp" component={SignUp} />
       </Switch>
   );
 }

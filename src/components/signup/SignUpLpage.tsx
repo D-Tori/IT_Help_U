@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import logo from '../login/images/full-logo.svg'
 import './css/left-page.css'
-
+import { Link } from 'react-router-dom';
 
 function SignUpLpage(){
   return (
@@ -46,7 +46,7 @@ function SignUpLpage(){
         <div className="divider" />
         <p className="account">
           "계정이 있으신가요?"
-          <a href="#">로그인 하기</a>
+          <Link to="/login">로그인 하기</Link>
         </p>
       </div>
     </div>
