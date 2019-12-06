@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from './images/full-logo.svg'
-
+import { Link } from 'react-router-dom';
 
 function LoginLogo(){
   return (
     <Logo>
-      <img src= {logo} className="logo" alt="임시로고"/>
+      <Link to='/'>
+        <img src= {logo} className="logo" alt="임시로고"/>
+      </Link>
     </Logo>
   );
 }  
