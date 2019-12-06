@@ -3,7 +3,7 @@ import LoginRpage from './LoginRpage';
 import SignupLpage from './SignUpLpage';
 
 
-function Signup() {
+function SignUp() {
   return(
     <div className="container-fluid">
       <div className="row full-height">
@@ -15,4 +15,4 @@ function Signup() {
 }
 
 
-export default Signup;
+export default SignUp;
