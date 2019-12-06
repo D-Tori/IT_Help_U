@@ -8,6 +8,7 @@ const Style = styled.div`
   &:hover {
     .state-circle {
       background: #4a47d5  ;
+      cursor: default;
     }
   }
 

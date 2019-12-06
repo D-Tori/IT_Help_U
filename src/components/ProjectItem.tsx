@@ -7,8 +7,17 @@ import Profile from './Profile';
 import ProjectState from './ProjectState';
 
 const CardItemStyle = styled.div`
-  .card {
-    margin-top : 20px;
+
+  margin-bottom: 10px;
+
+  @media (min-width: 1025px) {
+      width: 33.333333%;
+  }
+  @media (min-width: 768px) {
+    width: 49%;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
   }
 
   .info-container {
@@ -32,13 +41,28 @@ const CardItemStyle = styled.div`
     justify-content: space-between;
   }
 
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .submit-btn {
+    display: flex;
+    &:hover {
+      color: #5457ff;
+      cursor: pointer
+    }
+  }
+  small {
+    display: flex;
+  }
 `;
 
 
 function ProjectItem() {
   return (
     <CardItemStyle>
-      <Card style={{ width: '30rem' }}>
+      <Card>
         <Card.Body>
           <Card.Title>프로젝트 제목</Card.Title>
           <Card.Text>
@@ -49,7 +73,7 @@ function ProjectItem() {
             <div className="block">서울시 금천구</div>
           </div>
           <div className="info-container">
-            <div className="block">프로젝트 기간</div>
+            <div className="block">기간</div>
             <div className="block">2019-12-05 ~ 2019-12-31</div>
           </div>
           <div className="info-container">
@@ -60,13 +84,10 @@ function ProjectItem() {
             <Profile />
             <ProjectState />
           </div>
-            
-
-          
-            
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
+          <div className="submit-btn">지원하기</div>
         </Card.Footer>
       </Card>
     </CardItemStyle>

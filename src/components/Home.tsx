@@ -3,6 +3,12 @@ import Header from './Header';
 import ImageSlider from './ImageSlider';
 
 import Container from 'react-bootstrap/Container';
+import styled from 'styled-components';
+
+const PageViewStyle = styled.div`
+  margin: 0 auto;
+  width: 1200px;
+`
 
 
 function Home() {
@@ -10,9 +16,8 @@ function Home() {
     <>
       <Header />
       <ImageSlider />
-      <Container>
-        
-      </Container>
+      <PageViewStyle>
+      </PageViewStyle>
     </>
   )
 }
