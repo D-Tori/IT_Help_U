@@ -1,18 +1,16 @@
 import React from 'react';
-import LoginRpage from '../login/Right-page';
-import SignupLpage from './Left-page';
+import LoginRpage from './LoginRpage';
+import ResetPwL from './ResetPwL';
 
-
-function Signup() {
+function ResetPw(){
   return(
     <div className="container-fluid">
       <div className="row full-height">
-        <SignupLpage/>
+        <ResetPwL />>
         <LoginRpage/>
       </div>
     </div>
   );
 }
 
-
-export default Signup;
+export default ResetPw;

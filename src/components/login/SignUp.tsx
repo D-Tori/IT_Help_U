@@ -1,18 +1,18 @@
 import React from 'react';
-import LoginLpage from './LoginLpage';
 import LoginRpage from './LoginRpage';
+import SignupLpage from './SignUpLpage';
 
 
-
-function Login() {
+function Signup() {
   return(
     <div className="container-fluid">
       <div className="row full-height">
-        <LoginLpage/>
+        <SignupLpage/>
         <LoginRpage/>
       </div>
     </div>
   );
 }
 
-export default Login;
+
+export default Signup;
