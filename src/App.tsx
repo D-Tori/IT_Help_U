@@ -8,7 +8,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/login/Login';
 import SignUp from './components/login/SignUp';
 import ResetPw from './components/login/ResetPw';
-
+import Mentors from './components/login/Mentors';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +17,7 @@ const App: React.FC = () => {
         <Route path="/login" component={Login} />
         <Route path="/signUp" component={SignUp} />
         <Route path="/resetPw" component={ResetPw} />
+        <Route pate="/mentors" component={Mentors} />>
       </Switch>
   );
 }
