@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from './components/Home'
-import ImageSlider from './components/ImageSlider'
-import ProjectItem from './components/ProjectItem';
+
 
 // import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
