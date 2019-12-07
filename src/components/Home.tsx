@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import ImageSlider from './ImageSlider';
 
-import Container from 'react-bootstrap/Container';
+
 import styled from 'styled-components';
 
 const PageViewStyle = styled.div`

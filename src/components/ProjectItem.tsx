@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import fifthImage from '../images/5.jpg';
+
 import styled from 'styled-components';
-import Image from 'react-bootstrap/Image';
+
 import Profile from './Profile';
 import ProjectState from './ProjectState';
 
@@ -11,7 +11,7 @@ const CardItemStyle = styled.div`
   margin-bottom: 10px;
 
   @media (min-width: 1025px) {
-      width: 33.333333%;
+      // width: 33.333333%;
   }
   @media (min-width: 768px) {
     width: 49%;
