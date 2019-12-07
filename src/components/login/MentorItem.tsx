@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 import MentorImg from './images/mentor1.png';
 import Button from 'react-bootstrap/Button';
 
-function MentorCard(){
+function MentorItem(){
   return(
     <CardMentor>
       <div className="col-100 tablet-50 desktop-25">
@@ -29,26 +29,27 @@ function MentorCard(){
             <div className="pTitle">IT 개발</div>
             <div className="pInfo">Java 개발 React</div>
           </div>
-          <Button size="sm" variant="danger">질문하기</Button>
+          <Button size="sm">질문하기</Button>
         </div>
       </div>
     </CardMentor>
   );
 }
 
-export default MentorCard;
+export default MentorItem;
 
 const CardMentor= styled.div`
-  @media (min-width: 768px){
-    width: 50%;
-  }
 
   @media (max-width: 768px){
     width: 100%
   }
+  
+  @media (min-width: 768px){
+    width: 50%;
+  }
 
   @media (min-width: 1025px){
-    width: 25%
+    width: 25%;
   }
   
   .card{
@@ -148,5 +149,6 @@ const CardMentor= styled.div`
     position: absolute;
     right: 12px;
     bottom: 12px;
+    background-color: #4a47d5;
   }
 `

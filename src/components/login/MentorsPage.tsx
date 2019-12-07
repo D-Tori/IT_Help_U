@@ -4,7 +4,7 @@ import Header from '../Header';
 import MentorList from './MentorList';
 import MentorField from './MentorField';
 
-function Mentors(){
+function MentorsPage(){
   return(
     <>
       <Header />
@@ -16,12 +16,17 @@ function Mentors(){
   );
 } 
 
-export default Mentors;
+export default MentorsPage;
 
 const PageContent = styled.div`
-  padding-top: 44px;
   overflow: auto;
   box-sizing: border-box;
   height: 100%;
   position: relative;
+
+  @media(min-width:1025px){
+    width: 1200px;
+  }
+  
+  margin: 0 auto;
 `

@@ -4,7 +4,7 @@ import icon from './images/icon-star.svg';
 import img from './images/Login-Illustration-1.svg';
 
 
-function LoginRpage(){
+function LoginRight(){
   return(
     <Container>
         <Inner>
@@ -15,7 +15,7 @@ function LoginRpage(){
   );
 }
 
-export default LoginRpage;
+export default LoginRight;
 
 
 const Container = styled.div`

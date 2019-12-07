@@ -5,7 +5,7 @@ import SignUpForm from './SignUpForm';
 import SignUpBtn from './SignUpBtn';
 import { Link } from 'react-router-dom';
 
-function SignUpLpage(){
+function SignUpLeft(){
   return (
     <div className="col col-12 col-md-6 left ds-vertical-align">
       <LoginLogo />
@@ -25,7 +25,7 @@ function SignUpLpage(){
   );
 }
 
-export default SignUpLpage;
+export default SignUpLeft;
 
 const Inner = styled.div`
   padding: 150px 50px 50px;   // 위, 왼오, 아래

@@ -1,29 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
-import LoginLogo from './LoginLogo';
-import ResetPwForm from './ResetPwForm';
 import { Link } from 'react-router-dom';
+import LoginLogo from './LoginLogo';
+import LoginBtn from './LoginBtn';
+import LoginForm from './LoginForm';
 
-function ResetPwL() {
-  return(
-    <div className="col col-12 col-md-6 left ds-vertical-align"> 
+// col-종류-숫자 형태로 작성
+// 종류	   크기	           주로 해당되는 디바이스
+// lg	     1200px 이상	   PC, 태블릿
+// md	     992 ~ 1200px	   태블릿
+// sm	     768 ~ 992px	   태블릿
+// xs	     768px 미만	     스마트 폰
+
+// "숫자"는 그 내용이 row에 차지하는 비중이다. row는 폭 전체를 "12"의 블록으로 나누어 관리한다.
+
+function LoginLeft(){
+  return (
+    <div className="col col-12 col-md-6 left ds-vertical-align">  
       <LoginLogo />
       <Inner>
-        <h1>비밀번호 초기화</h1>
+        <LoginBtn />
         <Divider>
-          <span>확인 메일 보내기</span>
+          <span>이메일로 로그인하기</span>
         </Divider>
-        <ResetPwForm />
+        <LoginForm />
         <Divider />
         <p className="no-account">
-          <Link to='/login'> 로그인하러 가기</Link>
+          "계정이 없으신가요?"
+          <Link to='/signUp'> 회원 가입하기</Link>
         </p>
       </Inner>
-    </div>
+    </div>  
   );
 }
 
-export default ResetPwL;
+export default LoginLeft;
 
 const Inner = styled.div`
   padding: 150px 50px 50px;   // 위, 왼오, 아래
@@ -35,7 +46,7 @@ const Inner = styled.div`
   form {
     text-align: left;
   }
-  
+
   .no-account {
     padding: 20px 0;
   }

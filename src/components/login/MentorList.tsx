@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MentorCard from './MentorCard';
+import MentorItem from './MentorItem';
 import Row from 'react-bootstrap/Row';
 
 function MentorList() {
@@ -10,17 +10,17 @@ function MentorList() {
         멘토
       </div>
       <Row>
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
-        <MentorCard />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
       </Row>
     </ListStyle>
   );

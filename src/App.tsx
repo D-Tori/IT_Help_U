@@ -5,11 +5,11 @@ import ProjectItem from './components/ProjectItem';
 
 // import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Login from './components/login/Login';
+import Login from './components/login/LoginPage';
 import ProjectPage from './components/ProjectPage';
-import SignUp from './components/login/SignUp';
-import ResetPw from './components/login/ResetPw';
-import Mentors from './components/login/Mentors';
+import SignUp from './components/login/SignUpPage';
+import ResetPw from './components/login/ResetPwPage';
+import Mentors from './components/login/MentorsPage';
 
 
 const App: React.FC = () => {
