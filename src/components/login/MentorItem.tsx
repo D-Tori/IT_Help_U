@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button';
 function MentorItem(){
   return(
     <CardMentor>
-      <div className="col-100 tablet-50 desktop-25">
         <div className="card">
           <a type="external" href="#">
             <div className="coverImage" />
@@ -31,7 +30,6 @@ function MentorItem(){
           </div>
           <Button size="sm">질문하기</Button>
         </div>
-      </div>
     </CardMentor>
   );
 }
@@ -39,13 +37,14 @@ function MentorItem(){
 export default MentorItem;
 
 const CardMentor= styled.div`
+  margin-bottom: 10px;
 
-  @media (max-width: 768px){
+  @media (max-width: 767px){
     width: 100%
   }
   
   @media (min-width: 768px){
-    width: 50%;
+    width: 49%;
   }
 
   @media (min-width: 1025px){
@@ -53,8 +52,6 @@ const CardMentor= styled.div`
   }
   
   .card{
-    margin: 15px;
-    margin-top: 0;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     border: 1px solid rgba(0,0,0,0.09);
     position: relative;
