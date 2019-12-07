@@ -9,7 +9,11 @@ import fifthImage from '../images/5.jpg'
 import styled from 'styled-components';
 
 const Style = styled.div`
+
+  display: flex;
+  
   img {
+    width: 100%;
     height: 334px;
   }
 `

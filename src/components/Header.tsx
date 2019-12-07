@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 const NavbarStyle = styled.div`
 
+  display: flex;
   
   .navbar {
     width: 100%;
