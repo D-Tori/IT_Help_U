@@ -14,6 +14,7 @@ const NavbarStyle = styled.div`
     width: 100%;
     background-color: #ffffff;
     position: fixed;
+    border-bottom: 1px solid #eee;
   }
 
   .navbar-brand, .navbar-nav .nav-link {
