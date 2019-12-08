@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../Header';
 import MentorList from './MentorList';
 import MentorField from './MentorField';
+import Footer from '../Footer';
 
 function MentorsPage(){
   return(
@@ -12,6 +13,7 @@ function MentorsPage(){
         <MentorField />
         <MentorList />
       </PageContent>
+      <Footer />
     </>
   );
 } 
