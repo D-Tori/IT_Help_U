@@ -55,6 +55,7 @@ const ListStyle = styled.div`
 
   .row {
     margin: 0px;
-    
+    display: flex;
+    justify-content: space-between
   }
 `

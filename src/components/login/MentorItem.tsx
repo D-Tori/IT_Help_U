@@ -7,12 +7,17 @@ import Button from 'react-bootstrap/Button';
 function MentorItem(){
   return(
     <CardMentor>
-        <div className="card">
-          <a type="external" href="#">
-            <div className="coverImage" />
+      <div className="container">
+          <div className="top">
             <div className="mentorImg">
               <Image className="img" src={MentorImg} roundedCircle />
             </div>
+            <div className="primaryInfo">
+              <div className="pTitle">IT 개발</div>
+              <div className="pInfo">Java 개발 React</div>
+            </div>
+          </div>
+          <div className="bottom">
             <div className="mentorInfo">
               <div className="name">
                 <span className="mentorName">박보영</span>
@@ -23,13 +28,11 @@ function MentorItem(){
                 <div>기획팀</div>
               </div>
             </div>
-          </a>
-          <div className="primaryInfo">
-            <div className="pTitle">IT 개발</div>
-            <div className="pInfo">Java 개발 React</div>
+            <div className="btnBlock">
+              <Button size="sm">질문하기</Button>
+            </div>
           </div>
-          <Button size="sm">질문하기</Button>
-        </div>
+      </div>
     </CardMentor>
   );
 }
@@ -39,66 +42,74 @@ export default MentorItem;
 const CardMentor= styled.div`
   margin-bottom: 10px;
 
-  @media (max-width: 767px){
+  @media (max-width:507px){
     width: 100%
+  }
+
+  @media (min-width: 508px){
+    width: 49%
   }
   
   @media (min-width: 768px){
-    width: 49%;
+    width: 33%;
   }
 
   @media (min-width: 1025px){
-    width: 25%;
+    width: 24%;
   }
   
-  .card{
+  .container{
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     border: 1px solid rgba(0,0,0,0.09);
-    position: relative;
     border-radius: 15px;
     background: #fff;
     font-size: 14px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  a {
-    color: #ff2d55;
-    cursor: pointer;
-    text-decoration: none;
-    outline: 0;
-    background-color: transparent;
-  }
-
-  .coverImage {
-    background-image: url();
-    padding-top: 42.25%;
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .coverImage::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  .top, .bottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
   }
 
   .mentorImg{
-    position: absolute;
-    left: 12px;
-    top: 12px;
+    display: flex;
   }
 
   .img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+  }
+
+  .primaryInfo {
+    width: 40%;
+    text-align: right
+    word-break: break-all;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pTitle{
+    font-size: 11px;
+    line-height: 1.6;
+    color: #6d6d72;
+  }
+
+  .pInfo{
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.3;
   }
 
   .mentorInfo{
-    position: absolute;
-    left: 12px;
-    bottom: 12px;
+    display: flex;
+    flex-direction: column;
   }
 
   .mentorName{
@@ -120,32 +131,12 @@ const CardMentor= styled.div`
     line-height: 1.3;
   }
 
-  .primaryInfo {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    width: 35%;
-    color: black;
-    text-align: right;
-    word-break: break-all;
-  }
-
-  .pTitle{
-    font-size: 11px;
-    line-height: 1.6;
-    color: #6d6d72;
-  }
-
-  .pInfo{
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 1.3;
+  .btnBlock{
+    position: relative;
+    top: 27px;
   }
 
   .btn{
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
     background-color: #4a47d5;
   }
 `
