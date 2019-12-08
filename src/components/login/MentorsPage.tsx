@@ -22,11 +22,9 @@ const PageContent = styled.div`
   overflow: auto;
   box-sizing: border-box;
   height: 100%;
-  position: relative;
-
-  @media(min-width:1025px){
+  padding: 20px;
+  margin: 0 auto;
+  @media (min-width: 1025px){
     width: 1200px;
   }
-  
-  margin: 0 auto;
 `

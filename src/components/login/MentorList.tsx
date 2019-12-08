@@ -21,6 +21,15 @@ function MentorList() {
         <MentorItem />
         <MentorItem />
         <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
+        <MentorItem />
       </Row>
     </ListStyle>
   );
@@ -37,7 +46,7 @@ const ListStyle = styled.div`
     font-size: 23px;
     line-height: 25px;
     font-weight: bold;
-    margin: 35px 15px 10px;
+    margin: 35px 0px 10px;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
