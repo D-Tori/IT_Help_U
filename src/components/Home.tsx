@@ -6,34 +6,43 @@ import ImageSlider from './ImageSlider';
 import styled from 'styled-components';
 import Footer from './Footer';
 
-const ContentViewStyle = styled.div`
-  margin: 0 auto;
-  width: 1200px;
-  flex: 1;
-
-`
-
 const PageViewStyle = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+
+
+`
+
+const ContentViewStyle = styled.div`
+  display: flex;
+  margin: 0 auto;
   min-height: 100vh;
+  flex: 1;
+
+  @media (min-width: 1024px) {
+    width: 1200px;
+  }
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
 
 `
 
 
 function Home() {
   return (
-    <PageViewStyle>
-      <Header />
-      <ImageSlider />
-      <ContentViewStyle>
-      kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>
-      kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>
-      kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>
-      kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>kaldfalkdfklanfkl<br/>
-      </ContentViewStyle>
-      <Footer />
-    </PageViewStyle>
+    <div>
+      <PageViewStyle>
+        <Header />
+        <ImageSlider />
+        <ContentViewStyle>
+        </ContentViewStyle>
+        <Footer />
+      </PageViewStyle>
+    </div>
   )
 }
 

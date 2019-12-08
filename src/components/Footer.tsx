@@ -3,28 +3,30 @@ import styled from 'styled-components';
 
 const FooterContainer = styled.div`
   display flex;
-  width: 100%;
   height: 150px;
   padding: 20px;
   background-color: #333  ;
   justify-content: center;
-  
+
   footer {
     display: flex;
-    width: 1200px;
+    width: 100%;
     flex-direction: column;
   }
 
-  .footer-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    line-height: 35px;
-  }
 
   footer ul {
     display: flex;
     list-style: none;
+    padding-left: 0px;
+  }
+
+  footer ul li:first-child {
+    margin-left: 0px;
+  }
+
+  footer ul li {
+    margin: 0px 15px;
   }
 
   .logo {
@@ -53,6 +55,45 @@ const FooterContainer = styled.div`
     color: #6d6d72;
   }
 
+
+  @media (min-width: 1024px) {
+    width: 100%;
+    .footer-top {
+      display: flex
+      flex-direction: row;
+      justify-content: space-between;
+      line-height: 35px;
+    }
+  }
+  @media (max-width: 1023px) {
+    width: 100%;
+    .footer-top {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    .footer-info {
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    footer ul {
+      display: none;
+    }
+    .footer-top {
+      margin-bottom: 20px;
+    }
+  }
+
   
 
 `
@@ -64,7 +105,7 @@ function Footer() {
         <div className="footer-top">
           <div className="logo">
             ITHelpU
-        </div>
+          </div>
           <ul>
             <li><a className="footer-link">서비스소개</a></li>
             <li><a className="footer-link">회원약관</a></li>
