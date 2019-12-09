@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 const NavbarStyle = styled.div`
 
@@ -61,8 +62,19 @@ const NavbarStyle = styled.div`
     
   }
 
-}
 
+  .dropdown {
+    
+  }
+
+  p {
+    display: flex;
+  }
+
+
+  .dropdown-title {
+    background-color: #fff
+  }
 
 `
 
@@ -87,7 +99,7 @@ function Header() {
             </Form>
             <Nav.Item><Nav.Link href="/project">프로젝트</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/mentors">멘토</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link >고민게시판</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href="/board">고민게시판</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/signup">회원가입</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/login">로그인</Nav.Link></Nav.Item>
           </Nav>

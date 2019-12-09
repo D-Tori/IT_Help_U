@@ -9,7 +9,7 @@ import ProjectPage from './components/ProjectPage';
 import SignUp from './components/login/SignUpPage';
 import ResetPw from './components/login/ResetPwPage';
 import Mentors from './components/login/MentorsPage';
-
+import ProjectDetail from './components/ProjectDetail';
 
 const App: React.FC = () => {
   return (
@@ -19,7 +19,8 @@ const App: React.FC = () => {
         <Route path="/project" component={ProjectPage} />
         <Route path="/signUp" component={SignUp} />
         <Route path="/resetPw" component={ResetPw} />
-        <Route pate="/mentors" component={Mentors} />>
+        <Route path="/mentors" component={Mentors} />
+        <Route path="/board" component={ProjectDetail} />
       </Switch>
   );
 }
