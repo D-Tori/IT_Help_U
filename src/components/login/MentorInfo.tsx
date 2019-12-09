@@ -1,0 +1,172 @@
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'react-bootstrap/Image';
+import MentorImg from './images/mentor1.png';
+import Button from 'react-bootstrap/Button';
+
+function MentorInfo() {
+  return(
+    <Info>
+      <div className="mentorImg">
+        <Image className="img" src={MentorImg} roundedCircle />
+      </div>
+      <div className="infoBox">
+        <div className="name">
+          <span className="profileName">
+            박보영
+            <small>멘토</small>
+          </span>
+        </div>
+        <div className="job">
+          nc소프트 · 기획팀
+        </div>
+        <div className="detail">
+          <div className="detailInfo">
+            <div className="typeBlock">
+              <div className="typelabel">
+                <span className="label">답변율 <strong className="highLight">100%</strong></span>
+              </div>
+            </div >
+            <div className="typeBlock">
+              <div className="typelabel">
+                <span className="label">답변수 <strong className="highLight">27건</strong></span>
+              </div>
+            </div>
+            <div className="typeBlock">
+              <div className="typelabel">
+                <span className="label">팔로워 <strong className="highLight">88명</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div className="box">
+            <div className="title">직무 유형</div>
+            <div className="detailInfo2">
+              <div className="typeBlock">
+                <div className="typelabel">IT 개발</div>  
+              </div>
+            </div>
+          </div>
+
+          <div className="box">
+            <div className="title">멘토링 분야</div>
+            <div className="detailInfo2">
+              <div className="typeBlock">
+                <div className="typelabel">Java</div>
+              </div>
+              <div className="typeBlock">
+                <div className="typelabel">React</div>  
+              </div>
+              <div className="typeBlock">
+                <div className="typelabel">Python</div>  
+              </div>
+              <div className="typeBlock">
+                <div className="typelabel">HTML/CSS</div>  
+              </div>
+            </div>
+          </div>
+
+          <div className="btnContainer">
+            <Button className="btnFollow">팔로우</Button>
+            <Button className="btnQuestion">질문하기</Button>
+          </div>
+        </div>
+      </div>
+    </Info>
+  );
+}
+
+
+export default MentorInfo
+
+const Info = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0;
+  padding: 0 15px;
+  
+  .mentorImg{
+    display:flex;
+  }
+
+  .img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .infoBox{
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+  }
+
+  .name, .typelabel, .label{
+    display: flex;
+  }
+
+  .profileName{
+    font-size: 28px;
+    font-weight: bold;
+    word-break: keep-all;
+  }
+
+  small{
+    font-size: 50%;
+    color: #6d6d72;
+    font-weight: bold;
+    word-break: keep-all;
+  }
+
+  .job{
+    margin-top: 8px;
+    font-size: 17px;
+    color: #6d6d72;
+  }
+
+  .detailInfo{
+    display: flex;
+    margin-top: 15px;
+    font-size: 13px;
+  }
+
+  .detailInfo2{
+    display: flex;
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+  .typeBlock{
+    height: 28px;
+    padding: 0 8px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 12px;
+    display:flex;
+    align-items: center;
+    margin-right: 5px;
+  }
+
+  .highLight{
+    color: #ff2d55 !important;
+  }
+
+  .box{
+    margin-top: 15px;
+  }
+
+  .btnContainer{
+    margin-top: 15px;
+  }
+
+  .btn{
+    margin-right:10px;
+  }
+
+  .btnFollow{
+    color: #4a47d5;
+    background-color: white;
+  }
+
+  .btnQuestion{
+    background-color: #4a47d5;
+  }
+`

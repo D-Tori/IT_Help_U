@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Image from 'react-bootstrap/Image';
 import MentorImg from './images/mentor1.png';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 function MentorItem(){
   return(
@@ -10,11 +11,13 @@ function MentorItem(){
       <div className="container">
           <div className="top">
             <div className="mentorImg">
-              <Image className="img" src={MentorImg} roundedCircle />
+              <Link to='/mentorDetail'>
+                <Image className="img" src={MentorImg} roundedCircle />
+              </Link>  
             </div>
             <div className="primaryInfo">
               <div className="pTitle">IT 개발</div>
-              <div className="pInfo">Java 개발 React</div>
+              <div className="pInfo">Java React Python HTML/CSS</div>
             </div>
           </div>
           <div className="bottom">
