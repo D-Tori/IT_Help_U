@@ -87,7 +87,7 @@ function ProjectItem() {
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
-          <div className="submit-btn">지원하기</div>
+          <div className="submit-btn"><a href="/board">지원하기</a></div>
         </Card.Footer>
       </Card>
     </CardItemStyle>
