@@ -19,11 +19,6 @@ const PageViewContainer = styled.div`
   }
 `;
 
-const btnMarginContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 20px;
-`;
 
 function ProjectDetailPage () {
   return(
@@ -33,6 +28,7 @@ function ProjectDetailPage () {
         <MenuTitle />
         <ProjectDetail />
           <SubmitBtn />
+        
       </PageViewContainer>
     </>
   )
