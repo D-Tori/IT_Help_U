@@ -3,34 +3,26 @@ import styled from 'styled-components';
 
 const Style = styled.div`
 
-  display: flex;
+  display: block ;
+  width: 80px;
+  background-color: #5457ff;
+  border-radius: 25px;
+  text-align:center;
+  color: #fff;
+  line-height:30px;
+
 
   &:hover {
-    .state-circle {
       background: #4a47d5  ;
       cursor: default;
-    }
   }
 
-  .state-circle {
-    width: 70px;
-    height: 30px;
-    background-color: #5457ff;
-    border-radius: 25px;
-    text-align:center;
-    line-height:30px;
-  }
-  span {
-    color: #fff;
-  }
 
 `
 
 function ProjectState () {
   return(
-    <Style>
-      <div className="state-circle"><span>모집중</span></div>
-    </Style>
+      <Style>모집중</Style>
   )
 }
 

@@ -2,11 +2,16 @@ import React from 'react';
 import Image from 'react-bootstrap/Image';
 import styled from 'styled-components';
 import fifthImage from '../images/5.jpg';
+import mail from '../images/mail.svg';
+import phone from '../images/phone.svg';
 
 const Style = styled.div`
   display: flex;
+  align-items: center;
 
   .img {
+    display: flex;
+    align
     width: 30px;
     height: 30px;
   }
@@ -14,7 +19,14 @@ const Style = styled.div`
   div {
     display: flex;
     margin-left: 10px;
-    align-items: center
+
+  }
+
+  
+
+  .img-btn {
+    width: 25px;
+    margin-left: 5px;
   }
 
 `;
@@ -24,6 +36,8 @@ function Profile () {
     <Style>
       <Image className="img" roundedCircle src={fifthImage} />
       <div>fepanbr</div>
+      <input type="image" src={mail} className="img-btn" />
+      <input type="image" src={phone} className="img-btn" />
     </Style>
   )
 }
