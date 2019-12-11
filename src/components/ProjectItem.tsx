@@ -46,8 +46,13 @@ const CardItemStyle = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  .submit-btn {
+  .apply-btn {
     display: flex;
+    
+  }
+  .apply-btn > a {
+    color: #333;
+    text-decoration: none;
     &:hover {
       color: #5457ff;
       cursor: pointer
@@ -87,7 +92,7 @@ function ProjectItem() {
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
-          <div className="submit-btn"><a href="/board">지원하기</a></div>
+          <div className="apply-btn"><a href="/project/Detail">지원하기</a></div>
         </Card.Footer>
       </Card>
     </CardItemStyle>

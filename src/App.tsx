@@ -12,17 +12,16 @@ import Mentors from './components/login/MentorsPage';
 import ProjectDetailPage from './components/ProjectDetailPage';
 import MentorDetail from './components/login/MentorDetailPage';
 
-
 const App: React.FC = () => {
   return (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <Route path="/project" component={ProjectPage} />
+        <Route exact path="/project" component={ProjectPage} />
         <Route path="/signUp" component={SignUp} />
         <Route path="/resetPw" component={ResetPw} />
         <Route path="/mentors" component={Mentors} />
-        <Route path="/board" component={ProjectDetailPage} />
+        <Route path="/project/Detail" component={ProjectDetailPage} />
         <Route path="/mentorDetail" component={MentorDetail} />
       </Switch>
   );

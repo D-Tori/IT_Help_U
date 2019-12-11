@@ -4,6 +4,7 @@ import ProjectDetail from './ProjectDetail';
 import MenuTitle from './MenuTitle';
 import styled from 'styled-components';
 import SubmitBtn from './SubmitBtn';
+import ProjectComment from './ProjectComment';
 
 
 const PageViewContainer = styled.div`
@@ -19,11 +20,6 @@ const PageViewContainer = styled.div`
   }
 `;
 
-const btnMarginContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 20px;
-`;
 
 function ProjectDetailPage () {
   return(
@@ -32,7 +28,9 @@ function ProjectDetailPage () {
       <PageViewContainer>
         <MenuTitle />
         <ProjectDetail />
-          <SubmitBtn />
+        <SubmitBtn />
+        <MenuTitle />
+        <ProjectComment />
       </PageViewContainer>
     </>
   )
