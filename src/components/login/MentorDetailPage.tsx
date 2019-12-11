@@ -21,8 +21,4 @@ export default MentorDetailPage;
 const PageStyled = styled.div`
   display: flex;
 
-
-  @media (min-width: 1025px){
-    width: 1200px;
-  }
 `

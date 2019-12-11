@@ -24,17 +24,17 @@ function MentorInfo() {
           <div className="detailInfo">
             <div className="typeBlock">
               <div className="typelabel">
-                <span className="label">답변율 <strong className="highLight">100%</strong></span>
+                <span className="label">답변율<strong className="highLight">100%</strong></span>
               </div>
             </div >
             <div className="typeBlock">
               <div className="typelabel">
-                <span className="label">답변수 <strong className="highLight">27건</strong></span>
+                <span className="label">답변수<strong className="highLight">27건</strong></span>
               </div>
             </div>
             <div className="typeBlock">
               <div className="typelabel">
-                <span className="label">팔로워 <strong className="highLight">88명</strong></span>
+                <span className="label">팔로워<strong className="highLight">88명</strong></span>
               </div>
             </div>
           </div>
@@ -63,6 +63,18 @@ function MentorInfo() {
               <div className="typeBlock">
                 <div className="typelabel">HTML/CSS</div>  
               </div>
+              <div className="typeBlock">
+                <div className="typelabel">HTML/CSS</div>  
+              </div>
+              <div className="typeBlock">
+                <div className="typelabel">HTML/CSS</div>  
+              </div>
+              <div className="typeBlock">
+                <div className="typelabel">HTML/CSS</div>  
+              </div>
+              <div className="typeBlock">
+                <div className="typelabel">HTML/CSS</div>  
+              </div>
             </div>
           </div>
 
@@ -85,6 +97,12 @@ const Info = styled.div`
   margin: 35px 0;
   padding: 0 15px;
   
+  @media(max-width: 799px){
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
   .mentorImg{
     display:flex;
   }
@@ -98,6 +116,11 @@ const Info = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 60%;
+
+    @media(max-width: 799px){
+      max-width: 100%;
+      margin-top: 10px;
+    }
   }
 
   .name, .typelabel, .label{
@@ -125,12 +148,14 @@ const Info = styled.div`
 
   .detailInfo{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 15px;
     font-size: 13px;
   }
 
   .detailInfo2{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 5px;
     font-size: 13px;
   }
@@ -142,11 +167,12 @@ const Info = styled.div`
     border-radius: 12px;
     display:flex;
     align-items: center;
-    margin-right: 5px;
+    margin: 2px 5px 0 0;
   }
 
   .highLight{
     color: #ff2d55 !important;
+    margin-left: 2px;
   }
 
   .box{
@@ -155,18 +181,28 @@ const Info = styled.div`
 
   .btnContainer{
     margin-top: 15px;
-  }
-
-  .btn{
-    margin-right:10px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .btnFollow{
     color: #4a47d5;
     background-color: white;
+    margin-right: 5px;
+
+    @media(max-width: 620px){
+      width: 100%;
+      margin-top: 5px;
+    }  
   }
 
   .btnQuestion{
     background-color: #4a47d5;
+    margin-right: 5px;
+
+    @media(max-width: 620px){
+      width: 100%;
+      margin-top: 5px;
+    }
   }
 `
