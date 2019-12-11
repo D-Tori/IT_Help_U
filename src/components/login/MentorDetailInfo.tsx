@@ -32,8 +32,6 @@ const Detail = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   margin: 35px 0;
-  padding-left: 0;
-  padding-right: 0;
   word-break: break-all;
 
   .divider {
@@ -55,6 +53,7 @@ const Detail = styled.div`
 
   .block {
     display: flex;
+    flex-direction: column;
     font-size: 14.5px;
     line-height: 1.6;
     padding: 0 15px;

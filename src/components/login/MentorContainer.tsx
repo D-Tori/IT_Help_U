@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import MentorInfo from './MentorInfo';
 import MentorDetailInfo from './MentorDetailInfo';
+import MentorThanks from './MentorThanks';
 
 function MentorContainer(){
   return(
     <ContainerStyled>
       <MentorInfo />
       <MentorDetailInfo />
-      <div>Thanks</div>
-      <div>Content</div>
+      <MentorThanks />
     </ContainerStyled>
   );
 }
@@ -23,9 +23,15 @@ const ContainerStyled = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
 
-  @media (min-width: 1025px){
+  @media (min-width: 800px){
     width: 800px;
     margin: 0 auto;
     padding-top: 81px
   }
+
+  @media (max-width: 799px){
+    width: auto;
+    margin: 0 auto;
+    padding-top: 81px
+  }  
 `
