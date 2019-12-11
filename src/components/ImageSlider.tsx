@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
-import fristImage from '../images/1.jpg'
+import firstImage from '../images/1.jpg'
 import secondImage from '../images/2.jpg'
 import thridImage from '../images/3.jpg'
 import fourthImage from '../images/4.jpg'
@@ -23,7 +23,7 @@ function ImageSlider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={fristImage}
+            src={firstImage}
             alt="First slide"
           />
           <Carousel.Caption>

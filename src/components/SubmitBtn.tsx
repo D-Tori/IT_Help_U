@@ -35,7 +35,7 @@ const BtnContainer = styled.div`
 function SubmitBtn () {
   return(
     <BtnContainer>
-      <a className="btn" href="#">제출하기</a>
+      <a className="btn" href="#">신청하기</a>
     </BtnContainer>
   )
 }
