@@ -24,17 +24,17 @@ function MentorInfo() {
           <div className="detailInfo">
             <div className="typeBlock">
               <div className="typelabel">
-                <span className="label">답변율 <strong className="highLight">100%</strong></span>
+                <span className="label">답변율<strong className="highLight">100%</strong></span>
               </div>
             </div >
             <div className="typeBlock">
               <div className="typelabel">
-                <span className="label">답변수 <strong className="highLight">27건</strong></span>
+                <span className="label">답변수<strong className="highLight">27건</strong></span>
               </div>
             </div>
             <div className="typeBlock">
               <div className="typelabel">
-                <span className="label">팔로워 <strong className="highLight">88명</strong></span>
+                <span className="label">팔로워<strong className="highLight">88명</strong></span>
               </div>
             </div>
           </div>
@@ -147,6 +147,7 @@ const Info = styled.div`
 
   .highLight{
     color: #ff2d55 !important;
+    margin-left: 2px;
   }
 
   .box{
@@ -158,7 +159,7 @@ const Info = styled.div`
   }
 
   .btn{
-    margin-right:10px;
+    margin-right: 5px;
   }
 
   .btnFollow{

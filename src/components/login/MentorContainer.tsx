@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import MentorInfo from './MentorInfo';
+import MentorDetailInfo from './MentorDetailInfo';
 
 function MentorContainer(){
   return(
     <ContainerStyled>
       <MentorInfo />
-      <div>Detail</div>
+      <MentorDetailInfo />
       <div>Thanks</div>
       <div>Content</div>
     </ContainerStyled>
