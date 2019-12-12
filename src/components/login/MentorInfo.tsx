@@ -80,7 +80,7 @@ function MentorInfo() {
 
           <div className="btnContainer">
             <Button className="btnFollow">팔로우</Button>
-            <Button className="btnQuestion">질문하기</Button>
+            <Button className="btnQuestion" href="/menteeProfile">질문하기</Button>
           </div>
         </div>
       </div>
