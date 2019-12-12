@@ -32,7 +32,9 @@ function MentorItem(){
               </div>
             </div>
             <div className="btnBlock">
-              <Button size="sm">질문하기</Button>
+              <Link to='menteeProfile'>
+                <Button size="sm">질문하기</Button>
+              </Link>
             </div>
           </div>
       </div>
