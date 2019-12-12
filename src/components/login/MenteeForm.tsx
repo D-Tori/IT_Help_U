@@ -65,7 +65,7 @@ function MenteeForm() {
           </Form.Group>
 
           <div className="btn-container">
-            <Button type="submit" className="btn-modified" href="/login">수정</Button>
+            <Button type="submit" className="btn-modified" href="/question">수정</Button>
           </div>
         </Form>
       </div>

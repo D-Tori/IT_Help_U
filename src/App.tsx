@@ -12,6 +12,7 @@ import Mentors from './components/login/MentorsPage';
 import ProjectDetailPage from './components/ProjectDetailPage';
 import MentorDetail from './components/login/MentorDetailPage';
 import MenteeProfile from './components/login/MenteeProfilePage';
+import Question from './components/login/QuestionPage';
 
 const App: React.FC = () => {
   return (
@@ -24,7 +25,8 @@ const App: React.FC = () => {
         <Route path="/mentors" component={Mentors} />
         <Route path="/project/Detail" component={ProjectDetailPage} />
         <Route path="/mentorDetail" component={MentorDetail} />
-        <Route path="/menteeProfile" component={MenteeProfile} />>
+        <Route path="/menteeProfile" component={MenteeProfile} />
+        <Route path="/question" component={Question} />
       </Switch>
   );
 }
