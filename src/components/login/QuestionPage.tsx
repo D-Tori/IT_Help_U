@@ -24,12 +24,10 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-  @media (min-width: 800px){
-    width: 800px;
-    margin: 0 auto;
-    padding-top: 81px
-  }
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 81px
+  
 
   @media (max-width: 799px){
     width: auto;
