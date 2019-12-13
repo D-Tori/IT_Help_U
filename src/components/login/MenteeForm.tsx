@@ -80,7 +80,7 @@ const PageContent= styled.div`
   flex-direction: column;
   margin: 81px 0 35px;
   padding: 0 20px;
-  width: 700px;
+  width: 800px;
 
   .content-title{
     margin: 35px 0;
