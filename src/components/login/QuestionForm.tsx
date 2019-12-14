@@ -23,10 +23,15 @@ function QuestionForm() {
           <Form.Group controlId="form">
             <Form.Label>구체적인 질문 <abbr title="required"> *</abbr></Form.Label>
             <Form.Control as="textarea" rows="5" />
+            <Form.Text className="text-muted">
+              아래 사항에 해당할 경우, 답변이 거절될 수 있습니다.
+              <li>- 멘토링 분야와 무관한 질문</li>
+              <li>- 행사 참여/인터뷰/과제요청</li>
+            </Form.Text>
           </Form.Group>
 
           <div className="btn-container">
-            <Button type="submit" className="btn-modified" href="/question">임시 저장</Button>
+            <Button type="submit" className="btn-modified" href="/questionList">임시 저장</Button>
           </div>
         </Form>
       </div>
@@ -47,7 +52,6 @@ const ContentsContainer = styled.div`
 
   @media(max-width: 799px){
     width: 100%;
-    
   } 
 
   .divider {
@@ -89,8 +93,12 @@ const ContentsContainer = styled.div`
     background-color: #4a47d5;
     width: 30%
     margin: 0 auto;
-    @media(max-width: 799px){
+    @media(max-width: 620px){
       width: 100%
     }
+  }
+
+  li {
+    list-style: none;
   }
 `

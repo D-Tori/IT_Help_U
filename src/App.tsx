@@ -14,6 +14,7 @@ import MentorDetail from './components/login/MentorDetailPage';
 import BoardPage from './components/BoardPage';
 import MenteeProfile from './components/login/MenteeProfilePage';
 import Question from './components/login/QuestionPage';
+import QuestionList from './components/login/QuestionListPage';
 import BoardDetailPage from './components/BoardDetailPage';
 
 const App: React.FC = () => {
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Route exact path="/board" component={BoardPage} />
         <Route path="/menteeProfile" component={MenteeProfile} />
         <Route path="/question" component={Question} />
+        <Route path="/questionList" component={QuestionList} />
         <Route path="/board/detail" component={BoardDetailPage} />
       </Switch>
   );
