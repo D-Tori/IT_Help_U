@@ -93,7 +93,7 @@ const ContentsContainer = styled.div`
     background-color: #4a47d5;
     width: 30%
     margin: 0 auto;
-    @media(max-width: 799px){
+    @media(max-width: 620px){
       width: 100%
     }
   }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../Header';
 import Footer from '../Footer';
 import MentorInfo from './MentorInfo';
+import QuestionItem from './QuestionItem';
 
 function QuestionListPage() {
   return(
@@ -10,7 +11,7 @@ function QuestionListPage() {
       <Header />
       <ContentContainer>
         <MentorInfo />
-        
+        <QuestionItem />
       </ContentContainer>
       <Footer />
     </>
