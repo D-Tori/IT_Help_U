@@ -36,8 +36,8 @@ function Profile () {
     <Style>
       <Image className="img" roundedCircle src={fifthImage} />
       <div>fepanbr</div>
-      <input type="image" src={mail} className="img-btn" />
-      <input type="image" src={phone} className="img-btn" />
+      <input alt="이메일버튼" type="image" src={mail} className="img-btn" />
+      <input alt="핸드폰버튼" type="image" src={phone} className="img-btn" />
     </Style>
   )
 }
