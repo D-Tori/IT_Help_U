@@ -15,6 +15,7 @@ import BoardPage from './components/BoardPage';
 import MenteeProfile from './components/login/MenteeProfilePage';
 import Question from './components/login/QuestionPage';
 import QuestionList from './components/login/QuestionListPage';
+import BoardDetailPage from './components/BoardDetailPage';
 
 const App: React.FC = () => {
   return (
@@ -27,10 +28,11 @@ const App: React.FC = () => {
         <Route path="/mentors" component={Mentors} />
         <Route path="/project/Detail" component={ProjectDetailPage} />
         <Route path="/mentorDetail" component={MentorDetail} />
-        <Route path="/board" component={BoardPage} />
+        <Route exact path="/board" component={BoardPage} />
         <Route path="/menteeProfile" component={MenteeProfile} />
         <Route path="/question" component={Question} />
         <Route path="/questionList" component={QuestionList} />
+        <Route path="/board/detail" component={BoardDetailPage} />
       </Switch>
   );
 }

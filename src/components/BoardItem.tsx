@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Badge from './Badge';
 import IdDateComponent from './IdDateComponent';
-import Image from 'react-bootstrap/Image';
 
-import comment from '../images/comment (2).svg';
-import like from '../images/like.svg';
-import view from '../images/view.svg';
+import BoardState from './BoardState';
 
 
 const TitleWrapper = styled.div`
@@ -92,19 +89,12 @@ function BoardItem() {
     <BoardItemContainer>
       <TitleWrapper>
         <span>#1010101</span>
-        <h5><a href="#">제목인데 이게 길어진다면 감당이 되겠어??</a></h5>
+        <h5><a href="/board/detail">제목인데 이게 길어진다면 감당이 되겠어??</a></h5>
         <Badge />
       </TitleWrapper>
       <AvatarContainer>
         <IdDateComponent />
-        <ItemState>
-          <Image className="board-icon" src={comment} />
-          <span>5</span>
-          <Image className="board-icon" src={like} />
-          <span>20000</span>
-          <Image className="board-icon" src={view} />
-          <span>500</span>
-        </ItemState>
+        <BoardState />
       </AvatarContainer>
     </BoardItemContainer>
   )
