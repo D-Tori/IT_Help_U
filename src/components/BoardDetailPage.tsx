@@ -60,8 +60,8 @@ function BoardDetailPage () {
       <MenuTitle />
       <BoardContainer>
         <div className="detail-header">
-          <IdDateComponent />
-          <BoardState />
+          <IdDateComponent imgBool={true}/>
+          {/* <BoardState /> */}
         </div>
         <BoardDetailContent />
       </BoardContainer>
