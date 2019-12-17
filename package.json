@@ -35,7 +35,10 @@
     "extends": [
       "react-app",
       "airbnb"
-    ]
+    ],
+    "rules": {
+      "linebreak-style": 0
+    }
   },
   "browserslist": {
     "production": [
@@ -48,5 +51,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  
+  "devDependencies": {
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-equimper": "*",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.10.0",
+    "prettier": "^1.14.3"
   }
 }

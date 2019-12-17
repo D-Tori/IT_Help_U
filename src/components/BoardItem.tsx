@@ -12,7 +12,7 @@ const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+
 
   h5 {
     display: flex;
@@ -57,6 +57,7 @@ const AvatarContainer = styled.div`
 
   @media (max-width: 767px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 `
 
@@ -67,7 +68,7 @@ const BoardItemContainer = styled.li`
   border-left: 3px solid #5457ff;
   padding: 10px;
   justify-content: space-between;
-  
+
   @media (max-width: 767px) {
     flex-direction: column;
   }
@@ -92,7 +93,7 @@ function BoardItem({ board }: BoardItemType) {
       </TitleWrapper>
       <AvatarContainer>
         <div className="id-date-container">
-          <IdDateComponent imgBool={false} />
+          <IdDateComponent user={board.user} imgBool={false} />
         </div>
         <BoardState view={board.view} comment={board.comment} like={board.like} />
       </AvatarContainer>

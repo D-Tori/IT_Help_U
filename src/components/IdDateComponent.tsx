@@ -8,13 +8,13 @@ const Style = styled.div`
 
   display: flex;
   width: 100%;
-  
+  align-items: center;
 
   .comment-profile-img {
   display: flex;
   width: 60px;
   height: 60px;
-  
+
   }
 
   .comment-user {
@@ -48,20 +48,22 @@ const Style = styled.div`
   }
 
 
+
 `;
 
 type IdDateComponentType = {
+  user: string,
   imgBool: boolean
 }
 
 
-function IdDateComponent({imgBool}: IdDateComponentType) {
+function IdDateComponent({ user, imgBool }: IdDateComponentType) {
   return (
     <Style>
       <Image className="comment-profile-img" src={firstImage} roundedCircle />
       <div className="id-date-container">
         <div className="id-container">
-          <span>hongis0327</span>
+          <span>{user}</span>
           <Image className={imgBool ? "comment-user" : "d-none"} src={user} thumbnail />    {/* 글쓴이인지 아닌지에 따라 디스플레이 none or block */}
         </div>
         <div className="date">2019-12-31 00:00:00</div>
