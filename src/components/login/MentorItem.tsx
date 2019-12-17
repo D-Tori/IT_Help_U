@@ -4,34 +4,39 @@ import Image from 'react-bootstrap/Image';
 import MentorImg from './images/mentor1.png';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import { Mentor } from '../../modules/mentors';
 
-function MentorItem(){
+type MentorItemProps = {
+  mentor: Mentor;
+};
+
+function MentorItem({ mentor }: MentorItemProps){
   return(
     <CardMentor>
       <div className="container">
           <div className="top">
-            <div className="mentorImg">
+            <div className="mentor-img">
               <Link to='/mentorDetail'>
                 <Image className="img" src={MentorImg} roundedCircle />
-              </Link>  
+              </Link>
             </div>
-            <div className="primaryInfo">
-              <div className="pTitle">IT 개발</div>
-              <div className="pInfo">Java React Python HTML/CSS</div>
+            <div className="primary-info-container">
+              <div className="primary-title"> {mentor.pTitle} </div>
+              <div className="primary-detail-info"> {mentor.pInfo} </div>
             </div>
           </div>
           <div className="bottom">
-            <div className="mentorInfo">
+            <div className="mentor-info-container">
               <div className="name">
-                <span className="mentorName">박보영</span>
-                <span className="position">멘토</span>
+                <span className="mentor-name"> {mentor.mentorName} </span>
+                <span className="position"> {mentor.position} </span>
               </div>
               <div className="job">
-                <div>nc소프트</div>
-                <div>기획팀</div>
+                <div className="company"> {mentor.company} </div>
+                <div className="department"> {mentor.department} </div>
               </div>
             </div>
-            <div className="btnBlock">
+            <div className="btn-container">
               <Link to='menteeProfile'>
                 <Button size="sm">질문하기</Button>
               </Link>
@@ -54,7 +59,7 @@ const CardMentor= styled.div`
   @media (min-width: 508px){
     width: 49%
   }
-  
+
   @media (min-width: 768px){
     width: 33%;
   }
@@ -62,7 +67,7 @@ const CardMentor= styled.div`
   @media (min-width: 1025px){
     width: 24%;
   }
-  
+
   .container{
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     border: 1px solid rgba(0,0,0,0.09);
@@ -81,7 +86,7 @@ const CardMentor= styled.div`
     margin: 15px 0;
   }
 
-  .mentorImg{
+  .mentor-img{
     display: flex;
   }
 
@@ -91,7 +96,7 @@ const CardMentor= styled.div`
     display: flex;
   }
 
-  .primaryInfo {
+  .primary-info-container {
     width: 40%;
     text-align: right
     word-break: break-all;
@@ -100,24 +105,24 @@ const CardMentor= styled.div`
     flex-direction: column;
   }
 
-  .pTitle{
+  .primary-title{
     font-size: 11px;
     line-height: 1.6;
     color: #6d6d72;
   }
 
-  .pInfo{
+  .primary-detail-info{
     font-size: 11px;
     font-weight: bold;
     line-height: 1.3;
   }
 
-  .mentorInfo{
+  .mentor-info-container{
     display: flex;
     flex-direction: column;
   }
 
-  .mentorName{
+  .mentor-name{
     color: black;
     font-size: 21px;
     font-weight: bold;
@@ -136,7 +141,7 @@ const CardMentor= styled.div`
     line-height: 1.3;
   }
 
-  .btnBlock{
+  .btn-container{
     position: relative;
     top: 27px;
   }
