@@ -9,9 +9,6 @@ function MentorList() {
 
   return(
     <ListStyle>
-      <div className="title">
-        멘토
-      </div>
       <Row>
         {mentors.map(mentor => (
           <MentorItem mentor={mentor} />

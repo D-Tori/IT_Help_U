@@ -8,7 +8,6 @@ import MenuTitle from '../MenuTitle';
 function MentorField(){
   return(
     <Field>
-        <MenuTitle />
         <ButtonToolbar>
           <ToggleButtonGroup type="checkbox">
             <ToggleButton value = "1">Java</ToggleButton>
@@ -50,7 +49,7 @@ const Field = styled.div`
     margin-bottom: 5px;
     border-radius: 4px !important;
   }
-  
+
   .btn-group{
     display:block;
   }
