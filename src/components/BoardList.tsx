@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import BoardItem from './BoardItem';
 
+import useBoards from '../hooks/useBoards';
+
 
 const BoardListContainer = styled.div`
   display: flex;
@@ -9,17 +11,23 @@ const BoardListContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   padding: 10px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 function BoardList () {
+  const boards = useBoards();
   return(
     <BoardListContainer>
-      <BoardItem />
-      <BoardItem />
-      <BoardItem />
-      <BoardItem />
-      <BoardItem />
-      <BoardItem />
+      <ul>
+        {boards.map(board => (
+          <BoardItem board={board} key={board.id} />
+        ))}
+      </ul>
     </BoardListContainer>
   )
 }
