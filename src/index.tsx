@@ -9,8 +9,6 @@ import { createStore } from 'redux';
 
 const store = createStore(rootReducer);
 
-
-
 ReactDOM.render(
   <Router>
     <Provider store={store}>
