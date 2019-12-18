@@ -12,9 +12,9 @@ const BoardDetailStyle = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  
+
   margin-bottom: 40px;
-  
+
 
   .detail-header {
     width: 100%;
@@ -39,7 +39,7 @@ const BoardDetailStyle = styled.div`
   @media (min-width: 1024px) {
     width: 1200px;
   }
-  
+
 
 `;
 
@@ -57,15 +57,15 @@ function BoardDetailPage () {
     <>
     <Header />
     <BoardDetailStyle>
-      <MenuTitle />
+      <MenuTitle condition="board"/>
       <BoardContainer>
         <div className="detail-header">
-          <IdDateComponent />
-          <BoardState />
+          <IdDateComponent user={'이름'} imgBool={true}/>
+          {/* <BoardState /> */}
         </div>
         <BoardDetailContent />
       </BoardContainer>
-      <MenuTitle />
+      <MenuTitle condition="comments"/>
       <BoardComment />
     </BoardDetailStyle>
     <Footer />

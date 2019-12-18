@@ -21,7 +21,7 @@ const CommentItem = styled.div`
   p {
     margin: 0;
   }
-  
+
   .flex-col {
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ function BoardCommentItem() {
     <CommentItem>
 
       <div className="flex-col">
-        <IdDateComponent />
+        <IdDateComponent user={'이름'} imgBool={true} />
         <div className="comment-content">
           <p>왓더 뻑</p>
         </div>

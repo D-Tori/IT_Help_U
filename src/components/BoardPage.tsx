@@ -9,7 +9,7 @@ import Header from './Header';
 const PageViewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  
+
   margin: 0 auto;
 
   @media (min-width: 360px) {
@@ -20,7 +20,7 @@ const PageViewContainer = styled.div`
     width: 800px;
   }
 
-  
+
 `;
 
 function BoardPage() {
@@ -28,7 +28,7 @@ function BoardPage() {
     <>
       <Header />
       <PageViewContainer>
-        <MenuTitle />
+        <MenuTitle condition="boards"/>
         <BoardList />
       </PageViewContainer>
       <Footer />

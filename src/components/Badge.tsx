@@ -10,21 +10,23 @@ type BadgesProps = {
 
 
 const BadgeStyle = styled.button`
-  display: inline-block;
-  background-color: ${props => props.color}
-  font-size: 16px;
+  display: inline;
+  background-color: #5457ff
+  font-size: 12px;
   color: #fff;
   border-radius: 4px;
-  width: 60px;
-  height: 30px;
+  padding: 5px 10px;
   border: none;
+  margin-right: 5px;
 `;
 
-function Badge({name, color}: BadgesProps) {
+type categoryItemType = {
+  category: string;
+}
+
+function Badge({category}: categoryItemType) {
   return (
-    <BadgeStyle color={color}>
-      {name}
-    </BadgeStyle>
+    <BadgeStyle>{category}</BadgeStyle>
   )
 }
 

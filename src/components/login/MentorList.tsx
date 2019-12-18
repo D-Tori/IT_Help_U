@@ -6,9 +6,6 @@ import Row from 'react-bootstrap/Row';
 function MentorList() {
   return(
     <ListStyle>
-      <div className="title">
-        멘토
-      </div>
       <Row>
         <MentorItem />
         <MentorItem />

@@ -4,6 +4,7 @@ import Badge from './Badge';
 import IdDateComponent from './IdDateComponent';
 
 import BoardState from './BoardState';
+import { Board } from '../modules/boards';
 
 
 const TitleWrapper = styled.div`
@@ -11,7 +12,7 @@ const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+
 
   h5 {
     display: flex;
@@ -47,54 +48,54 @@ const AvatarContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 300px;
+
+  .id-date-container {
+    display: flex;
+    margin-bottom: 5px;
+  }
 
   @media (max-width: 767px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 `
 
-const BoardItemContainer = styled.div`
+const BoardItemContainer = styled.li`
   display: flex;
   width: 100%;
   border: 1px solid #ddd;
   border-left: 3px solid #5457ff;
   padding: 10px;
   justify-content: space-between;
-  
+
   @media (max-width: 767px) {
     flex-direction: column;
   }
 `;
 
-const ItemState = styled.div`
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 24px
-  .board-icon {
-    width: 24px;
-    height: 24px;
-  }
-  span {
-    
-  }
-  @media(max-width:767px) {
-    margin-top: 5px;
-  }
-`;
 
-function BoardItem() {
+type BoardItemType = {
+  board: Board;
+}
+
+function BoardItem({ board }: BoardItemType) {
   return (
     <BoardItemContainer>
       <TitleWrapper>
-        <span>#1010101</span>
-        <h5><a href="/board/detail">제목인데 이게 길어진다면 감당이 되겠어??</a></h5>
-        <Badge />
+        <span>#{board.id}</span>
+        <h5><a href="/board/detail">{board.title}</a></h5>
+        <div>
+          {board.category.map(category => (
+            <Badge category={category}/>
+          ))}
+        </div>
       </TitleWrapper>
       <AvatarContainer>
-        <IdDateComponent />
-        <BoardState />
+        <div className="id-date-container">
+          <IdDateComponent user={board.user} imgBool={false} />
+        </div>
+        <BoardState view={board.view} comment={board.comment} like={board.like} />
       </AvatarContainer>
     </BoardItemContainer>
   )
