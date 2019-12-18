@@ -4,19 +4,22 @@ import Header from '../Header';
 import MentorList from './MentorList';
 import MentorField from './MentorField';
 import Footer from '../Footer';
+import MenuTitle from '../MenuTitle';
 
 function MentorsPage(){
   return(
     <>
       <Header />
       <PageContent>
+        <MenuTitle condition="mentorSkill"/>
         <MentorField />
+        <MenuTitle condition="mentors"/>
         <MentorList />
       </PageContent>
       <Footer />
     </>
   );
-} 
+}
 
 export default MentorsPage;
 

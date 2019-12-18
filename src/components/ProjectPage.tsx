@@ -9,10 +9,10 @@ import MentorField from './login/MentorField';
 
 const PageContentStyle = styled.div`
 
-  
+
   margin: 0 auto;
   padding: 20px;
-  
+
   flex-direction: column;
   align-content: flex-start;
 
@@ -20,7 +20,7 @@ const PageContentStyle = styled.div`
     width: 1200px;
   }
 
-  @media all and (min-width: 480px) and (max-width: 768px) { 
+  @media all and (min-width: 480px) and (max-width: 768px) {
 
   }
 `
@@ -32,9 +32,9 @@ function ProjectPage() {
     <>
       <Header />
       <PageContentStyle>
-        <MenuTitle />
+        <MenuTitle condition='projectSkills'/>
           <MentorField />
-        <MenuTitle />
+        <MenuTitle condition='projects'/>
         <ProjectList />
       </PageContentStyle>
     </>

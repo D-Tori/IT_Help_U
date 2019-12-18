@@ -26,10 +26,10 @@ function ProjectDetailPage () {
     <>
       <Header />
       <PageViewContainer>
-        <MenuTitle />
+        <MenuTitle condition="project"/>
         <ProjectDetail />
         <SubmitBtn />
-        <MenuTitle />
+        <MenuTitle condition="comments"/>
         <ProjectComment />
       </PageViewContainer>
     </>

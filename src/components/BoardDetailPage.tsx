@@ -57,7 +57,7 @@ function BoardDetailPage () {
     <>
     <Header />
     <BoardDetailStyle>
-      <MenuTitle />
+      <MenuTitle condition="board"/>
       <BoardContainer>
         <div className="detail-header">
           <IdDateComponent user={'이름'} imgBool={true}/>
@@ -65,7 +65,7 @@ function BoardDetailPage () {
         </div>
         <BoardDetailContent />
       </BoardContainer>
-      <MenuTitle />
+      <MenuTitle condition="comments"/>
       <BoardComment />
     </BoardDetailStyle>
     <Footer />

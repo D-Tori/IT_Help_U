@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
 import board from './boards';
-
+import menu from './menus';
 
 const rootReducer = combineReducers({
-  board
+  board,
+  menu
 });
 
 export default rootReducer;

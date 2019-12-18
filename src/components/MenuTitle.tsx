@@ -1,7 +1,8 @@
 import React from 'react';
 
 import styled from 'styled-components';
-
+import useMenus from '../hooks/useMenus';
+import { Menu } from '../modules/menus';
 
 const StyleMenu = styled.div`
 
@@ -22,18 +23,26 @@ const StyleMenu = styled.div`
     display: flex;
 
   }
+  .none {
+    display: none;
+  }
 `;
 
+type MenuTitleType = {
+  condition: string
+}
 
 
-function MenuTitle() {
+
+function MenuTitle({condition}: MenuTitleType) {
+  const menus = useMenus();
+  const selectedCondition = menus.findIndex(menu => menu.condition === condition);
   return (
-
       <StyleMenu>
         <h1>
-          프로젝트 둘러보기
+          {menus[selectedCondition].name}
         </h1>
-        <button>안녕</button>
+        <button className={menus[selectedCondition].isBtn ? "title-btn" : "none"}>{menus[selectedCondition].btnName}</button>
       </StyleMenu>
 
 
