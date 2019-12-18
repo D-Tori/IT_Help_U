@@ -2,31 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 import MentorItem from './MentorItem';
 import Row from 'react-bootstrap/Row';
+import useMentors from '../../hooks/useMentors';
 
 function MentorList() {
+  const mentors = useMentors();
+
   return(
     <ListStyle>
       <Row>
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
-        <MentorItem />
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
+        {mentors.map(mentor => (
+          <MentorItem mentor={mentor} />
+        ))}
+
       </Row>
     </ListStyle>
   );
