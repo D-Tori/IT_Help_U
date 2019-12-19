@@ -4,5 +4,5 @@ import { addBoard } from '../modules/boards';
 
 export default function useAddBoard() {
   const dispatch = useDispatch();
-  return useCallback((text, desc, category, user) => dispatch(addBoard(text, desc, category, user)), [dispatch]);
+  return useCallback((board) => dispatch(addBoard(board)), [dispatch]);
 }

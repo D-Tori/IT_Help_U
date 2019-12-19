@@ -3,22 +3,14 @@ const ADD_BOARD = 'boards/ADD_BOARD' as const;
 const DELETE_BOARD = 'boards/DELETE_BOARD' as const;
 
 // 액션 생성 함수
-export const addBoard = (title: string, desc: string, category: Array<string>, user: string) => ({
+export const addBoard = (payload: Board) => ({
   type: ADD_BOARD,
-  payload: {
-    title: title,
-    desc: desc,
-    category: category,
-    view: 0,
-    comment: 0,
-    like: 0,
-    user: user
-  }
-}); 
+  payload: payload
+});
 
 // 액션들의 타입 정의
 
-type BoardAction = 
+type BoardAction =
   | ReturnType<typeof addBoard>;
 
 

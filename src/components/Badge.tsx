@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 type Color = ''
 
@@ -26,7 +27,7 @@ type categoryItemType = {
 
 function Badge({category}: categoryItemType) {
   return (
-    <BadgeStyle>{category}</BadgeStyle>
+    <BadgeStyle><Link to="/board/write">{category}</Link></BadgeStyle>
   )
 }
 

@@ -16,6 +16,7 @@ import MenteeProfile from './components/login/MenteeProfilePage';
 import Question from './components/login/QuestionPage';
 import QuestionList from './components/login/QuestionListPage';
 import BoardDetailPage from './components/BoardDetailPage';
+import BoardWritePage from './components/BoardWritePage';
 
 const App: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         <Route path="/question" component={Question} />
         <Route path="/questionList" component={QuestionList} />
         <Route path="/board/detail" component={BoardDetailPage} />
+        <Route path="/board/write" component={BoardWritePage} />
       </Switch>
   );
 }

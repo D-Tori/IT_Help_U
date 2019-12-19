@@ -30,6 +30,7 @@ const initialState: MenusState = [
   { name: "댓글", btnName: "댓글 작성", condition: "comments", isBtn: true},
   { name: "프로젝트 상세내용", btnName: "목록 보기", condition: "project", isBtn: true},
   { name: "관련 기술", btnName: "", condition: "mentorSkill", isBtn: false},
+  { name: "새글 쓰기", btnName: "목록보기", condition: "boardWrite", isBtn: true},
 ]
 
 function menu (state: MenusState = initialState) {

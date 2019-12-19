@@ -21,6 +21,7 @@ const BoardListContainer = styled.div`
 
 function BoardList () {
   const boards = useBoards();
+  console.log(boards);
   return(
     <BoardListContainer>
       <ul>

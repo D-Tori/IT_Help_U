@@ -4,6 +4,7 @@ import BoardList from './BoardList';
 import MenuTitle from './MenuTitle';
 import Footer from './Footer';
 import Header from './Header';
+import BoardWritePage from './BoardWritePage';
 
 
 const PageViewContainer = styled.div`
@@ -31,6 +32,7 @@ function BoardPage() {
         <MenuTitle condition="boards"/>
         <BoardList />
       </PageViewContainer>
+      <BoardWritePage />
       <Footer />
     </>
   )
