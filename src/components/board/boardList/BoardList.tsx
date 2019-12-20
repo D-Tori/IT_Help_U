@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import BoardItem from './BoardItem';
 
-import useBoards from '../hooks/useBoards';
+import useBoards from '../../../hooks/useBoards';
 
 
 const BoardListContainer = styled.div`
@@ -10,7 +10,7 @@ const BoardListContainer = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  padding: 10px;
+  padding: 15px;
 
   ul {
     list-style: none;

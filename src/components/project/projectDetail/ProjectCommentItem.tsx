@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'react-bootstrap/Image';
 
-import comment from '../images/comment.svg';
-import IdDateComponent from './IdDateComponent';
+import comment from '../../../images/comment.svg';
+import IdDateComponent from '../../common/IdDateComponent';
 
 const CommentItemContainer = styled.div`
   display: flex;

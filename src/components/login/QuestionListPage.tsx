@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 import MentorInfo from './MentorInfo';
 import QuestionItem from './QuestionItem';
 
@@ -33,5 +33,5 @@ const ContentContainer = styled.div`
     width: auto;
     margin: 0 auto;
     padding-top: 81px
-  }  
+  }
 `

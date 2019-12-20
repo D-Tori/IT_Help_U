@@ -1,15 +1,15 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
-import firstImage from '../images/1.jpg'
-import secondImage from '../images/2.jpg'
-import thridImage from '../images/3.jpg'
-import fourthImage from '../images/4.jpg'
-import fifthImage from '../images/5.jpg'
+import firstImage from '../../images/1.jpg'
+import secondImage from '../../images/2.jpg'
+import thridImage from '../../images/3.jpg'
+import fourthImage from '../../images/4.jpg'
+import fifthImage from '../../images/5.jpg'
 // import './ImageSlider.css';
 import styled from 'styled-components';
 
 const Style = styled.div`
-  
+
 
   img {
     height: 334px;

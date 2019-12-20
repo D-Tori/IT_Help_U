@@ -27,7 +27,7 @@ type categoryItemType = {
 
 function Badge({category}: categoryItemType) {
   return (
-    <BadgeStyle><Link to="/board/write">{category}</Link></BadgeStyle>
+    <BadgeStyle>{category}</BadgeStyle>
   )
 }
 

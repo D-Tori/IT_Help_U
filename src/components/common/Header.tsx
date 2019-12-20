@@ -6,12 +6,13 @@ import styled from 'styled-components';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 
 const NavbarStyle = styled.div`
 
   display: flex;
-  
+
   .navbar {
     width: 100%;
     background-color: #ffffff;
@@ -59,12 +60,12 @@ const NavbarStyle = styled.div`
       border: 1px solid #eee;
       border-radius: 20px;
     }
-    
+
   }
 
 
   .dropdown {
-    
+
   }
 
   p {
@@ -97,9 +98,9 @@ function Header() {
               <FormControl bsPrefix="search" as="input" type="text" placeholder="Search" className="mr-sm-2" />
               <Button >Search</Button>
             </Form>
-            <Nav.Item><Nav.Link href="/project">프로젝트</Nav.Link></Nav.Item>
+            <Nav.Item><Link to="/project">프로젝트</Link></Nav.Item>
             <Nav.Item><Nav.Link href="/mentors">멘토</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/board">고민게시판</Nav.Link></Nav.Item>
+            <Nav.Item><Link to="/board">고민게시판</Link></Nav.Item>
             <Nav.Item><Nav.Link href="/signup">회원가입</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/login">로그인</Nav.Link></Nav.Item>
           </Nav>

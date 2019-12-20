@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 import MenteeForm from './MenteeForm';
 
 function MenteeProfilePage(){
@@ -24,5 +24,5 @@ const FormContainer = styled.div`
   margin: 0 auto;
   @media(max-width: 799px){
     width: auto;
-  }  
+  }
 `

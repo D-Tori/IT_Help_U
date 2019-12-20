@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import useMenus from '../hooks/useMenus';
-import { Menu } from '../modules/menus';
+import useMenus from '../../hooks/useMenus';
+import MenuButton from './MenuButton';
 
 const StyleMenu = styled.div`
 
@@ -17,20 +17,20 @@ const StyleMenu = styled.div`
     margin: 0;
     font-size: 30px;
     font-weight: bold;
-    color: #000;
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
   }
-  button {
-    display: flex;
 
-  }
-  .none {
-    display: none;
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
 `;
 
 type MenuTitleType = {
   condition: string
 }
+
 
 
 
@@ -42,7 +42,9 @@ function MenuTitle({condition}: MenuTitleType) {
         <h1>
           {menus[selectedCondition].name}
         </h1>
-        <button className={menus[selectedCondition].isBtn ? "title-btn" : "none"}>{menus[selectedCondition].btnName}</button>
+        {menus[selectedCondition].isBtn ?
+         <MenuButton condition={condition} btnName={menus[selectedCondition].btnName}/>
+          : <></>}
       </StyleMenu>
 
 

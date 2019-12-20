@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 import MentorInfo from './MentorInfo';
 import QuestionForm from './QuestionForm';
 
@@ -27,11 +27,11 @@ const ContentContainer = styled.div`
   width: 800px;
   margin: 0 auto;
   padding-top: 81px
-  
+
 
   @media (max-width: 799px){
     width: auto;
     margin: 0 auto;
     padding-top: 81px
-  }  
+  }
 `

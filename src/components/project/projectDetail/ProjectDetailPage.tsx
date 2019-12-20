@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header';
+import Header from '../../common/Header';
 import ProjectDetail from './ProjectDetail';
-import MenuTitle from './MenuTitle';
+import MenuTitle from '../../common/MenuTitle';
 import styled from 'styled-components';
-import SubmitBtn from './SubmitBtn';
+import SubmitBtn from '../../common/SubmitBtn';
 import ProjectComment from './ProjectComment';
 
 

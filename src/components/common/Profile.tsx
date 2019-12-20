@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
 import styled from 'styled-components';
-import fifthImage from '../images/5.jpg';
-import mail from '../images/mail.svg';
-import phone from '../images/phone.svg';
+import fifthImage from '../../images/5.jpg';
+import mail from '../../images/mail.svg';
+import phone from '../../images/phone.svg';
 
 const Style = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const Style = styled.div`
 
   }
 
-  
+
 
   .img-btn {
     width: 25px;

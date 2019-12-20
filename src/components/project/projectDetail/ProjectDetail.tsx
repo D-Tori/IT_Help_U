@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Profile from './Profile';
-import ProjectState from './ProjectState';
+import Profile from '../../common/Profile';
+import ProjectState from '../projectList/ProjectState';
 
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const Container = styled.div`
   div {
     display: flex;
   }
-  
+
   .flex-row-sb {
     border-bottom: 1px solid #eee;
     align-items: center;
@@ -27,7 +27,7 @@ const Container = styled.div`
     width: 20%;
     font-weight: 800;
   }
-  
+
   .flex-item-content {
     padding: 10px;
   }
@@ -74,14 +74,14 @@ const Container = styled.div`
     }
   }
 
-  
+
 `
 
 
 
 function ProjectDetail () {
   return (
-    <> 
+    <>
       <Container>
         <div className="flex-row-sb">
           <div className="flex-item-name">프로젝트명</div>
@@ -92,7 +92,7 @@ function ProjectDetail () {
           <div className="flex-item-content">
             <Profile />
           </div>
-        </div>   
+        </div>
         <div className="flex-row-sb">
           <div className="flex-item-name">프로젝트 기간</div>
           <div className="flex-item-content">2019-12-01 ~ 2019-12-31</div>
@@ -117,8 +117,8 @@ function ProjectDetail () {
           <div className="project-intro">프로젝트 소개</div>
           <div className="project-intro-content">내가 말이야 이땅에 태어나서 하루 하루를 이렇게 살아본적이없어 ㅇㅋ? 구질구질하게 하지말자</div>
         </div>
-        
-        
+
+
       </Container>
     </>
   )

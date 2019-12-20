@@ -1,12 +1,12 @@
 import React from 'react';
 import BoardDetailContent from './BoardDetailContent';
-import IdDateComponent from './IdDateComponent';
+import IdDateComponent from '../../common/IdDateComponent';
 import styled from 'styled-components';
-import BoardState from './BoardState';
-import MenuTitle from './MenuTitle';
-import Header from './Header';
+import BoardState from '../boardList/BoardState';
+import MenuTitle from '../../common/MenuTitle';
+import Header from '../../common/Header';
 import BoardComment from './BoardComment';
-import Footer from './Footer';
+import Footer from '../../common/Footer';
 
 const BoardDetailStyle = styled.div`
   margin: 0 auto;
@@ -27,13 +27,13 @@ const BoardDetailStyle = styled.div`
     @media (max-width: 767px) {
       flex-direction: column;
       align-items: flex-start;
-      padding: 20px;
+      padding: 15px;
     }
   }
 
   @media (min-width: 360px) {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
   }
 
   @media (min-width: 1024px) {
