@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import icon from './images/icon-star.svg';
-import img from './images/Login-Illustration-1.svg';
+import icon from '../../images/icon-star.svg';
+import img from '../../images/Login-Illustration-1.svg';
 
 
 function LoginRight(){
@@ -28,7 +28,7 @@ const Container = styled.div`
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
-  
+
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -43,7 +43,7 @@ const Inner = styled.div`
   h3 {
     letter-spacing: 0rem;
     font-size: 18px;
-    line-height: 26px; 
+    line-height: 26px;
     margin-bottom: 15px;
     font-weight: 700;
     color: #171933;

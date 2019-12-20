@@ -16,9 +16,9 @@ import LoginForm from './LoginForm';
 
 function LoginLeft(){
   return (
-    <div className="col col-12 col-md-6 left ds-vertical-align">  
-      <LoginLogo />
+    <>
       <Inner>
+        <LoginLogo />
         <LoginBtn />
         <Divider>
           <span>이메일로 로그인하기</span>
@@ -30,15 +30,18 @@ function LoginLeft(){
           <Link to='/signUp'> 회원 가입하기</Link>
         </p>
       </Inner>
-    </div>  
+    </>
   );
 }
 
 export default LoginLeft;
 
 const Inner = styled.div`
-  padding: 150px 50px 50px;   // 위, 왼오, 아래
-  width: 100%;
+  display:flex;
+  flex-direction: column;
+
+  padding: 50px;
+
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
