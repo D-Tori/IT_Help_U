@@ -1,24 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Header';
-import Footer from '../Footer';
-import MentorInfo from './MentorInfo';
-import QuestionItem from './QuestionItem';
+import Header from '../../Header';
+import Footer from '../../Footer';
+import MentorInfo from '../detail/MentorInfo';
+import QuestionForm from './QuestionForm';
 
-function QuestionListPage() {
+function QuestionPage() {
   return(
     <>
       <Header />
       <ContentContainer>
         <MentorInfo />
-        <QuestionItem />
+        <QuestionForm />
       </ContentContainer>
       <Footer />
     </>
   );
 }
 
-export default QuestionListPage
+export default QuestionPage;
 
 const ContentContainer = styled.div`
   display: flex;
@@ -33,5 +33,5 @@ const ContentContainer = styled.div`
     width: auto;
     margin: 0 auto;
     padding-top: 81px
-  }  
+  }
 `

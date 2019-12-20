@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import ToggleButton from 'react-bootstrap/ToggleButton'
-import MenuTitle from '../MenuTitle';
 
 function MentorField(){
   return(

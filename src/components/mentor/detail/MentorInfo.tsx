@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'react-bootstrap/Image';
-import MentorImg from './images/mentor1.png';
+import MentorImg from '../../../images/mentor1.png';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 function MentorInfo() {
   return(
     <Info>
       <div className="mentorImg">
-        <Image className="img" src={MentorImg} roundedCircle />
+        <Link to='/mentors/detail'>
+          <Image className="img" src={MentorImg} roundedCircle />
+        </Link>
       </div>
       <div className="infoBox">
         <div className="name">
@@ -43,7 +46,7 @@ function MentorInfo() {
             <div className="title">직무 유형</div>
             <div className="detailInfo2">
               <div className="typeBlock">
-                <div className="typelabel">IT 개발</div>  
+                <div className="typelabel">IT 개발</div>
               </div>
             </div>
           </div>
@@ -55,32 +58,32 @@ function MentorInfo() {
                 <div className="typelabel">Java</div>
               </div>
               <div className="typeBlock">
-                <div className="typelabel">React</div>  
+                <div className="typelabel">React</div>
               </div>
               <div className="typeBlock">
-                <div className="typelabel">Python</div>  
+                <div className="typelabel">Python</div>
               </div>
               <div className="typeBlock">
-                <div className="typelabel">HTML/CSS</div>  
+                <div className="typelabel">HTML/CSS</div>
               </div>
               <div className="typeBlock">
-                <div className="typelabel">HTML/CSS</div>  
+                <div className="typelabel">HTML/CSS</div>
               </div>
               <div className="typeBlock">
-                <div className="typelabel">HTML/CSS</div>  
+                <div className="typelabel">HTML/CSS</div>
               </div>
               <div className="typeBlock">
-                <div className="typelabel">HTML/CSS</div>  
+                <div className="typelabel">HTML/CSS</div>
               </div>
               <div className="typeBlock">
-                <div className="typelabel">HTML/CSS</div>  
+                <div className="typelabel">HTML/CSS</div>
               </div>
             </div>
           </div>
 
           <div className="btnContainer">
             <Button className="btnFollow">팔로우</Button>
-            <Button className="btnQuestion" href="/menteeProfile">질문하기</Button>
+            <Button className="btnQuestion" href="/mentors/question">질문하기</Button>
           </div>
         </div>
       </div>
@@ -96,7 +99,7 @@ const Info = styled.div`
   justify-content: space-between;
   margin: 35px 0;
   padding: 0 15px;
-  
+
   @media(max-width: 799px){
     flex-direction: column;
     flex-wrap: wrap;
@@ -193,7 +196,7 @@ const Info = styled.div`
     @media(max-width: 620px){
       width: 100%;
       margin-top: 5px;
-    }  
+    }
   }
 
   .btnQuestion{

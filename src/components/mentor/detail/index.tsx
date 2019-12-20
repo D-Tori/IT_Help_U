@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../../Header';
+import Footer from '../../Footer';
 import MentorContainer from './MentorContainer';
 
 function MentorDetailPage(){
@@ -10,7 +10,7 @@ function MentorDetailPage(){
       <Header />
       <PageStyled>
         <MentorContainer />
-      </PageStyled>  
+      </PageStyled>
       <Footer />
     </>
   );

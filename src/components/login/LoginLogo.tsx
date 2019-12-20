@@ -1,26 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from './images/full-logo.svg'
+import logo from '../../images/full-logo.svg'
 import { Link } from 'react-router-dom';
 
 function LoginLogo(){
   return (
     <Logo>
-      <Link to='/'>
-        <img src= {logo} className="logo" alt="임시로고"/>
-      </Link>
+      <div className="logo-container">
+        <Link to='/'>
+          <img src= {logo} alt="임시로고"/>
+        </Link>
+      </div>
     </Logo>
   );
-}  
+}
 
 export default LoginLogo;
 
 const Logo = styled.div`
-  img.logo {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    margin-left: -90px;
-    max-width: 45%;
-  }
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 `
