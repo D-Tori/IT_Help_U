@@ -1,7 +1,7 @@
 import React from 'react';
-import upArrow from '../images/upArrow.svg';
-import downArrow from '../images/downArrow.svg';
-import like from '../images/like.svg';
+import upArrow from '../../../images/upArrow.svg';
+import downArrow from '../../../images/downArrow.svg';
+import like from '../../../images/like.svg';
 import Image from 'react-bootstrap/Image';
 import styled from 'styled-components';
 

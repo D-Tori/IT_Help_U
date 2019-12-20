@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'react-bootstrap/Image';
 
-import commentImage from '../images/comment (2).svg';
-import likeImage from '../images/like.svg';
-import viewImage from '../images/view.svg';
-import { Board } from '../modules/boards';
+import commentImage from '../../../images/comment (2).svg';
+import likeImage from '../../../images/like.svg';
+import viewImage from '../../../images/view.svg';
+
 
 const ItemState = styled.div`
   display: flex;

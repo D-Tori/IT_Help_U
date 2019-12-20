@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from './Header';
-import ImageSlider from './ImageSlider';
+import Header from './common/Header';
+import ImageSlider from './common/ImageSlider';
 
 
 import styled from 'styled-components';
-import Footer from './Footer';
+import Footer from './common/Footer';
 
 const PageViewStyle = styled.div`
   display: flex;

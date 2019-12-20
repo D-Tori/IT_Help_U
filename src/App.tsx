@@ -1,21 +1,21 @@
 import React from 'react';
 import Home from './components/Home'
 
-
-// import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Login from './components/login';
-import ProjectPage from './components/ProjectPage';
-import SignUp from './components/signUp';
+import Login from './components/login/';
+import ProjectPage from './components/project/projectList/ProjectPage';
+import SignUp from './components/signUp/';
 import ResetPw from './components/myPage/passWord/ResetPwPage';
-import Mentors from './components/mentor';
-import ProjectDetailPage from './components/ProjectDetailPage';
-import MentorDetail from './components/mentor/detail';
-import BoardPage from './components/BoardPage';
-import MenteeProfile from './components/myPage/menteeProfile';
-import Question from './components/mentor/question';
-import Questioner from './components/questioner';
-import BoardDetailPage from './components/BoardDetailPage';
+import Mentors from './components/mentor/';
+import ProjectDetailPage from './components/project/projectDetail/ProjectDetailPage';
+import MentorDetail from './components/mentor/detail/';
+import BoardPage from './components/board/boardList/BoardPage';
+import MenteeProfile from './components/myPage/menteeProfile/';
+import Question from './components/mentor/question/';
+import Questioner from './components/questioner/';
+import BoardDetailPage from './components/board/boardDetail/BoardDetailPage';
+import BoardWritePage from './components/board/boardWrite/BoardWritePage';
+
 
 const App: React.FC = () => {
   return (
@@ -33,6 +33,7 @@ const App: React.FC = () => {
         <Route path="/mentors/question" component={Question} />
         <Route path="/questioner" component={Questioner} />
         <Route path="/board/detail" component={BoardDetailPage} />
+        <Route path="/board/write" component={BoardWritePage} />
       </Switch>
   );
 }

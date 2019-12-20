@@ -1,11 +1,9 @@
 import React from 'react';
 import ProjectList from './ProjectList';
-import Header from './Header';
-import MenuTitle from './MenuTitle';
+import Header from '../../common/Header';
+import MenuTitle from '../../common/MenuTitle';
 import styled from 'styled-components';
-import MentorField from './mentor/MentorField';
-
-
+import MentorField from '../../mentor/MentorField';
 
 const PageContentStyle = styled.div`
 

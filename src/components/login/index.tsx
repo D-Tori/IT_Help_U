@@ -1,8 +1,8 @@
 import React from 'react';
 import LoginLeft from './LoginLeft';
 import LoginRight from './LoginRight';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 import styled from 'styled-components';
 
 function LoginPage() {

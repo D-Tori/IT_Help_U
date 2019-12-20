@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 import styled from 'styled-components';
 
-import Profile from './Profile';
+import Profile from '../../common/Profile';
 import ProjectState from './ProjectState';
 
 const CardItemStyle = styled.div`
@@ -26,10 +26,10 @@ const CardItemStyle = styled.div`
     border-bottom: 1px solid #eee;
     margin-bottom: 10px;
     padding-bottom: 5px;
-  }  
+  }
   .block {
     display: flex;
-    
+
   }
 
   .card-body {
@@ -48,7 +48,7 @@ const CardItemStyle = styled.div`
   }
   .apply-btn {
     display: flex;
-    
+
   }
   .apply-btn > a {
     color: #333;

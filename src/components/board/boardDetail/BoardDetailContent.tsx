@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import LikeContainer from './LikeContainer';
+import LikeContainer from '../boardList/LikeContainer';
 
 
 const ContentWrap = styled.div`
@@ -17,11 +17,11 @@ const ContentWrap = styled.div`
   }
 
   .content {
-    padding: 20px;
+    padding: 15px;
     @media (max-width: 767px) {
       padding: 10px;
     }
-  
+
   }
 
 `;

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import BoardList from './BoardList';
-import MenuTitle from './MenuTitle';
-import Footer from './Footer';
-import Header from './Header';
+import MenuTitle from '../../common/MenuTitle';
+import Footer from '../../common/Footer';
+import Header from '../../common/Header';
+import BoardWritePage from '../boardWrite/BoardWritePage';
 
 
 const PageViewContainer = styled.div`
@@ -31,6 +32,7 @@ function BoardPage() {
         <MenuTitle condition="boards"/>
         <BoardList />
       </PageViewContainer>
+      <BoardWritePage />
       <Footer />
     </>
   )

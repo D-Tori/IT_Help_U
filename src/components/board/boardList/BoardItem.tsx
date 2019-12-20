@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Badge from './Badge';
-import IdDateComponent from './IdDateComponent';
+import IdDateComponent from '../../common/IdDateComponent';
 
 import BoardState from './BoardState';
-import { Board } from '../modules/boards';
+import { Board } from '../../../modules/boards';
 
 
 const TitleWrapper = styled.div`
@@ -58,6 +58,7 @@ const AvatarContainer = styled.div`
   @media (max-width: 767px) {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 `
 

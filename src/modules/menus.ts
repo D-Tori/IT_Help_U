@@ -15,6 +15,12 @@ export type Menu = {
 
 type MenusState = Menu[];
 
+/**
+ *  name: 메뉴 이름
+    btnName: 버튼 이름
+    condition: 조건
+    isBtn: 버튼 유무
+ */
 const initialState: MenusState = [
   { name: "프로젝트 둘러보기", btnName: "새 프로젝트 작성", condition: "projects", isBtn: true},
   { name: "멘토", btnName: "명예 멘토", condition: "mentors", isBtn: true},
@@ -24,6 +30,7 @@ const initialState: MenusState = [
   { name: "댓글", btnName: "댓글 작성", condition: "comments", isBtn: true},
   { name: "프로젝트 상세내용", btnName: "목록 보기", condition: "project", isBtn: true},
   { name: "관련 기술", btnName: "", condition: "mentorSkill", isBtn: false},
+  { name: "새글 쓰기", btnName: "목록보기", condition: "boardWrite", isBtn: true},
 ]
 
 function menu (state: MenusState = initialState) {

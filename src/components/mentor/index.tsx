@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Header';
+import Header from '../common/Header';
 import MentorList from './MentorList';
 import MentorField from './MentorField';
-import Footer from '../Footer';
-import MenuTitle from '../MenuTitle';
+import Footer from '../common/Footer';
+import MenuTitle from '../common/MenuTitle';
 
 function MentorsPage(){
   return(
