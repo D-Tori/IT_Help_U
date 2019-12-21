@@ -8,29 +8,35 @@
 // 상태를 위한 타입 설정
 export type Menu = {
   name: string,
-  btnName: string,
+  toggleBtnName?: string,
+  funcBtnName?: string,
+  toggleBtn: boolean,
+  funcBtn: boolean,
   condition: string,
-  isBtn: boolean
+  routing?: string
 }
 
 type MenusState = Menu[];
 
 /**
- *  name: 메뉴 이름
-    btnName: 버튼 이름
-    condition: 조건
-    isBtn: 버튼 유무
+ *  name: string = 메뉴 이름
+    btnName: string = 버튼 이름
+    condition: string = 조건
+    addBtn: boolean = 기능 버튼 유무
+    toggleBtn: boolean = 라우팅, 필터링 버튼 유무
+    toggleBtnName: string = 라우팅, 필터링 버튼 이름
+    addBtnName: string = 기능 버튼 이름
  */
 const initialState: MenusState = [
-  { name: "프로젝트 둘러보기", btnName: "새 프로젝트 작성", condition: "projects", isBtn: true},
-  { name: "멘토", btnName: "명예 멘토", condition: "mentors", isBtn: true},
-  { name: "고민 게시판", btnName: "새글 작성", condition: "boards", isBtn: true},
-  { name: "사용 기술", btnName: "", condition: "projectSkills", isBtn: false},
-  { name: "고민 내용", btnName: "새글 작성", condition: "board", isBtn: true},
-  { name: "댓글", btnName: "댓글 작성", condition: "comments", isBtn: true},
-  { name: "프로젝트 상세내용", btnName: "목록 보기", condition: "project", isBtn: true},
-  { name: "관련 기술", btnName: "", condition: "mentorSkill", isBtn: false},
-  { name: "새글 쓰기", btnName: "목록보기", condition: "boardWrite", isBtn: true},
+  { name: "프로젝트 둘러보기", toggleBtnName: "모집중", funcBtnName: "새 프로젝트 작성", condition: "projects", toggleBtn: true, funcBtn: true, routing: 'project/write' },
+  { name: "멘토", toggleBtnName: "명예 멘토", condition: "mentors", toggleBtn: true, funcBtn: false},
+  { name: "고민 게시판", funcBtnName: "새글 작성", condition: "boards", toggleBtn: false, funcBtn: true, routing: 'board/write'},
+  { name: "사용 기술", condition: "projectSkills", toggleBtn: false, funcBtn: false},
+  { name: "고민 내용", funcBtnName: "새글 작성", condition: "board", toggleBtn: false, funcBtn: true, routing: 'project/write'},
+  { name: "댓글", funcBtnName: "댓글 작성", condition: "comments", toggleBtn: false, funcBtn: true},
+  { name: "프로젝트 상세내용", funcBtnName: "목록 보기", condition: "project", toggleBtn: true, funcBtn: true, routing: 'projects'},
+  { name: "관련 기술", condition: "mentorSkill", toggleBtn: false, funcBtn: false},
+  { name: "새글 쓰기", funcBtnName: "목록보기", condition: "boardWrite", toggleBtn: false, funcBtn: true, routing: 'board/write'},
 ]
 
 function menu (state: MenusState = initialState) {
@@ -38,3 +44,4 @@ function menu (state: MenusState = initialState) {
 }
 
 export default menu;
+

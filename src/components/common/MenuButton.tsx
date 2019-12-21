@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 type ConditionType = {
-  btnName: string
+  routing?: string
+  btnName?: string
   condition: string
 }
 
 const ButtonStyle = styled.div`
   display: flex;
+  margin-left: 5px;
 
   .projects {
     background-color: #fff;
@@ -29,9 +32,16 @@ const ButtonStyle = styled.div`
   }
 `;
 
-function MenuButton ({ btnName, condition }: ConditionType) {
+function MenuButton ({routing, btnName, condition }: ConditionType) {
   return (
-    <ButtonStyle><Button className={condition}>{btnName}</Button></ButtonStyle>
+    <ButtonStyle>
+      {routing?
+        <Link to={routing}>
+          <Button className={condition}>{btnName}</Button>
+        </Link> :
+        <Button className={condition}>{btnName}</Button>
+      }
+    </ButtonStyle>
   )
 }
 

@@ -21,6 +21,10 @@ const StyleMenu = styled.div`
       margin: 0 auto;
     }
   }
+  .menu-title-btns {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -34,18 +38,24 @@ type MenuTitleType = {
 
 
 
-function MenuTitle({condition}: MenuTitleType) {
+function MenuTitle({ condition }: MenuTitleType) {
   const menus = useMenus();
   const selectedCondition = menus.findIndex(menu => menu.condition === condition);
   return (
-      <StyleMenu>
-        <h1>
-          {menus[selectedCondition].name}
-        </h1>
-        {menus[selectedCondition].isBtn ?
-         <MenuButton condition={condition} btnName={menus[selectedCondition].btnName}/>
+    <StyleMenu>
+      <h1>
+        {menus[selectedCondition].name}
+      </h1>
+      <div className="menu-title-btns">
+        {menus[selectedCondition].funcBtn ?
+          <MenuButton routing={menus[selectedCondition].routing} condition={condition} btnName={menus[selectedCondition].funcBtnName} />
           : <></>}
-      </StyleMenu>
+        {menus[selectedCondition].toggleBtn ?
+          <MenuButton condition={condition} btnName={menus[selectedCondition].toggleBtnName} />
+          : <></>}
+      </div>
+
+    </StyleMenu>
 
 
   )

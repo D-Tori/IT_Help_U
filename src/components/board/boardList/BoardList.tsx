@@ -10,7 +10,6 @@ const BoardListContainer = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  padding: 15px;
 
   ul {
     list-style: none;

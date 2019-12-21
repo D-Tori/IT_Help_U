@@ -2,7 +2,6 @@ import React from 'react';
 import BoardDetailContent from './BoardDetailContent';
 import IdDateComponent from '../../common/IdDateComponent';
 import styled from 'styled-components';
-import BoardState from '../boardList/BoardState';
 import MenuTitle from '../../common/MenuTitle';
 import Header from '../../common/Header';
 import BoardComment from './BoardComment';

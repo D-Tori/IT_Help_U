@@ -9,7 +9,7 @@ import Header from '../../common/Header';
 const PageViewContainer = styled.div`
   display: flex;
   flex-direction: column;
-
+  padding: 15px;
   margin: 0 auto;
 
   @media (min-width: 360px) {
