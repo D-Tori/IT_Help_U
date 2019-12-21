@@ -32,6 +32,7 @@ const PageStyled = styled.div`
   .left-page {
     display: flex;
     width: 50%
+
     @media (max-width: 767px){
       width: 100%;
     }

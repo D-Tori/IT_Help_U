@@ -6,29 +6,30 @@ import { Link } from 'react-router-dom';
 
 function ResetPwLeft() {
   return(
-    <div className="col col-12 col-md-6 left ds-vertical-align">
+    <ContentBox>
       <LoginLogo />
-      <Inner>
+      <div>
         <h1>비밀번호 초기화</h1>
-        <Divider>
-          <span>확인 메일 보내기</span>
-        </Divider>
-        <ResetPwForm />
-        <Divider />
-        <p className="no-account">
-          <Link to='/login'> 로그인하러 가기</Link>
-        </p>
-      </Inner>
-    </div>
+      </div>
+      <Divider>
+        <span>확인 메일 보내기</span>
+      </Divider>
+      <ResetPwForm />
+      <Divider />
+      <p className="no-account">
+        <Link to='/login'> 로그인하러 가기</Link>
+      </p>
+    </ContentBox>
   );
 }
 
 export default ResetPwLeft;
 
-const Inner = styled.div`
-  padding: 150px 50px 50px;   // 위, 왼오, 아래
-  width: 100%;
-  max-width: 500px;
+const ContentBox = styled.div`
+  display:flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
 
