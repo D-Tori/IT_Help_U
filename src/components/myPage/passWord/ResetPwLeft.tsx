@@ -1,31 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import LoginLogo from './LoginLogo';
-import SignUpForm from './SignUpForm';
-import SignUpBtn from './SignUpBtn';
+import LoginLogo from '../../login/LoginLogo';
+import ResetPwForm from './ResetPwForm';
 import { Link } from 'react-router-dom';
 
-function SignUpLeft(){
-  return (
+function ResetPwLeft() {
+  return(
     <div className="col col-12 col-md-6 left ds-vertical-align">
       <LoginLogo />
       <Inner>
-        <SignUpBtn />
+        <h1>비밀번호 초기화</h1>
         <Divider>
-          <span>이메일로 회원 가입하기</span>
+          <span>확인 메일 보내기</span>
         </Divider>
-        <SignUpForm />
+        <ResetPwForm />
         <Divider />
-        <p className="account">
-          "계정이 있으신가요?"
-          <Link to="/login">로그인 하기</Link>
+        <p className="no-account">
+          <Link to='/login'> 로그인하러 가기</Link>
         </p>
       </Inner>
     </div>
   );
 }
 
-export default SignUpLeft;
+export default ResetPwLeft;
 
 const Inner = styled.div`
   padding: 150px 50px 50px;   // 위, 왼오, 아래
@@ -38,7 +36,7 @@ const Inner = styled.div`
     text-align: left;
   }
 
-  .account {
+  .no-account {
     padding: 20px 0;
   }
 `

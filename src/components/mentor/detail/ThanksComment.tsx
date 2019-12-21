@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MenteeImg from './images/mentee1.jpg'
+import MenteeImg from '../../../images/mentee1.jpg'
 import Image from 'react-bootstrap/Image';
 
 function ThanksComment() {

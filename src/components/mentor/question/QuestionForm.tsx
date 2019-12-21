@@ -31,7 +31,7 @@ function QuestionForm() {
           </Form.Group>
 
           <div className="btn-container">
-            <Button type="submit" className="btn-modified" href="/questionList">임시 저장</Button>
+            <Button type="submit" className="btn-modified" href="/questioner">임시 저장</Button>
           </div>
         </Form>
       </div>
@@ -52,7 +52,7 @@ const ContentsContainer = styled.div`
 
   @media(max-width: 799px){
     width: 100%;
-  } 
+  }
 
   .divider {
     display: flex;

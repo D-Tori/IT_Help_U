@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'react-bootstrap/Image';
-import MentorImg from './images/mentor1.png';
+import MentorImg from '../../images/mentor1.png';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { Mentor } from '../../modules/mentors';
@@ -16,7 +16,7 @@ function MentorItem({ mentor }: MentorItemProps){
       <div className="container">
           <div className="top">
             <div className="mentor-img">
-              <Link to='/mentorDetail'>
+              <Link to='/mentors/detail'>
                 <Image className="img" src={MentorImg} roundedCircle />
               </Link>
             </div>
@@ -37,7 +37,7 @@ function MentorItem({ mentor }: MentorItemProps){
               </div>
             </div>
             <div className="btn-container">
-              <Link to='menteeProfile'>
+              <Link to='/myPage/menteeProfile'>
                 <Button size="sm">질문하기</Button>
               </Link>
             </div>

@@ -2,23 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
-import MentorInfo from './MentorInfo';
-import QuestionForm from './QuestionForm';
+import MentorInfo from '../mentor/detail/MentorInfo';
+import QuestionItem from './QuestionItem';
 
-function QuestionPage() {
+function QuestionListPage() {
   return(
     <>
       <Header />
       <ContentContainer>
         <MentorInfo />
-        <QuestionForm />
+        <QuestionItem />
       </ContentContainer>
       <Footer />
     </>
   );
 }
 
-export default QuestionPage;
+export default QuestionListPage
 
 const ContentContainer = styled.div`
   display: flex;

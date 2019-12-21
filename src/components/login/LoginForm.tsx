@@ -23,7 +23,7 @@ function LoginForm(){
       <div className="row">
         <div className="col col-12 col-lg6">
           <div className="form-group">
-            <Link to='/resetPw'>비밀번호를 잊어버리셨나요?</Link>
+            <Link to='/myPage/resetPw'>비밀번호를 잊어버리셨나요?</Link>
           </div>
         </div>
       </div>
