@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import styled from 'styled-components';
 import IdDateComponent from '../../common/IdDateComponent';
 import Image from 'react-bootstrap/Image';

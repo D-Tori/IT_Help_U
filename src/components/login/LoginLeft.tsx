@@ -16,8 +16,7 @@ import LoginForm from './LoginForm';
 
 function LoginLeft(){
   return (
-    <>
-      <Inner>
+      <ContentBox>
         <LoginLogo />
         <LoginBtn />
         <Divider>
@@ -29,14 +28,13 @@ function LoginLeft(){
           "계정이 없으신가요?"
           <Link to='/signUp'> 회원 가입하기</Link>
         </p>
-      </Inner>
-    </>
+      </ContentBox>
   );
 }
 
 export default LoginLeft;
 
-const Inner = styled.div`
+const ContentBox = styled.div`
   display:flex;
   flex-direction: column;
 
