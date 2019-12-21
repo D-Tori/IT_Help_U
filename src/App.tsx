@@ -5,18 +5,18 @@ import Home from './components/Home'
 // import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/login/LoginPage';
-import ProjectPage from './components/project/projectList/ProjectPage';
+import ProjectPage from './components/project/projectList';
 import SignUp from './components/login/SignUpPage';
 import ResetPw from './components/login/ResetPwPage';
 import Mentors from './components/login/MentorsPage';
 import ProjectDetailPage from './components/project/projectDetail/ProjectDetailPage';
 import MentorDetail from './components/login/MentorDetailPage';
-import BoardPage from './components/board/boardList/BoardPage';
+import BoardPage from './components/board/boardList';
 import MenteeProfile from './components/login/MenteeProfilePage';
 import Question from './components/login/QuestionPage';
 import QuestionList from './components/login/QuestionListPage';
-import BoardDetailPage from './components/board/boardDetail/BoardDetailPage';
-import BoardWritePage from './components/board/boardWrite/BoardWritePage';
+import BoardDetailPage from './components/board/boardDetail';
+import BoardWritePage from './components/board/boardWrite';
 
 const App: React.FC = () => {
   return (

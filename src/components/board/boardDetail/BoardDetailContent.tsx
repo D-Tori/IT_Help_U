@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import LikeContainer from '../boardList/LikeContainer';
+import LikeContainer from './LikeContainer';
 
 
 const ContentWrap = styled.div`

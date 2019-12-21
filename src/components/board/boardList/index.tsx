@@ -4,7 +4,6 @@ import BoardList from './BoardList';
 import MenuTitle from '../../common/MenuTitle';
 import Footer from '../../common/Footer';
 import Header from '../../common/Header';
-import BoardWritePage from '../boardWrite/BoardWritePage';
 
 
 const PageViewContainer = styled.div`
@@ -32,7 +31,6 @@ function BoardPage() {
         <MenuTitle condition="boards"/>
         <BoardList />
       </PageViewContainer>
-      <BoardWritePage />
       <Footer />
     </>
   )

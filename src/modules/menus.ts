@@ -1,9 +1,9 @@
-enum Color {
-  Main = "#5457ff",
-  Darkmain = "#4a47d5",
-  Point = "#963484",
-  border = "#eee"
-}
+// enum Color {
+//   Main = "#5457ff",
+//   Darkmain = "#4a47d5",
+//   Point = "#963484",
+//   border = "#eee"
+// }
 
 // 상태를 위한 타입 설정
 export type Menu = {
