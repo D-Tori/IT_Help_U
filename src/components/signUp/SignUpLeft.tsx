@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import LoginLogo from '../login/LoginLogo';
 import SignUpForm from './SignUpForm';
-import SignUpBtn from './SignUpBtn';
 import { Link } from 'react-router-dom';
+import SnsBtns from '../login/SnsBtns';
 
 function SignUpLeft(){
   return (
     <ContentBox>
       <LoginLogo />
-      <SignUpBtn />
+      <SnsBtns condition="signup" />
       <Divider>
         <span>이메일로 회원 가입하기</span>
       </Divider>

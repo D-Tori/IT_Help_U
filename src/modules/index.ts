@@ -3,11 +3,13 @@ import { combineReducers } from 'redux';
 import board from './boards';
 import menu from './menus';
 import mentors from './mentors';
+import snsbtn from './snsBtn';
 
 const rootReducer = combineReducers({
   board,
   menu,
-  mentors
+  mentors,
+  snsbtn
 });
 
 export default rootReducer;

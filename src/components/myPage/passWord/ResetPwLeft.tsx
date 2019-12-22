@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import LoginLogo from '../../login/LoginLogo';
 import ResetPwForm from './ResetPwForm';
 import { Link } from 'react-router-dom';
+import SnsBtns from '../../login/SnsBtns';
 
 function ResetPwLeft() {
   return(
     <ContentBox>
       <LoginLogo />
-      <div>
-        <h1>비밀번호 초기화</h1>
-      </div>
+      <SnsBtns condition="resetpw" />
       <Divider>
         <span>확인 메일 보내기</span>
       </Divider>

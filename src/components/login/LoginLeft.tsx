@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import LoginLogo from './LoginLogo';
-import LoginBtn from './LoginBtn';
 import LoginForm from './LoginForm';
+import SnsBtns from './SnsBtns'
 
 function LoginLeft(){
   return (
       <ContentBox>
         <LoginLogo />
-        <LoginBtn />
+        <SnsBtns condition="login"/>
         <Divider>
           <span>이메일로 로그인하기</span>
         </Divider>
