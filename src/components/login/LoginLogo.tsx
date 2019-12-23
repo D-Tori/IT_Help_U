@@ -20,5 +20,5 @@ export default LoginLogo;
 const ContentBox = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 `

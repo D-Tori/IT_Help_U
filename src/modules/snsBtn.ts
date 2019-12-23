@@ -23,6 +23,7 @@ const initailState: SnsBtnState = [
   { name: "Welcome Back", btnGoogle: "Login with Google", btnNaver: "Login with Naver", btnKakao: "Login with Kakao", btnFacebook: "Login with Facebook", condition: "login", isBtn: true},
   { name: "Welcome", btnGoogle: "Sign up with Google", btnNaver: "Sign up with Naver", btnKakao: "Sign up with Kakao", btnFacebook: "Sign up with Facebook", condition: "signup", isBtn: true},
   { name: "비밀번호 초기화", btnGoogle: "", btnNaver: "", btnKakao: "", btnFacebook: "", condition: "resetpw", isBtn: false},
+  { name: "멘토 지원하기", btnGoogle: "", btnNaver: "", btnKakao: "", btnFacebook: "", condition: "mentorapply", isBtn: false},
 ]
 
 // 리듀서 구현

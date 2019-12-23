@@ -40,7 +40,7 @@ const ContentBox = styled.div`
   flex-direction: column;
 
   h1 {
-    margin: 5px;
+    margin: 10px 0;
   }
 
   .btn {

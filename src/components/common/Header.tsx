@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Header.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import styled from 'styled-components';
@@ -77,6 +76,17 @@ const NavbarStyle = styled.div`
     background-color: #fff
   }
 
+
+  // hong
+  a {
+    color: #111;
+    margin: 0 5px;
+
+    &:hover {
+      color: #5457ff;
+    }
+  }
+
 `
 
 
@@ -98,11 +108,12 @@ function Header() {
               <FormControl bsPrefix="search" as="input" type="text" placeholder="Search" className="mr-sm-2" />
               <Button >Search</Button>
             </Form>
-            <Nav.Item><Link to="/project">프로젝트</Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/mentors">멘토</Nav.Link></Nav.Item>
-            <Nav.Item><Link to="/board">고민게시판</Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/signup">회원가입</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/login">로그인</Nav.Link></Nav.Item>
+            <Nav.Item><Link to="/project">프로젝트 </Link></Nav.Item>
+            <Nav.Item><Link to="/mentors">멘토 </Link></Nav.Item>
+            <Nav.Item><Link to="/board">고민게시판 </Link></Nav.Item>
+            <Nav.Item><Link to="/mentors/application">멘토 지원 </Link></Nav.Item>
+            <Nav.Item><Link to="/signup">회원가입 </Link></Nav.Item>
+            <Nav.Item><Link to="/login">로그인 </Link></Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

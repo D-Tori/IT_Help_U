@@ -15,7 +15,7 @@ import Question from './components/mentor/question/';
 import Questioner from './components/questioner/';
 import BoardDetailPage from './components/board/boardDetail/BoardDetailPage';
 import BoardWritePage from './components/board/boardWrite/BoardWritePage';
-
+import MentorApplication from './components/mentor/application/';
 
 const App: React.FC = () => {
   return (
@@ -34,6 +34,7 @@ const App: React.FC = () => {
         <Route path="/questioner" component={Questioner} />
         <Route path="/board/detail" component={BoardDetailPage} />
         <Route path="/board/write" component={BoardWritePage} />
+        <Route path="/mentors/application" component={MentorApplication} />
       </Switch>
   );
 }
