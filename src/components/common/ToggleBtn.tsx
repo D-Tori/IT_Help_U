@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
+
 type ConditionType = {
+  btnName: string,
   routing?: string
-  btnName?: string
-  condition: string
 }
 
-const ButtonStyle = styled.div`
+const ToggleBtnStyle = styled.button`
   display: flex;
   margin-left: 5px;
 
@@ -32,17 +31,18 @@ const ButtonStyle = styled.div`
   }
 `;
 
-function MenuButton ({routing, btnName, condition }: ConditionType) {
+function ToggleBtn ({ btnName, routing }: ConditionType) {
+
+  let routingProp: string = '';
+
+  if(routing !== undefined) {
+    routingProp = routing;
+  }
+
+
   return (
-    <ButtonStyle>
-      {routing?
-        <Link to={routing}>
-          <Button className={condition}>{btnName}</Button>
-        </Link> :
-        <Button className={condition}>{btnName}</Button>
-      }
-    </ButtonStyle>
+    <Link to={routingProp}><ToggleBtnStyle>{btnName}</ToggleBtnStyle></Link>
   )
 }
 
-export default MenuButton;
+export default ToggleBtn;

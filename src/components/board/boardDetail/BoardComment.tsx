@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import BoardCommentItem from './BoardCommentItem';
+import CommentInput from './CommentInput';
 
 
 const CommentContainer = styled.div`
   display: flex;
   flex-direction: column;
 
+
+  .comment-input {
+    margin-bottom: 20px;
+    min-height: 150px;
+  }
 `;
 
 const CommentHeader = styled.div`
@@ -24,11 +30,18 @@ const CommentHeader = styled.div`
     margin: 0;
 
   }
+
+
 `;
 
-function BoardComment () {
+type BoardPropsType = {
+  isAdd: boolean
+}
+
+function BoardComment ({ isAdd }: BoardPropsType) {
   return (
     <CommentContainer>
+      {isAdd ? <div className="comment-input"><CommentInput /></div> : <></>}
       <CommentHeader>
         <h3>댓글 3</h3>
       </CommentHeader>

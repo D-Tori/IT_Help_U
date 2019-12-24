@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Badge from './Badge';
-import IdDateComponent from '../../common/IdDateComponent';
+import IdDateComponent from '../common/IdDateComponent';
 
 import BoardState from './BoardState';
-import { Board } from '../../../modules/boards';
+import { Board } from '../../modules/boards';
+import { useRouteMatch, Link } from 'react-router-dom';
 
 
 const TitleWrapper = styled.div`
@@ -77,15 +78,18 @@ const BoardItemContainer = styled.li`
 
 
 type BoardItemType = {
-  board: Board;
+  board: Board,
+  key: number
 }
 
 function BoardItem({ board }: BoardItemType) {
+  let { url } = useRouteMatch();
+  console.log(url);
   return (
     <BoardItemContainer>
       <TitleWrapper>
         <span>#{board.id}</span>
-        <h5><a href="/board/detail">{board.title}</a></h5>
+        <Link key={board.id} to={`${url}/${board.id}`}><h5>{board.title}</h5></Link>
         <div>
           {board.category.map(category => (
             <Badge category={category}/>

@@ -1,8 +1,11 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import useMenus from '../../hooks/useMenus';
-import MenuButton from './MenuButton';
+import RoutingBtn from './RoutingBtn';
+import BackBtn from './BackBtn';
+import ToggleBtn from './ToggleBtn';
+import AddBtn from './AddBtn';
+
 
 const StyleMenu = styled.div`
 
@@ -21,9 +24,8 @@ const StyleMenu = styled.div`
       margin: 0 auto;
     }
   }
-  .menu-title-btns {
+  .btn-container {
     display: flex;
-    justify-content: flex-end;
   }
 
   @media (max-width: 767px) {
@@ -32,29 +34,44 @@ const StyleMenu = styled.div`
 `;
 
 type MenuTitleType = {
-  condition: string
+  menuTitle: string,
+  routingBtnName?: string,
+  backBtnName?: string,
+  toggleBtnName?: string,
+  addBtnName?: string,
+  routing?: string,
+  onClick?: () => void
 }
 
+function MenuTitle({ menuTitle, routingBtnName, backBtnName, toggleBtnName, addBtnName, routing, onClick }: MenuTitleType) {
 
+  let routingBtn = null;
+  let backBtn = null;
+  let toggleBtn = null;
+  let addBtn = null;
 
+  if(routingBtnName !== null && routingBtnName !== undefined) {
+    routingBtn = <RoutingBtn btnName={routingBtnName} routing={routing} />
+  };
+  if(backBtnName !== null && backBtnName !== undefined) {
+    backBtn = <BackBtn btnName={backBtnName} />;
+  };
+  if(toggleBtnName !== null && toggleBtnName !== undefined) {
+    toggleBtn = <ToggleBtn routing={routing} btnName={toggleBtnName} />;
+  };
+  if(addBtnName !== null && addBtnName !== undefined) {
+    addBtn = <AddBtn onClickHandler={onClick} btnName={addBtnName} />;
+  };
 
-function MenuTitle({ condition }: MenuTitleType) {
-  const menus = useMenus();
-  const selectedCondition = menus.findIndex(menu => menu.condition === condition);
   return (
     <StyleMenu>
-      <h1>
-        {menus[selectedCondition].name}
-      </h1>
-      <div className="menu-title-btns">
-        {menus[selectedCondition].funcBtn ?
-          <MenuButton routing={menus[selectedCondition].routing} condition={condition} btnName={menus[selectedCondition].funcBtnName} />
-          : <></>}
-        {menus[selectedCondition].toggleBtn ?
-          <MenuButton condition={condition} btnName={menus[selectedCondition].toggleBtnName} />
-          : <></>}
+      <h1>{menuTitle}</h1>
+      <div className="btn-container">
+        {routingBtn ? routingBtn : <></>}
+        {backBtn ? backBtn : <></>}
+        {toggleBtn ? toggleBtn : <></>}
+        {addBtn ? addBtn : <></>}
       </div>
-
     </StyleMenu>
 
 

@@ -100,7 +100,7 @@ function Header() {
             </Form>
             <Nav.Item><Link to="/project">프로젝트</Link></Nav.Item>
             <Nav.Item><Nav.Link href="/mentors">멘토</Nav.Link></Nav.Item>
-            <Nav.Item><Link to="/board">고민게시판</Link></Nav.Item>
+            <Nav.Item><Link to="/boards">고민게시판</Link></Nav.Item>
             <Nav.Item><Nav.Link href="/signup">회원가입</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/login">로그인</Nav.Link></Nav.Item>
           </Nav>

@@ -30,9 +30,9 @@ function ProjectPage() {
     <>
       <Header />
       <PageContentStyle>
-        <MenuTitle condition='projectSkills'/>
+          <MenuTitle menuTitle="사용 기술" />
           <MentorField />
-        <MenuTitle condition='projects'/>
+          <MenuTitle menuTitle="프로젝트" toggleBtnName="모집중" routingBtnName="프로젝트 개설" routing="project/write" />
         <ProjectList />
       </PageContentStyle>
     </>

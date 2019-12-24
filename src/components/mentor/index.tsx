@@ -11,9 +11,9 @@ function MentorsPage(){
     <>
       <Header />
       <PageContent>
-        <MenuTitle condition="mentorSkill"/>
+        <MenuTitle menuTitle="관련 기술" />
         <MentorField />
-        <MenuTitle condition="mentors"/>
+        <MenuTitle menuTitle="멘토" toggleBtnName="명예멘토" />
         <MentorList />
       </PageContent>
       <Footer />
