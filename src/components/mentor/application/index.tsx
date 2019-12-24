@@ -1,15 +1,12 @@
 import React from 'react';
 import LoginRight from '../../login/LoginRight';
 import ApplyLeft from './ApplyLeft';
-import Header from '../../common/Header';
-import Footer from '../../common/Footer';
 import styled from 'styled-components';
 import img from '../../../images/Login-Illustration-1.svg';
 
 function MentorApplication() {
   return(
     <>
-      <Header />
       <PageStyled>
         <div className="left-page">
           <ApplyLeft/>
@@ -18,7 +15,6 @@ function MentorApplication() {
           <LoginRight/>
         </div>
       </PageStyled>
-      <Footer />
     </>
   );
 }

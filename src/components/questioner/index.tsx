@@ -1,19 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../common/Header';
-import Footer from '../common/Footer';
 import MentorInfo from '../mentor/detail/MentorInfo';
 import QuestionItem from './QuestionItem';
 
 function QuestionListPage() {
   return(
     <>
-      <Header />
       <ContentContainer>
         <MentorInfo />
         <QuestionItem />
       </ContentContainer>
-      <Footer />
     </>
   );
 }

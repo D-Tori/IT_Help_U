@@ -1,8 +1,11 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import useMenus from '../../hooks/useMenus';
-import MenuButton from './MenuButton';
+import RoutingBtn from './RoutingBtn';
+import BackBtn from './BackBtn';
+import ToggleBtn from './ToggleBtn';
+import AddBtn from './AddBtn';
+
 
 const StyleMenu = styled.div`
 
@@ -21,6 +24,9 @@ const StyleMenu = styled.div`
       margin: 0 auto;
     }
   }
+  .btn-container {
+    display: flex;
+  }
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -28,24 +34,45 @@ const StyleMenu = styled.div`
 `;
 
 type MenuTitleType = {
-  condition: string
+  menuTitle: string,
+  routingBtnName?: string,
+  backBtnName?: string,
+  toggleBtnName?: string,
+  addBtnName?: string,
+  routing?: string,
+  onClick?: () => void
 }
 
+function MenuTitle({ menuTitle, routingBtnName, backBtnName, toggleBtnName, addBtnName, routing, onClick }: MenuTitleType) {
 
+  let routingBtn = null;
+  let backBtn = null;
+  let toggleBtn = null;
+  let addBtn = null;
 
+  if(routingBtnName !== null && routingBtnName !== undefined) {
+    routingBtn = <RoutingBtn btnName={routingBtnName} routing={routing} />
+  };
+  if(backBtnName !== null && backBtnName !== undefined) {
+    backBtn = <BackBtn btnName={backBtnName} />;
+  };
+  if(toggleBtnName !== null && toggleBtnName !== undefined) {
+    toggleBtn = <ToggleBtn routing={routing} btnName={toggleBtnName} />;
+  };
+  if(addBtnName !== null && addBtnName !== undefined) {
+    addBtn = <AddBtn onClickHandler={onClick} btnName={addBtnName} />;
+  };
 
-function MenuTitle({condition}: MenuTitleType) {
-  const menus = useMenus();
-  const selectedCondition = menus.findIndex(menu => menu.condition === condition);
   return (
-      <StyleMenu>
-        <h1>
-          {menus[selectedCondition].name}
-        </h1>
-        {menus[selectedCondition].isBtn ?
-         <MenuButton condition={condition} btnName={menus[selectedCondition].btnName}/>
-          : <></>}
-      </StyleMenu>
+    <StyleMenu>
+      <h1>{menuTitle}</h1>
+      <div className="btn-container">
+        {routingBtn ? routingBtn : <></>}
+        {backBtn ? backBtn : <></>}
+        {toggleBtn ? toggleBtn : <></>}
+        {addBtn ? addBtn : <></>}
+      </div>
+    </StyleMenu>
 
 
   )

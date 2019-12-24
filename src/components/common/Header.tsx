@@ -77,7 +77,7 @@ const NavbarStyle = styled.div`
   }
 
 
-  // hong
+  // 기석 : 임시로 설정함
   a {
     color: #111;
     margin: 0 5px;
@@ -110,7 +110,7 @@ function Header() {
             </Form>
             <Nav.Item><Link to="/project">프로젝트 </Link></Nav.Item>
             <Nav.Item><Link to="/mentors">멘토 </Link></Nav.Item>
-            <Nav.Item><Link to="/board">고민게시판 </Link></Nav.Item>
+            <Nav.Item><Link to="/boards">고민게시판 </Link></Nav.Item>
             <Nav.Item><Link to="/mentors/application">멘토 지원 </Link></Nav.Item>
             <Nav.Item><Link to="/signup">회원가입 </Link></Nav.Item>
             <Nav.Item><Link to="/login">로그인 </Link></Nav.Item>

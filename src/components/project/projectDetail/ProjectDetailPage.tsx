@@ -26,10 +26,10 @@ function ProjectDetailPage () {
     <>
       <Header />
       <PageViewContainer>
-        <MenuTitle condition="project"/>
+        <MenuTitle menuTitle="프로젝트 상세보기" backBtnName="목록보기"/>
         <ProjectDetail />
         <SubmitBtn />
-        <MenuTitle condition="comments"/>
+        <MenuTitle menuTitle="댓글" addBtnName="댓글쓰기" />
         <ProjectComment />
       </PageViewContainer>
     </>

@@ -1,6 +1,6 @@
 // 액션 Type
 const ADD_BOARD = 'boards/ADD_BOARD' as const;
-const DELETE_BOARD = 'boards/DELETE_BOARD' as const;
+// const DELETE_BOARD = 'boards/DELETE_BOARD' as const;
 
 // 액션 생성 함수
 export const addBoard = (payload: Board) => ({

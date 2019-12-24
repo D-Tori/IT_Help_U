@@ -1,15 +1,12 @@
 import React from 'react';
 import LoginLeft from './LoginLeft';
 import LoginRight from './LoginRight';
-import Header from '../common/Header';
-import Footer from '../common/Footer';
 import styled from 'styled-components';
 import img from '../../images/Login-Illustration-1.svg';
 
 function LoginPage() {
   return(
     <>
-      <Header />
       <PageStyled>
         <div className="left-page">
           <LoginLeft/>
@@ -18,7 +15,6 @@ function LoginPage() {
           <LoginRight/>
         </div>
       </PageStyled>
-      <Footer />
     </>
   );
 }

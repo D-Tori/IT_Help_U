@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Form from 'react-bootstrap/Form';
 import useAddBoard from '../../../hooks/AddBoard';
-import { Board } from '../../../modules/boards';
+
 
 
 

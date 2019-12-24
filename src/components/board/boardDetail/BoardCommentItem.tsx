@@ -1,12 +1,7 @@
  import React from 'react';
 import styled from 'styled-components';
 import IdDateComponent from '../../common/IdDateComponent';
-import Image from 'react-bootstrap/Image';
-import like from '../images/like.svg';
-
-import upArrow from '../images/upArrow.svg';
-import downArrow from '../images/downArrow.svg';
-import LikeContainer from '../boardList/LikeContainer';
+import LikeContainer from './LikeContainer';
 
 const CommentItem = styled.div`
   width: 100%;

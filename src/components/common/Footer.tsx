@@ -48,7 +48,7 @@ const FooterContainer = styled.div`
   footer ul li .footer-link:hover {
     color: #fff;
   }
-  
+
 
   .footer-info {
     display: flex;
@@ -71,7 +71,7 @@ const FooterContainer = styled.div`
       display: flex;
       flex-direction: column;
     }
-    
+
     .logo {
       margin-bottom: 5px;
     }
@@ -94,7 +94,7 @@ const FooterContainer = styled.div`
     }
   }
 
-  
+
 
 `
 
@@ -107,13 +107,13 @@ function Footer() {
             ITHelpU
           </div>
           <ul>
-            <li><a className="footer-link">서비스소개</a></li>
-            <li><a className="footer-link">회원약관</a></li>
-            <li><a className="footer-link">개인정보처리방침</a></li>
-            <li><a className="footer-link">광고문의</a></li>
-            <li><a className="footer-link">고객센터</a></li>
-            <li><a className="footer-link">페이스북</a></li>
-            <li><a className="footer-link">블로그</a></li>
+            <li><a href="/" className="footer-link">서비스소개</a></li>
+            <li><a href="/" className="footer-link">회원약관</a></li>
+            <li><a href="/" className="footer-link">개인정보처리방침</a></li>
+            <li><a href="/" className="footer-link">광고문의</a></li>
+            <li><a href="/" className="footer-link">고객센터</a></li>
+            <li><a href="/" className="footer-link">페이스북</a></li>
+            <li><a href="/" className="footer-link">블로그</a></li>
           </ul>
         </div>
 

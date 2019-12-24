@@ -1,10 +1,7 @@
 import React from 'react';
-import Header from './common/Header';
 import ImageSlider from './common/ImageSlider';
-
-
 import styled from 'styled-components';
-import Footer from './common/Footer';
+
 
 const PageViewStyle = styled.div`
   display: flex;
@@ -36,11 +33,9 @@ function Home() {
   return (
     <div>
       <PageViewStyle>
-        <Header />
         <ImageSlider />
         <ContentViewStyle>
         </ContentViewStyle>
-        <Footer />
       </PageViewStyle>
     </div>
   )

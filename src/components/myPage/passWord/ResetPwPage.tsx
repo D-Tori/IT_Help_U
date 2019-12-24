@@ -1,15 +1,12 @@
 import React from 'react';
 import LoginRight from '../../login/LoginRight';
 import ResetPwLeft from './ResetPwLeft';
-import Header from '../../common/Header';
-import Footer from '../../common/Footer';
 import styled from 'styled-components';
 import img from '../../../images/Login-Illustration-1.svg';
 
 function ResetPwPage(){
   return(
     <>
-      <Header />
       <PageStyled>
         <div className="left-page">
           <ResetPwLeft />
@@ -18,7 +15,6 @@ function ResetPwPage(){
           <LoginRight/>
         </div>
       </PageStyled>
-      <Footer />
     </>
   );
 }

@@ -1,41 +1,61 @@
 import React from 'react';
 import Home from './components/Home'
 
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Login from './components/login/';
-import ProjectPage from './components/project/projectList/ProjectPage';
+import ProjectPage from './components/project/projectList/';
 import SignUp from './components/signUp/';
 import ResetPw from './components/myPage/passWord/ResetPwPage';
 import Mentors from './components/mentor/';
-import ProjectDetailPage from './components/project/projectDetail/ProjectDetailPage';
 import MentorDetail from './components/mentor/detail/';
-import BoardPage from './components/board/boardList/BoardPage';
 import MenteeProfile from './components/myPage/menteeProfile/';
 import Question from './components/mentor/question/';
 import Questioner from './components/questioner/';
-import BoardDetailPage from './components/board/boardDetail/BoardDetailPage';
-import BoardWritePage from './components/board/boardWrite/BoardWritePage';
+import BoardWritePage from './components/board/boardWrite/';
+import Boards from './components/board/index';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 import MentorApplication from './components/mentor/application/';
+
 
 const App: React.FC = () => {
   return (
+    <Router>
+      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <Route exact path="/project" component={ProjectPage} />
+
         <Route path="/signUp" component={SignUp} />
         <Route path="/myPage/resetPw" component={ResetPw} />
         <Route exact path="/mentors" component={Mentors} />
-        <Route path="/project/Detail" component={ProjectDetailPage} />
         <Route path="/mentors/detail" component={MentorDetail} />
-        <Route exact path="/board" component={BoardPage} />
+
+        {/* board */}
+        <Route path="/boards">
+          <Boards />
+        </Route>
+        <Route path="/board/write">
+          <BoardWritePage />
+        </Route>
+        {/* -------- */}
+
+        {/* project */}
+        <Route exact path="/projects">
+          <ProjectPage />
+        </Route>
+        <Route exact path="/project/write">
+        </Route>
+        {/* -------- */}
+
         <Route path="/myPage/menteeProfile" component={MenteeProfile} />
         <Route path="/mentors/question" component={Question} />
         <Route path="/questioner" component={Questioner} />
-        <Route path="/board/detail" component={BoardDetailPage} />
-        <Route path="/board/write" component={BoardWritePage} />
         <Route path="/mentors/application" component={MentorApplication} />
+
       </Switch>
+      <Footer />
+    </Router>
   );
 }
 

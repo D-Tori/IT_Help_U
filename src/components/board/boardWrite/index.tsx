@@ -14,14 +14,10 @@ const Style = styled.div`
 
 function BoardWritePage() {
   return (
-    <>
-    <Header />
     <Style>
-    <MenuTitle condition="boardWrite"/>
-    <BoardForm />
+      <MenuTitle menuTitle="새글 쓰기" backBtnName="목록보기" />
+      <BoardForm />
     </Style>
-    <Footer />
-    </>
   )
 }
 
