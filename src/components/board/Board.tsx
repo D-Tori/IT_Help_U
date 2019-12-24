@@ -4,7 +4,6 @@ import BoardList from './BoardList';
 import MenuTitle from '../common/MenuTitle';
 import Footer from '../common/Footer';
 import Header from '../common/Header';
-import BoardRoutes from './index';
 
 
 const PageViewContainer = styled.div`
