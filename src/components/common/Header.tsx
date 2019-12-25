@@ -98,7 +98,7 @@ function Header() {
               <FormControl bsPrefix="search" as="input" type="text" placeholder="Search" className="mr-sm-2" />
               <Button >Search</Button>
             </Form>
-            <Nav.Item><Link to="/project">프로젝트</Link></Nav.Item>
+            <Nav.Item><Link to="/projects">프로젝트</Link></Nav.Item>
             <Nav.Item><Nav.Link href="/mentors">멘토</Nav.Link></Nav.Item>
             <Nav.Item><Link to="/boards">고민게시판</Link></Nav.Item>
             <Nav.Item><Nav.Link href="/signup">회원가입</Nav.Link></Nav.Item>
