@@ -3,16 +3,14 @@ import Home from './components/Home'
 
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Login from './components/login/';
-import ProjectPage from './components/project/projectList/';
+import Projects from './components/project/index';
 import SignUp from './components/signUp/';
 import ResetPw from './components/myPage/passWord/ResetPwPage';
 import Mentors from './components/mentor/';
-import ProjectDetailPage from './components/project/projectDetail/ProjectDetailPage';
 import MentorDetail from './components/mentor/detail/';
 import MenteeProfile from './components/myPage/menteeProfile/';
 import Question from './components/mentor/question/';
 import Questioner from './components/questioner/';
-import BoardDetailPage from './components/board/boardDetail/';
 import BoardWritePage from './components/board/boardWrite/';
 import Boards from './components/board/index';
 import Header from './components/common/Header';
@@ -40,10 +38,10 @@ const App: React.FC = () => {
         </Route>
         {/* -------- */}
         {/* project */}
-        <Route exact path="/projects">
-          <ProjectPage />
+        <Route path="/projects">
+          <Projects />
         </Route>
-        <Route exact path="/project/write">
+          <Route path="/project/write">
         </Route>
         {/* -------- */}
         <Route path="/myPage/menteeProfile" component={MenteeProfile} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Profile from '../../common/Profile';
-import ProjectState from '../projectList/ProjectState';
+import ProjectState from '../ProjectState';
 
 
 const Container = styled.div`
@@ -90,7 +90,7 @@ function ProjectDetail () {
         <div className="flex-row-sb">
           <div className="flex-item-name">프로젝트 개설자</div>
           <div className="flex-item-content">
-            <Profile />
+            <Profile user="하이"/>
           </div>
         </div>
         <div className="flex-row-sb">
@@ -111,7 +111,7 @@ function ProjectDetail () {
         </div>
         <div className="flex-row-sb">
           <div className="flex-item-name">상태</div>
-          <div className="flex-item-content block"><ProjectState /></div>
+          <div className="flex-item-content block"><ProjectState state="모집중"/></div>
         </div>
         <div className="project-intro-container">
           <div className="project-intro">프로젝트 소개</div>

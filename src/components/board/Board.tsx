@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import BoardList from './BoardList';
 import MenuTitle from '../common/MenuTitle';
-import Footer from '../common/Footer';
-import Header from '../common/Header';
 
 
 const PageViewContainer = styled.div`

@@ -16,13 +16,15 @@ const Style = styled.div`
       background: #4a47d5  ;
       cursor: default;
   }
+`;
 
+type StateType = {
+  state: string
+}
 
-`
-
-function ProjectState () {
+function ProjectState ({state}: StateType) {
   return(
-      <Style>모집중</Style>
+      <Style>{state}</Style>
   )
 }
 

@@ -1,9 +1,8 @@
 import React from 'react';
 import ProjectList from './ProjectList';
-import Header from '../../common/Header';
-import MenuTitle from '../../common/MenuTitle';
+import MenuTitle from '../common/MenuTitle';
 import styled from 'styled-components';
-import MentorField from '../../mentor/MentorField';
+import MentorField from '../mentor/MentorField';
 
 const PageContentStyle = styled.div`
 
@@ -28,7 +27,6 @@ const PageContentStyle = styled.div`
 function ProjectPage() {
   return (
     <>
-      <Header />
       <PageContentStyle>
           <MenuTitle menuTitle="사용 기술" />
           <MentorField />
