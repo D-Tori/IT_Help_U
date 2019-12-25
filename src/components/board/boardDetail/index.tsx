@@ -3,9 +3,7 @@ import BoardDetailContent from './BoardDetailContent';
 import IdDateComponent from '../../common/IdDateComponent';
 import styled from 'styled-components';
 import MenuTitle from '../../common/MenuTitle';
-import Header from '../../common/Header';
 import BoardComment from './BoardComment';
-import Footer from '../../common/Footer';
 import { useParams } from 'react-router-dom';
 
 const BoardDetailStyle = styled.div`

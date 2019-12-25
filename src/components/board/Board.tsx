@@ -23,10 +23,10 @@ const PageViewContainer = styled.div`
 
 function Board() {
   return (
-    <>
+    <PageViewContainer>
     <MenuTitle menuTitle="고민게시판" routingBtnName="새글 쓰기" routing="/board/write" />
       <BoardList />
-    </>
+    </PageViewContainer>
   )
 }
 
