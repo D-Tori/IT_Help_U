@@ -31,11 +31,15 @@ const Style = styled.div`
 
 `;
 
-function Profile () {
+type UserType = {
+  user: string
+}
+
+function Profile ({ user }: UserType) {
   return(
     <Style>
       <Image className="img" roundedCircle src={fifthImage} />
-      <div>fepanbr</div>
+      <div>{user}</div>
       <input alt="이메일버튼" type="image" src={mail} className="img-btn" />
       <input alt="핸드폰버튼" type="image" src={phone} className="img-btn" />
     </Style>

@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import BoardList from './BoardList';
 import MenuTitle from '../common/MenuTitle';
-import Footer from '../common/Footer';
-import Header from '../common/Header';
-import BoardRoutes from './index';
 
 
 const PageViewContainer = styled.div`
@@ -26,10 +23,10 @@ const PageViewContainer = styled.div`
 
 function Board() {
   return (
-    <>
+    <PageViewContainer>
     <MenuTitle menuTitle="고민게시판" routingBtnName="새글 쓰기" routing="/board/write" />
       <BoardList />
-    </>
+    </PageViewContainer>
   )
 }
 
