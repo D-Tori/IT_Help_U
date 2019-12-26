@@ -16,6 +16,7 @@ import Boards from './components/board/index';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import MentorApplication from './components/mentor/application/';
+import ProjectWrite from './components/project/projectWrite';
 
 
 const App: React.FC = () => {
@@ -45,6 +46,7 @@ const App: React.FC = () => {
           <Projects />
         </Route>
           <Route path="/project/write">
+            <ProjectWrite />
         </Route>
         {/* -------- */}
 
