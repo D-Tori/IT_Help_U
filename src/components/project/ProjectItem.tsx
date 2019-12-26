@@ -3,12 +3,15 @@ import Card from 'react-bootstrap/Card';
 
 import styled from 'styled-components';
 
-import Profile from '../../common/Profile';
+import Profile from '../common/Profile';
 import ProjectState from './ProjectState';
+import { Link, useRouteMatch } from 'react-router-dom';
+import { Project } from '../../modules/projects';
 
-const CardItemStyle = styled.div`
+const CardItemStyle = styled.li`
 
   margin-bottom: 10px;
+  list-style: none;
 
   @media (min-width: 1025px) {
       // width: 33.333333%;
@@ -63,36 +66,42 @@ const CardItemStyle = styled.div`
   }
 `;
 
+type ProjectType = {
+  project: Project;
+}
 
-function ProjectItem() {
+
+function ProjectItem({ project }: ProjectType) {
+  const { url } = useRouteMatch();
+  const detailURL = `${url}/${project.id}`
   return (
     <CardItemStyle>
       <Card>
         <Card.Body>
-          <Card.Title>프로젝트 제목</Card.Title>
+          <Card.Title>{project.title}</Card.Title>
           <Card.Text>
-            프로젝트 소개
+            {project.intro}
           </Card.Text>
           <div className="info-container">
             <div className="block">장소</div>
-            <div className="block">서울시 금천구</div>
+            <div className="block">{project.place}</div>
           </div>
           <div className="info-container">
             <div className="block">기간</div>
-            <div className="block">2019-12-05 ~ 2019-12-31</div>
+            <div className="block">{project.startDate} ~ {project.endDate}</div>
           </div>
           <div className="info-container">
             <div className="block">모집인원</div>
-            <div className="block">3명</div>
+            <div className="block">{project.members?.length}</div>
           </div>
           <div className="project-info">
-            <Profile />
-            <ProjectState />
+            <Profile user={project.user}/>
+            <ProjectState state={project.state}/>
           </div>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
-          <div className="apply-btn"><a href="/project/Detail">지원하기</a></div>
+          <div className="apply-btn"><Link key={project.id} to={detailURL}>지원하기</Link></div>
         </Card.Footer>
       </Card>
     </CardItemStyle>

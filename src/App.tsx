@@ -3,7 +3,7 @@ import Home from './components/Home'
 
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Login from './components/login/';
-import ProjectPage from './components/project/projectList/';
+import Projects from './components/project/index';
 import SignUp from './components/signUp/';
 import ResetPw from './components/myPage/passWord/ResetPwPage';
 import Mentors from './components/mentor/';
@@ -41,10 +41,10 @@ const App: React.FC = () => {
         {/* -------- */}
 
         {/* project */}
-        <Route exact path="/projects">
-          <ProjectPage />
+        <Route path="/projects">
+          <Projects />
         </Route>
-        <Route exact path="/project/write">
+          <Route path="/project/write">
         </Route>
         {/* -------- */}
 

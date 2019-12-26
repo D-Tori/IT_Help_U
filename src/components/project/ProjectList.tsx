@@ -2,16 +2,9 @@ import React from 'react';
 import ProjectItem from './ProjectItem';
 
 import styled from 'styled-components';
+import useProjects from '../../hooks/useProjects';
 
 
-
-// const Style = styled.div`
-
-//   align-content: center;
-//   .card-deck {
-//     display: flex;
-//   }
-// `
 
 const PageViewStyle = styled.div`
     display: flex;
@@ -23,15 +16,14 @@ const PageViewStyle = styled.div`
 
 
 function ProjectList() {
+
+  const projects = useProjects();
+
   return (
     <PageViewStyle>
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
+      {projects.map((project) => (
+          <ProjectItem project={project}/>
+      ))}
     </PageViewStyle>
   )
 }
