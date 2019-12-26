@@ -63,6 +63,10 @@ function ProjectForm() {
         <Form.Control value={title} onChange={onChangeTitle} placeholder="제목을 입력하세요." />
       </Form.Group>
       <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>제목</Form.Label>
+        <Form.Control value={title} onChange={onChangeTitle} placeholder="제목을 입력하세요." />
+      </Form.Group>
+      <Form.Group controlId="exampleForm.ControlInput1">
         <Form.Label>간단한 소개</Form.Label>
         <Form.Control value={intro} onChange={onChangeIntro} placeholder="제목을 입력하세요." />
       </Form.Group>
@@ -80,8 +84,9 @@ function ProjectForm() {
       </Form.Group>
       <button type="submit">작성완료</button>
     </Form>
+
   )
 }
 
 export default ProjectForm;
-  ;
+
