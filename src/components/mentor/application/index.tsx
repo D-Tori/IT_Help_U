@@ -1,15 +1,15 @@
 import React from 'react';
-import LoginRight from '../login/LoginRight';
-import SignupLeft from './SignUpLeft';
+import LoginRight from '../../login/LoginRight';
+import ApplyLeft from './ApplyLeft';
 import styled from 'styled-components';
-import img from '../../images/Login-Illustration-1.svg';
+import img from '../../../images/Login-Illustration-1.svg';
 
-function SignUpPage() {
+function MentorApplication() {
   return(
     <>
       <PageStyled>
         <div className="left-page">
-          <SignupLeft/>
+          <ApplyLeft/>
         </div>
         <div className="right-page">
           <LoginRight/>
@@ -20,7 +20,7 @@ function SignUpPage() {
 }
 
 
-export default SignUpPage;
+export default MentorApplication;
 
 const PageStyled = styled.div`
 display: flex;

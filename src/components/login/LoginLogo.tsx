@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom';
 
 function LoginLogo(){
   return (
-    <Logo>
+    <ContentBox>
       <div className="logo-container">
         <Link to='/'>
           <img src= {logo} alt="임시로고"/>
         </Link>
       </div>
-    </Logo>
+    </ContentBox>
   );
 }
 
 export default LoginLogo;
 
-const Logo = styled.div`
+const ContentBox = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 `

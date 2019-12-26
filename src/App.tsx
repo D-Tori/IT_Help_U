@@ -7,16 +7,15 @@ import ProjectPage from './components/project/projectList/';
 import SignUp from './components/signUp/';
 import ResetPw from './components/myPage/passWord/ResetPwPage';
 import Mentors from './components/mentor/';
-import ProjectDetailPage from './components/project/projectDetail/ProjectDetailPage';
 import MentorDetail from './components/mentor/detail/';
 import MenteeProfile from './components/myPage/menteeProfile/';
 import Question from './components/mentor/question/';
 import Questioner from './components/questioner/';
-import BoardDetailPage from './components/board/boardDetail/';
 import BoardWritePage from './components/board/boardWrite/';
 import Boards from './components/board/index';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import MentorApplication from './components/mentor/application/';
 
 
 const App: React.FC = () => {
@@ -31,6 +30,7 @@ const App: React.FC = () => {
         <Route path="/myPage/resetPw" component={ResetPw} />
         <Route exact path="/mentors" component={Mentors} />
         <Route path="/mentors/detail" component={MentorDetail} />
+
         {/* board */}
         <Route path="/boards">
           <Boards />
@@ -39,6 +39,7 @@ const App: React.FC = () => {
           <BoardWritePage />
         </Route>
         {/* -------- */}
+
         {/* project */}
         <Route exact path="/projects">
           <ProjectPage />
@@ -46,9 +47,12 @@ const App: React.FC = () => {
         <Route exact path="/project/write">
         </Route>
         {/* -------- */}
+
         <Route path="/myPage/menteeProfile" component={MenteeProfile} />
         <Route path="/mentors/question" component={Question} />
         <Route path="/questioner" component={Questioner} />
+        <Route path="/mentors/application" component={MentorApplication} />
+
       </Switch>
       <Footer />
     </Router>

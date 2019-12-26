@@ -2,10 +2,12 @@
 import { combineReducers } from 'redux';
 import board from './boards';
 import mentors from './mentors';
+import snsbtn from './snsBtn';
 
 const rootReducer = combineReducers({
   board,
-  mentors
+  mentors,
+  snsbtn
 });
 
 export default rootReducer;

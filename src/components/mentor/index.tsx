@@ -1,22 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../common/Header';
 import MentorList from './MentorList';
 import MentorField from './MentorField';
-import Footer from '../common/Footer';
 import MenuTitle from '../common/MenuTitle';
 
 function MentorsPage(){
   return(
     <>
-      <Header />
       <PageContent>
         <MenuTitle menuTitle="관련 기술" />
         <MentorField />
         <MenuTitle menuTitle="멘토" toggleBtnName="명예멘토" />
         <MentorList />
       </PageContent>
-      <Footer />
     </>
   );
 }

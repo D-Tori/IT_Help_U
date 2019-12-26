@@ -2,24 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import LoginLogo from './LoginLogo';
-import LoginBtn from './LoginBtn';
 import LoginForm from './LoginForm';
-
-// col-종류-숫자 형태로 작성
-// 종류	   크기	           주로 해당되는 디바이스
-// lg	     1200px 이상	   PC, 태블릿
-// md	     992 ~ 1200px	   태블릿
-// sm	     768 ~ 992px	   태블릿
-// xs	     768px 미만	     스마트 폰
-
-// "숫자"는 그 내용이 row에 차지하는 비중이다. row는 폭 전체를 "12"의 블록으로 나누어 관리한다.
+import SnsBtns from './SnsBtns'
 
 function LoginLeft(){
   return (
-    <>
-      <Inner>
+      <ContentBox>
         <LoginLogo />
-        <LoginBtn />
+        <SnsBtns condition="login"/>
         <Divider>
           <span>이메일로 로그인하기</span>
         </Divider>
@@ -29,20 +19,17 @@ function LoginLeft(){
           "계정이 없으신가요?"
           <Link to='/signUp'> 회원 가입하기</Link>
         </p>
-      </Inner>
-    </>
+      </ContentBox>
   );
 }
 
 export default LoginLeft;
 
-const Inner = styled.div`
+const ContentBox = styled.div`
   display:flex;
   flex-direction: column;
-
   padding: 50px;
-
-  max-width: 500px;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
 
