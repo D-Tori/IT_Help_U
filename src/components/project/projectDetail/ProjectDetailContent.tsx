@@ -79,7 +79,7 @@ const Container = styled.div`
 
 
 
-function ProjectDetail () {
+function ProjectDetailContent () {
   return (
     <>
       <Container>
@@ -124,4 +124,4 @@ function ProjectDetail () {
   )
 }
 
-export default ProjectDetail;
+export default ProjectDetailContent;

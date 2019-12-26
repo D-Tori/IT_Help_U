@@ -67,10 +67,10 @@ function MenuTitle({ menuTitle, routingBtnName, backBtnName, toggleBtnName, addB
     <StyleMenu>
       <h1>{menuTitle}</h1>
       <div className="btn-container">
-        {routingBtn ? routingBtn : <></>}
-        {backBtn ? backBtn : <></>}
-        {toggleBtn ? toggleBtn : <></>}
-        {addBtn ? addBtn : <></>}
+        {routingBtn && routingBtn}
+        {backBtn && backBtn}
+        {toggleBtn && toggleBtn}
+        {addBtnName && addBtnName}
       </div>
     </StyleMenu>
 
