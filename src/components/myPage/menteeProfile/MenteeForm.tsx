@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 function MenteeForm() {
   return(
-    <PageContent>
+    <ContentBox>
       <div className="content-title">
         <h1 className="title">멘티 프로필 작성하기</h1>
         <p className="description">
@@ -69,13 +69,13 @@ function MenteeForm() {
           </div>
         </Form>
       </div>
-    </PageContent>
+    </ContentBox>
   );
 }
 
 export default MenteeForm;
 
-const PageContent= styled.div`
+const ContentBox= styled.div`
   display: flex;
   flex-direction: column;
   margin: 81px 0 35px;

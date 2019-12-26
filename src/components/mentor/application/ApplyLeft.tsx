@@ -24,7 +24,6 @@ const ContentBox = styled.div`
   width: 500px;
   margin: 0 auto;
   text-align: center;
-  min-height: 600px;
 
   form {
     text-align: left;
