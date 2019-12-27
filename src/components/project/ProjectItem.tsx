@@ -12,12 +12,13 @@ const CardItemStyle = styled.li`
 
   margin-bottom: 10px;
   list-style: none;
+  min-height: 280px;
 
   @media (min-width: 1025px) {
       // width: 33.333333%;
   }
   @media (min-width: 768px) {
-    width: 49%;
+    width: 33.3333%;
   }
   @media (max-width: 767px) {
     width: 100%;
