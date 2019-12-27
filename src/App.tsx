@@ -23,19 +23,25 @@ const GlobalStyle = styled.div`
     font-family: ${props => props.theme.font[0]};
     font-size: ${props => props.theme.fontSize.medium};
     h1, h2, h3, h4, h5, h6 {
+      font-size: ${props => props.theme.fontSize.xLarge};
       margin: 0;
     }
     li {
       list-style: none;
+    }
+    width: ${props => props.theme.width.normalWidth};
+    margin: 0 auto;
+    @media (max-width: 767px) {
+      width: ${props => props.theme.width.fullWidth};
     }
 `;
 
 
 const App = () => {
   return (
-    <GlobalStyle>
       <Router>
         <Header />
+        <GlobalStyle>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
@@ -68,10 +74,10 @@ const App = () => {
           <Route path="/questioner" component={Questioner} />
           <Route path="/mentors/application" component={MentorApplication} />
 
-        </Switch>
-        <Footer />
+          </Switch>
+          <Footer />
+        </GlobalStyle>
       </Router>
-    </GlobalStyle>
   );
 }
 

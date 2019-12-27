@@ -17,6 +17,7 @@ const StyleMenu = styled.div`
 
   h1 {
     display: flex;
+    font-size: ${props => props.theme.fontSize.xLarge}
     color: ${props => props.theme.colors.headFontColor};
     font-weight: ${props => props.theme.fontWeight.mainTitle};
     @media (max-width: 767px) {
@@ -25,10 +26,12 @@ const StyleMenu = styled.div`
   }
   .btn-container {
     display: flex;
+    width: ${props => props.theme.width.halfWidth};
+    justify-content: flex-end;
   }
 
   @media (max-width: 767px) {
-    flex-direction: column;
+    flex-direction: row;
   }
 `;
 
