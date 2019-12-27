@@ -63,7 +63,9 @@ function project (state: ProjectState = initialState, action: ProjectAction): Pr
         user: action.payload.user,
         userMail: action.payload.userMail,
         state: action.payload.state,
-        required: action.payload.required
+        required: action.payload.required,
+        startDate: action.payload.startDate,
+        endDate: action.payload.endDate
       });
     default:
       return state;

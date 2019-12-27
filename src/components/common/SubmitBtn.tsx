@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BtnContainer = styled.div`
+const Button = styled.button`
   display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 40px 0;
 
   .btn {
     background: #5457ff;
@@ -34,9 +31,7 @@ const BtnContainer = styled.div`
 
 function SubmitBtn () {
   return(
-    <BtnContainer>
-      <a className="btn" href="/">신청하기</a>
-    </BtnContainer>
+    <Button>신청하기</Button>
   )
 }
 
