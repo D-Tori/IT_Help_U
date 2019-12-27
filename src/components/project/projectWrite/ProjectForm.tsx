@@ -34,8 +34,6 @@ function ProjectForm() {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
-  // const [startDate, setStartDate] = useState('');
-  // const [endDate, setEndDate] = useState('');
   const addProject = useAddProject();
   const onChangeTitle = (e: ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
@@ -91,7 +89,6 @@ function ProjectForm() {
   };
 
   return (
-    <>
     <Form onSubmit={onSubmit} >
       {/* <Form.Group controlId="exampleForm.ControlSelect1">
         <Form.Label>분야</Form.Label>
@@ -116,11 +113,11 @@ function ProjectForm() {
         <Row>
           <Col>
             <Form.Label>시작일</Form.Label>
-            <DatePicker locale={locale} onChange={onChangeStartDate}/>
+            <DatePicker className="date-input" locale={locale} onChange={onChangeStartDate}/>
           </Col>
           <Col>
             <Form.Label>종료일</Form.Label>
-            <DatePicker locale={locale} onChange={onChangeEndDate}/>
+            <DatePicker className="date-input" locale={locale} onChange={onChangeEndDate}/>
           </Col>
         </Row>
       </Form.Group>
@@ -137,7 +134,7 @@ function ProjectForm() {
       </Form.Group>
       <button type="submit">작성완료</button>
     </Form>
-</>
+
   )
 }
 

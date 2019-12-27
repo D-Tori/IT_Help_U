@@ -4,7 +4,7 @@ import ProjectForm from './ProjectForm';
 import styled from 'styled-components';
 
 const PageViewContainer = styled.div`
-  width: 800px;
+  width: 600px;
   margin: 0 auto;
 
   @media (max-width: 767px) {
