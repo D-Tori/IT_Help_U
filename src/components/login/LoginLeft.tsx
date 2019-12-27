@@ -9,7 +9,7 @@ function LoginLeft(){
   return (
       <ContentBox>
         <LoginLogo />
-        <SnsBtns condition="login"/>
+        <SnsBtns contentTitle="Welcome Back" type="login"/>
         <Divider>
           <span>이메일로 로그인하기</span>
         </Divider>

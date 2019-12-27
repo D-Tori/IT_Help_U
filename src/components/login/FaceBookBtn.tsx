@@ -6,10 +6,17 @@ type BtnType = {
   type: string
 }
 
-function FaceBookBtn(){
+function FaceBookBtn({type} : BtnType){
+  const value = type;
+
   return(
     <ContentBox>
-      <Button></Button>
+      {
+        (function() {
+          if (value === "login") return (<Button>Login with Facebook</Button>);
+          if (value === "signup") return (<Button>Sign up with Facebook</Button>);
+        })()
+      }
     </ContentBox>
   );
 }

@@ -7,9 +7,16 @@ type BtnType = {
 }
 
 function GoogleBtn({type} : BtnType){
+  const value = type;
+
   return(
     <ContentBox>
-      <Button></Button>
+      {
+        (function() {
+          if (value === "login") return (<Button variant="light">Login with Google</Button>);
+          if (value === "signup") return (<Button variant="light">Sign up with Google</Button>);
+        })()
+      }
     </ContentBox>
   );
 }

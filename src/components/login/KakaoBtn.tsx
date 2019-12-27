@@ -6,10 +6,17 @@ type BtnType = {
   type: string
 }
 
-function KakaoBtn(){
+function KakaoBtn({type} : BtnType){
+  const value = type;
+
   return(
     <ContentBox>
-      <Button></Button>
+      {
+        (function() {
+          if (value === "login") return (<Button variant="warning">Login with Kakao</Button>);
+          if (value === "signup") return (<Button variant="warning">Sign up with Kakao</Button>);
+        })()
+      }
     </ContentBox>
   );
 }

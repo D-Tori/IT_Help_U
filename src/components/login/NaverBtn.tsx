@@ -6,10 +6,17 @@ type BtnType = {
   type: string
 }
 
-function NaverBtn(){
+function NaverBtn({type} : BtnType){
+  const value = type;
+
   return(
     <ContentBox>
-      <Button></Button>
+      {
+        (function() {
+          if (value === "login") return (<Button variant="success">Login with Naver</Button>);
+          if (value === "signup") return (<Button variant="success">Sign up with Naver</Button>);
+        })()
+      }
     </ContentBox>
   );
 }
