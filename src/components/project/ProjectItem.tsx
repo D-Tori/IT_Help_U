@@ -74,6 +74,10 @@ type ProjectType = {
 function ProjectItem({ project }: ProjectType) {
   const { url } = useRouteMatch();
   const detailURL = `${url}/${project.id}`
+
+  // date format
+  const startDate = project.startDate?.toLocaleDateString('ko-KR');
+  const endDate = project.endDate?.toLocaleDateString('ko-KR');
   return (
     <CardItemStyle>
       <Card>
@@ -88,7 +92,7 @@ function ProjectItem({ project }: ProjectType) {
           </div>
           <div className="info-container">
             <div className="block">기간</div>
-            <div className="block">{project.startDate} ~ {project.endDate}</div>
+            <div className="block">{startDate} ~ {endDate}</div>
           </div>
           <div className="info-container">
             <div className="block">모집인원</div>
