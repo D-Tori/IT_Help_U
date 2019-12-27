@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { useCallback } from 'react';
-import { addBoard } from '../modules/boards';
+import { addProject } from '../modules/projects';
 
-export default function useAddBoard() {
+export default function useAddProject() {
   const dispatch = useDispatch();
-  return useCallback((board) => dispatch(addBoard(board)), [dispatch]);
+  return useCallback((project) => dispatch(addProject(project)), [dispatch]);
 }

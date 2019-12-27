@@ -17,9 +17,8 @@ const StyleMenu = styled.div`
 
   h1 {
     display: flex;
-    margin: 0;
-    font-size: 30px;
-    font-weight: bold;
+    color: ${props => props.theme.colors.headFontColor};
+    font-weight: ${props => props.theme.fontWeight.mainTitle};
     @media (max-width: 767px) {
       margin: 0 auto;
     }

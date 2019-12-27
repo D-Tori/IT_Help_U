@@ -20,8 +20,6 @@ const NavbarStyle = styled.div`
   }
 
   .navbar-brand, .navbar-nav .nav-link {
-    color: #111;
-
     &:hover {
       color: #5457ff;
     }
@@ -79,11 +77,14 @@ const NavbarStyle = styled.div`
 
   // 기석 : 임시로 설정함
   a {
-    color: #111;
+    color: ${props => props.theme.colors.headFontColor};
+    font-weight: ${props => props.theme.fontWeight.emphasis};
+    font-size: ${props => props.theme.fontSize.medium}
     margin: 0 5px;
 
     &:hover {
       color: #5457ff;
+      text-decoration: none;
     }
   }
 
