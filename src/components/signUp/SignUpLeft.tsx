@@ -9,7 +9,7 @@ function SignUpLeft(){
   return (
     <ContentBox>
       <LoginLogo />
-      <SnsBtns condition="signup" />
+      <SnsBtns contentTitle="Welcome" type="signup"/>
       <Divider>
         <span>이메일로 회원 가입하기</span>
       </Divider>

@@ -1,34 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from 'react-bootstrap/Button';
-import useSnsBtn from '../../hooks/useSnsBtn';
+import GoogleBtn from './GoogleBtn';
+import NaverBtn from './NaverBtn';
+import KakaoBtn from './KakaoBtn';
+import FaceBookBtn from './FaceBookBtn';
 
 // typescirpt를 사용하고 있기 때문에 타입을 명시적으로 선언해야 한다.
-type ConditionType = {
-  condition: string
+type SnsBtnsType = {
+  contentTitle: string,
+  type: string   // ? 를 쓰면 undefined
 }
 
 
-function SnsBtns({condition} : ConditionType) {
-  const snsbtn= useSnsBtn();
-  const selectedCondition = snsbtn.findIndex(snsbtn => snsbtn.condition === condition);
+function SnsBtns({ contentTitle, type } : SnsBtnsType) {
 
   return(
     <ContentBox>
-      <h1>
-        {snsbtn[selectedCondition].name}
-      </h1>
-      {
-        snsbtn[selectedCondition].isBtn
-        ?
-          <>
-            <Button className="btn-Google" variant="light"> {snsbtn[selectedCondition].btnGoogle} </Button>
-            <Button className="btn-Naver" variant="success"> {snsbtn[selectedCondition].btnNaver} </Button>
-            <Button className="btn-Kakao" variant="warning"> {snsbtn[selectedCondition].btnKakao} </Button>
-            <Button className="btn-Facebook" variant="primary"> {snsbtn[selectedCondition].btnFacebook} </Button>
-          </>
-        : <></>
-      }
+      <h1>{ contentTitle }</h1>
+      <GoogleBtn type = {type} />
+      <NaverBtn type = {type} />
+      <KakaoBtn type = {type} />
+      <FaceBookBtn type = {type} />
     </ContentBox>
   );
 }
@@ -45,5 +37,6 @@ const ContentBox = styled.div`
 
   .btn {
     margin: 1px 0;
+    width: 100%;
   }
 `

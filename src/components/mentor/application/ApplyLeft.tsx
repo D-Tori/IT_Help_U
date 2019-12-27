@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import ApplyForm from './ApplyForm';
 import LoginLogo from '../../login/LoginLogo';
-import SnsBtns from '../../login/SnsBtns';
+
 
 function ApplyLeft() {
   return(
     <ContentBox>
       <LoginLogo />
-      <SnsBtns condition="mentorapply"/>
+      <h1>멘토 지원하기</h1>
       <ApplyForm />
     </ContentBox>
 
@@ -24,7 +24,6 @@ const ContentBox = styled.div`
   width: 500px;
   margin: 0 auto;
   text-align: center;
-  min-height: 600px;
 
   form {
     text-align: left;
