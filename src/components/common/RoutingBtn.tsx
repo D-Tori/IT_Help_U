@@ -10,23 +10,15 @@ type BtnType = {
 
 const BackBtnStyle = styled.button`
   display: flex;
-  margin-left: 5px;
-
-  .projects {
-    background-color: #fff;
-    font-weight: bold;
-    color: #963484;
-    border: 1px solid #963484;
-    border-radius: 4px;
-    &:focus, &:active {
-      outline: none !important;
-      box-shadow: none;
-      background-color: #963484;
-      color: #fff
-    }
+  font-size: ${props => props.theme.fontSize.medium};
+  background-color: ${props => props.theme.colors.pointColor};
+  font-weight: ${props => props.theme.fontWeight.emphasis};
+  color: ${props => props.theme.colors.whiteColor};
+  border: none;
+  border-radius: 4px;
     @media (max-width: 767px) {
-      width: 100%;
-      margin-top 10px;
+      justify-content: center;
+      width: ${props => props.theme.width.fullWidth};
     }
   }
 `;

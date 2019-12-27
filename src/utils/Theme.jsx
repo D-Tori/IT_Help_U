@@ -14,10 +14,10 @@ const theme = {
   },
   font: ['Lato', 'sans-serif'],
   fontSize: {
-    xLarge: "2.5rem",   // 40px
-    large: "1.8rem",    // 28.8px
-    medium: "1.2rem",   // 19.2px
-    small: "0.8rem"     // 12.8px
+    xLarge: "1.5rem",   // 40px
+    large: "1rem",    // 16px
+    medium: "0.8rem",   // 12px
+    small: "0.5rem"     // 8px
   },
   fontWeight: {
     mainTitle: "900",
@@ -26,6 +26,7 @@ const theme = {
   },
   width: {
     fullWidth: '100%',
+    halfWidth: '50%',
     normalWidth: '1200px',
     formWidth: '600px',
     smallWidth: '800px'

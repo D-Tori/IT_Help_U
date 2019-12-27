@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 type ConditionType = {
@@ -11,37 +11,47 @@ type ConditionType = {
 const ToggleBtnStyle = styled.button`
   display: flex;
   margin-left: 5px;
+  font-weight: ${props => props.theme.fontWeight.emphasis};
+  background-color: ${props => props.theme.colors.whiteColor};
+  border-radius: 4px;
 
-  .projects {
-    background-color: #fff;
-    font-weight: bold;
-    color: #963484;
-    border: 1px solid #963484;
-    border-radius: 4px;
-    &:focus, &:active {
-      outline: none !important;
-      box-shadow: none;
-      background-color: #963484;
-      color: #fff
-    }
+  .onToggle {
+    color: ${props => props.theme.colors.smalldescColor};
+    border: 1px solid ${props => props.theme.colors.smalldescColor};
+  }
+
+  .offToggle {
+    color: ${props => props.theme.colors.pointColor};
+    border: 1px solid ${props => props.theme.colors.pointColor};
+  }
+
+
+
     @media (max-width: 767px) {
-      width: 100%;
-      margin-top 10px;
+      justify-content: center;
+      width: ${props => props.theme.width.fullWidth};
+      margin-top: 10px;
     }
   }
 `;
 
 function ToggleBtn ({ btnName, routing }: ConditionType) {
 
-  let routingProp: string = '';
+  const [isToggle, setIsToggle] = useState(false);
 
-  if(routing !== undefined) {
-    routingProp = routing;
+  const history = useHistory();
+
+  const onClickHandler = () => {
+
+    if( isToggle === true) setIsToggle(false);
+    if( isToggle === false) setIsToggle(true);
   }
 
 
   return (
-    <Link to={routingProp}><ToggleBtnStyle>{btnName}</ToggleBtnStyle></Link>
+    <>
+
+    </>
   )
 }
 
