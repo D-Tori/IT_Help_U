@@ -17,47 +17,61 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import MentorApplication from './components/mentor/application/';
 import ProjectWrite from './components/project/projectWrite';
+import styled from 'styled-components';
+
+const GlobalStyle = styled.div`
+    font-family: ${props => props.theme.font[0]};
+    font-size: ${props => props.theme.fontSize.medium};
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+    li {
+      list-style: none;
+    }
+`;
 
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
+    <GlobalStyle>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
 
-        <Route path="/signUp" component={SignUp} />
-        <Route path="/myPage/resetPw" component={ResetPw} />
-        <Route exact path="/mentors" component={Mentors} />
-        <Route path="/mentors/detail" component={MentorDetail} />
+          <Route path="/signUp" component={SignUp} />
+          <Route path="/myPage/resetPw" component={ResetPw} />
+          <Route exact path="/mentors" component={Mentors} />
+          <Route path="/mentors/detail" component={MentorDetail} />
 
-        {/* board */}
-        <Route path="/boards">
-          <Boards />
-        </Route>
-        <Route path="/board/write">
-          <BoardWritePage />
-        </Route>
-        {/* -------- */}
+          {/* board */}
+          <Route path="/boards">
+            <Boards />
+          </Route>
+          <Route path="/board/write">
+            <BoardWritePage />
+          </Route>
+          {/* -------- */}
 
-        {/* project */}
-        <Route path="/projects">
-          <Projects />
-        </Route>
+          {/* project */}
+          <Route path="/projects">
+            <Projects />
+          </Route>
           <Route path="/project/write">
             <ProjectWrite />
-        </Route>
-        {/* -------- */}
+          </Route>
+          {/* -------- */}
 
-        <Route path="/myPage/menteeProfile" component={MenteeProfile} />
-        <Route path="/mentors/question" component={Question} />
-        <Route path="/questioner" component={Questioner} />
-        <Route path="/mentors/application" component={MentorApplication} />
+          <Route path="/myPage/menteeProfile" component={MenteeProfile} />
+          <Route path="/mentors/question" component={Question} />
+          <Route path="/questioner" component={Questioner} />
+          <Route path="/mentors/application" component={MentorApplication} />
 
-      </Switch>
-      <Footer />
-    </Router>
+        </Switch>
+        <Footer />
+      </Router>
+    </GlobalStyle>
   );
 }
 

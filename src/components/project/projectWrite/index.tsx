@@ -4,11 +4,11 @@ import ProjectForm from './ProjectForm';
 import styled from 'styled-components';
 
 const PageViewContainer = styled.div`
-  width: 600px;
+  width: ${props => props.theme.width.formWidth}
   margin: 0 auto;
 
   @media (max-width: 767px) {
-    width: 100%;
+    width: ${props => props.theme.width.fullWidth}
   }
 `;
 
