@@ -6,16 +6,14 @@ import img from '../../images/Login-Illustration-1.svg';
 
 function Login() {
   return(
-    <>
-      <PageStyled>
-        <div className="left-page">
-          <LoginLeft/>
-        </div>
-        <div className="right-page">
-          <LoginRight/>
-        </div>
-      </PageStyled>
-    </>
+    <PageStyled>
+      <div className="left-page">
+        <LoginLeft/>
+      </div>
+      <div className="right-page">
+        <LoginRight/>
+      </div>
+    </PageStyled>
   );
 }
 
