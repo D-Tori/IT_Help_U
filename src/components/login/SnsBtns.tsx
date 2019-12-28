@@ -17,10 +17,12 @@ function SnsBtns({ contentTitle, type } : SnsBtnsType) {
   return(
     <ContentBox>
       <h1>{ contentTitle }</h1>
-      <GoogleBtn type = {type} />
-      <NaverBtn type = {type} />
-      <KakaoBtn type = {type} />
-      <FaceBookBtn type = {type} />
+      <div className= "btn-container">
+        <GoogleBtn type={type} />
+        <NaverBtn type={type} />
+        <KakaoBtn type={type} />
+        <FaceBookBtn type={type} />
+      </div>
     </ContentBox>
   );
 }
@@ -31,8 +33,8 @@ const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
 
-  h1 {
-    margin: 10px 0;
+  .btn-container {
+    margin-top: 10px;
   }
 
   .btn {
