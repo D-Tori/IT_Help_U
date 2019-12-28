@@ -33,10 +33,6 @@ const ContentBox = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  form {
-    text-align: left;
-  }
-
   .account {
     padding: 20px 0;
   }
