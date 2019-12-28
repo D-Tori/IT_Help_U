@@ -25,6 +25,10 @@ const ContentBox = styled.div`
   width: 100%;
   text-align: right;
 
+  img {
+    margin-right: 5px;
+  }
+
   .logo {
     h3 {
       letter-spacing: 0rem;
