@@ -1,31 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
-import MentorList from './MentorList';
-import MentorField from './MentorField';
-import MenuTitle from '../common/MenuTitle';
+import { Route, useRouteMatch, Switch } from 'react-router-dom';
+import Mentor from './Mentor';
 
-function MentorsPage(){
-  return(
-    <>
-      <PageContent>
-        <MenuTitle menuTitle="관련 기술" />
-        <MentorField />
-        <MenuTitle menuTitle="멘토" toggleBtnName="명예멘토" />
-        <MentorList />
-      </PageContent>
-    </>
+function Mentors() {
+  let { path } = useRouteMatch();
+  return (
+      <Switch>
+        <Route exact path={`${path}`}>
+          <Mentor />
+        </Route>
+
+      </Switch>
   );
 }
 
-export default MentorsPage;
-
-const PageContent = styled.div`
-  overflow: auto;
-  box-sizing: border-box;
-  height: 100%;
-  padding: 20px;
-  margin: 0 auto;
-  @media (min-width: 1025px){
-    width: 1200px;
-  }
-`
+export default Mentors;
