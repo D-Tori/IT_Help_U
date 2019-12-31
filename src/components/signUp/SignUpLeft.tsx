@@ -26,12 +26,12 @@ function SignUpLeft(){
 export default SignUpLeft;
 
 const ContentBox = styled.div`
-  display:flex;
-  flex-direction: column;
-  padding: 50px;
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
+  display: ${props => props.theme.leftPage.display};
+  flex-direction: ${props => props.theme.leftPage.flexDirection};
+  padding: ${props => props.theme.leftPage.padding};
+  width: ${props => props.theme.width.formWidth};
+  margin: ${props => props.theme.leftPage.margin};
+  text-align: ${props => props.theme.leftPage.textAlign};
 
   .account {
     padding: 20px 0;

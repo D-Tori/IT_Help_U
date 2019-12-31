@@ -44,4 +44,9 @@ const ContentBox = styled.div `
     font-weight: bold;
     text-decoration: none;
   }
+
+  form {
+    text-align: left;
+  }
+
 `

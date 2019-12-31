@@ -112,7 +112,7 @@ function Header() {
             <Nav.Item><Link to="/projects">프로젝트 </Link></Nav.Item>
             <Nav.Item><Link to="/mentors">멘토 </Link></Nav.Item>
             <Nav.Item><Link to="/boards">고민게시판 </Link></Nav.Item>
-            <Nav.Item><Link to="/mentors/application">멘토 지원 </Link></Nav.Item>
+            <Nav.Item><Link to="/newMentor">멘토 지원 </Link></Nav.Item>
             <Nav.Item><Link to="/signup">회원가입 </Link></Nav.Item>
             <Nav.Item><Link to="/login">로그인 </Link></Nav.Item>
           </Nav>

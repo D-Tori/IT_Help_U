@@ -1,26 +1,24 @@
 import React from 'react';
-import LoginRight from '../../login/LoginRight';
-import ApplyLeft from './ApplyLeft';
+import LoginRight from '../login/LoginRight';
+import NewMentorLeft from './NewMentorLeft';
 import styled from 'styled-components';
-import img from '../../../images/Login-Illustration-1.svg';
+import img from '../../images/Login-Illustration-1.svg';
 
-function MentorApplication() {
+function NewMentor() {
   return(
-    <>
-      <PageStyled>
-        <div className="left-page">
-          <ApplyLeft/>
-        </div>
-        <div className="right-page">
-          <LoginRight/>
-        </div>
-      </PageStyled>
-    </>
+    <PageStyled>
+      <div className="left-page">
+        <NewMentorLeft/>
+      </div>
+      <div className="right-page">
+        <LoginRight/>
+      </div>
+    </PageStyled>
   );
 }
 
 
-export default MentorApplication;
+export default NewMentor;
 
 const PageStyled = styled.div`
 display: flex;
