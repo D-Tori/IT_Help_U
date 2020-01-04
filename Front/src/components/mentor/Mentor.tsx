@@ -4,20 +4,18 @@ import MentorList from './MentorList';
 import MentorField from './MentorField';
 import MenuTitle from '../common/MenuTitle';
 
-function MentorsPage(){
+function Mentor(){
   return(
-    <>
-      <PageContent>
-        <MenuTitle menuTitle="관련 기술" />
-        <MentorField />
-        <MenuTitle menuTitle="멘토" toggleBtnName="명예멘토" />
-        <MentorList />
-      </PageContent>
-    </>
+    <PageContent>
+      <MenuTitle menuTitle="관련 기술" />
+      <MentorField />
+      <MenuTitle menuTitle="멘토" toggleBtnName="명예멘토" />
+      <MentorList />
+    </PageContent>
   );
 }
 
-export default MentorsPage;
+export default Mentor;
 
 const PageContent = styled.div`
   overflow: auto;

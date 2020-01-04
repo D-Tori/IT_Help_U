@@ -28,10 +28,17 @@ const theme = {
     fullWidth: '100%',
     halfWidth: '50%',
     normalWidth: '1200px',
-    formWidth: '600px',
+    formWidth: '500px',
     smallWidth: '800px'
   },
 
+  leftPage:{
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '50px',
+    margin: '0 auto',
+    textAlign: 'center'
+  },
 }
 
 const Theme = ({ children }) => (

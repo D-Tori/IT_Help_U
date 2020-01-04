@@ -15,7 +15,7 @@ import BoardWritePage from './components/board/boardWrite/';
 import Boards from './components/board/index';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
-import MentorApplication from './components/mentor/application/';
+import NewMentor from './components/newMentor';
 import ProjectWrite from './components/project/projectWrite';
 import styled from 'styled-components';
 
@@ -45,7 +45,6 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
-
           <Route path="/signUp" component={SignUp} />
           <Route path="/myPage/resetPw" component={ResetPw} />
           <Route exact path="/mentors" component={Mentors} />
@@ -72,7 +71,7 @@ const App = () => {
           <Route path="/myPage/menteeProfile" component={MenteeProfile} />
           <Route path="/mentors/question" component={Question} />
           <Route path="/questioner" component={Questioner} />
-          <Route path="/mentors/application" component={MentorApplication} />
+          <Route path="/newMentor" component={NewMentor} />
 
           </Switch>
           <Footer />
