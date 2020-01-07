@@ -7,6 +7,8 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
+import logo from '../../images/logo5(1).png';
+
 
 const NavbarStyle = styled.div`
 
@@ -21,13 +23,13 @@ const NavbarStyle = styled.div`
 
   .navbar-brand, .navbar-nav .nav-link {
     &:hover {
-      color: #5457ff;
+      color: #0489B1;
     }
   }
 
   .btn {
     margin-left: 5px;
-    background-color: #5457ff;
+    background-color: #0489B1;
     border: none;
     &:hover {
       background-color: #4a47d5;
@@ -83,9 +85,13 @@ const NavbarStyle = styled.div`
     margin: 0 5px;
 
     &:hover {
-      color: ${props => props.theme.colors.mainColor};
+      color: #5F4C0B
       text-decoration: none;
     }
+  }
+  .logo {
+    width: 100px;
+
   }
 
 `
@@ -95,7 +101,7 @@ function Header() {
   return (
     <NavbarStyle>
       <Navbar expand="md" sticky="top">
-        <Navbar.Brand href="/">ITHelpU</Navbar.Brand>
+        <Navbar.Brand href="/"><img className="logo" src={logo} alt="로고" /></Navbar.Brand>
         <Nav className="d-none d-md-block">
           <Form className="justify-content-sm-between" inline>
             <FormControl bsPrefix="search" as="input" type="text" placeholder="Search" className="mr-sm-2" />

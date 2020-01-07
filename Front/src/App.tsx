@@ -31,6 +31,7 @@ const GlobalStyle = styled.div`
     }
     width: ${props => props.theme.width.normalWidth};
     margin: 0 auto;
+    min-height: 100vh;
     @media (max-width: 767px) {
       width: ${props => props.theme.width.fullWidth};
     }
@@ -74,8 +75,8 @@ const App = () => {
           <Route path="/newMentor" component={NewMentor} />
 
           </Switch>
-          <Footer />
         </GlobalStyle>
+        <Footer />
       </Router>
   );
 }
