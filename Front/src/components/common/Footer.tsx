@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../images/logo7_1.png';
+import logo from '../../images/footer_logo_1.png';
 
 const FooterStyle = styled.footer`
   width: 100%;
@@ -44,7 +44,7 @@ const FooterStyle = styled.footer`
 `;
 
 const Image = styled.img`
-  width: 150px;
+  width: 200px;
   height: auto;
 `;
 

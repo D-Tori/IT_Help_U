@@ -7,7 +7,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-import logo from '../../images/logo5(1).png';
+import logo from '../../images/header1_1.png';
 
 
 const NavbarStyle = styled.div`
@@ -91,7 +91,7 @@ const NavbarStyle = styled.div`
   }
   .logo {
     width: 100px;
-
+    margin-right: 20px;
   }
 
 `
