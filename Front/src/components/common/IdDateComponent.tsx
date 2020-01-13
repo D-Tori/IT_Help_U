@@ -52,7 +52,7 @@ const Style = styled.div`
 `;
 
 type IdDateComponentType = {
-  user: string,
+  user?: string,
   imgBool: boolean
 }
 
@@ -64,7 +64,7 @@ function IdDateComponent({ user, imgBool }: IdDateComponentType) {
       <div className="id-date-container">
         <div className="id-container">
           <span>{user}</span>
-          <Image className={imgBool ? "comment-user" : "d-none"} src={user} thumbnail />    {/* 글쓴이인지 아닌지에 따라 디스플레이 none or block */}
+          {/* <Image className={imgBool ? "comment-user" : "d-none"} src={user} thumbnail />    글쓴이인지 아닌지에 따라 디스플레이 none or block */}
         </div>
         <div className="date">2019-12-31 00:00:00</div>
       </div>

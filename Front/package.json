@@ -9,8 +9,10 @@
     "@types/react-dom": "16.9.4",
     "@types/react-redux": "^7.1.5",
     "@types/react-router-dom": "^5.1.3",
+    "@types/redux-saga": "^0.10.5",
     "@types/styled-components": "^4.4.0",
     "@y0c/react-datepicker": "^1.0.1",
+    "axios": "^0.19.1",
     "bootstrap": "^4.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-equimper": "*",
@@ -33,6 +35,7 @@
     "react-simple-image-slider": "^1.0.2",
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.3",
     "styled-components": "^4.4.1",
     "typescript": "3.7.2"
   },
@@ -42,6 +45,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000/",
   "eslintConfig": {
     "extends": [
       "react-app",
