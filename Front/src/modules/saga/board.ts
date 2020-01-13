@@ -15,13 +15,10 @@ function* loadBoard (payload: ReturnType<typeof getBoardRequest>) {
     const { id } = payload;
     const data = yield call(loadBoardApi, id);
     console.log('API로 넘어온 data', data);
-    yield put({type: "GET_BOARD_SUCCESS", payload: data});
+    yield put(getBoardSuccess(data));
   }catch (err) {
     console.log('err : ' , err);
-    yield put({
-      type: getBoardFailure,
-      err
-    });
+    yield put(getBoardFailure(err));
   }
 }
 

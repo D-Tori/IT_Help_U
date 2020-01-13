@@ -22,8 +22,9 @@ export const getBoardSuccess = (payload: any) => (
     payload: payload
   }
 );
-export const getBoardFailure = () => ({
-  type: GET_BOARD_FAILURE
+export const getBoardFailure = (err: any) => ({
+  type: GET_BOARD_FAILURE,
+  err
 });
 
 // 액션들의 타입 정의
