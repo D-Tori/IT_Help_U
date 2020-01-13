@@ -90,17 +90,17 @@ function BoardItem({ board }: BoardItemType) {
       <TitleWrapper>
         <span>#{board.id}</span>
         <Link key={board.id} to={`${url}/${board.id}`}><h5>{board.title}</h5></Link>
-        <div>
+        {/* <div>
           {board.category.map(category => (
             <Badge category={category}/>
           ))}
-        </div>
+        </div> */}
       </TitleWrapper>
       <AvatarContainer>
         <div className="id-date-container">
           <IdDateComponent user={board.user} imgBool={false} />
         </div>
-        <BoardState view={board.view} comment={board.comment} like={board.like} />
+        <BoardState view={board.views} comment={board.comments} like={board.likes} />
       </AvatarContainer>
     </BoardItemContainer>
   )

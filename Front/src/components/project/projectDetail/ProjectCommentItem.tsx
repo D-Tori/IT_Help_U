@@ -58,7 +58,7 @@ function ProjectCommentItem() {
   return (
     <CommentItemContainer>
       <div className="comment-header">
-        <IdDateComponent user={'이름'} imgBool={true}/>
+        <IdDateComponent user="4" imgBool={true}/>
       </div>
       <div className="comment-content">
         <span>이것이 댓글 내용입니다. 두유 노우 댓? 잇이즈 매우매우 불편데스네 두유노우이누읾우리ㅏㅁ이ㅣ 유남생?</span>

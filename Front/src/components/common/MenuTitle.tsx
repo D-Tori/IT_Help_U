@@ -72,7 +72,7 @@ function MenuTitle({ menuTitle, routingBtnName, backBtnName, toggleBtnName, addB
         {routingBtn && routingBtn}
         {backBtn && backBtn}
         {toggleBtn && toggleBtn}
-        {addBtnName && addBtnName}
+        {addBtn && addBtn}
       </div>
     </StyleMenu>
 

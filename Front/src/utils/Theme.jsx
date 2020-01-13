@@ -6,9 +6,9 @@ const theme = {
   colors: {
     ligtMainColor: '#4a47d5',
     mainColor: '#5457ff',
-    pointColor: '#963484',
+    pointColor: '#0489B1',
     whiteColor: '#fff',
-    headFontColor: '#102A43',
+    headFontColor: '#1a1a1a',
     descFontColor: '#334E68',
     smalldescColor: '#80818D'
   },

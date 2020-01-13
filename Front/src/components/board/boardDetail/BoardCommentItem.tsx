@@ -32,7 +32,7 @@ function BoardCommentItem() {
     <CommentItem>
 
       <div className="flex-col">
-        <IdDateComponent user={'이름'} imgBool={true} />
+        <IdDateComponent user="4" imgBool={true} />
         <div className="comment-content">
           <p>왓더 뻑</p>
         </div>

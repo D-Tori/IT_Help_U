@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BoardDetailContent from './BoardDetailContent';
 import IdDateComponent from '../../common/IdDateComponent';
 import styled from 'styled-components';
 import MenuTitle from '../../common/MenuTitle';
 import BoardComment from './BoardComment';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getBoardRequest } from '../../../modules/boards';
+import useBoards from '../../../hooks/useBoards';
 
 const BoardDetailStyle = styled.div`
   margin: 0 auto;
@@ -54,12 +57,9 @@ function BoardDetailPage () {
 
   let {id} = useParams();
 
-  let sid: string = '';
-  if(id !== undefined) {
-    sid = id;
-  } else {
-    console.log('id is undefined ');
-  }
+  let sid: number =  Number(id);
+
+  const dispatch = useDispatch();
 
   const [isAdd, setIsAdd] = useState(false);
 
@@ -77,7 +77,7 @@ function BoardDetailPage () {
       <MenuTitle menuTitle="고민 내용" backBtnName="목록보기" />
       <BoardContainer>
         <div className="detail-header">
-          <IdDateComponent user={sid} imgBool={true}/>
+          <IdDateComponent user={id} imgBool={true}/>
           {/* <BoardState /> */}
         </div>
         <BoardDetailContent />
