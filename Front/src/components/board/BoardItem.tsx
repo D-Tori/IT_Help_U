@@ -100,7 +100,7 @@ function BoardItem({ board }: BoardItemType) {
         <div className="id-date-container">
           <IdDateComponent user={board.user} imgBool={false} />
         </div>
-        <BoardState view={board.views} comment={board.comments} like={board.likes} />
+        <BoardState view={board.views} comment={board.comments.length} like={board.likes} />
       </AvatarContainer>
     </BoardItemContainer>
   )

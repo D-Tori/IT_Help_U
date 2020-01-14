@@ -34,6 +34,7 @@ function BoardForm() {
     setTitle('');
     setCategory('');
     setDesc('');
+
   };
 
   return (
@@ -57,7 +58,7 @@ function BoardForm() {
         <Form.Label>내용</Form.Label>
         <Form.Control value={desc} onChange={onChangeDesc} as="textarea" rows="3" />
       </Form.Group>
-      <button type="submit">작성완료</button>
+      <button  type="submit">작성완료</button>
     </Form>
   )
 }
