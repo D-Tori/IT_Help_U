@@ -1,66 +1,121 @@
 // 액션 type
-const ADD_MENTOR = "mentors/ADD_MENTOR" as const;
+export const ADD_MENTOR_REQUEST = "mentors/ADD_MENTOR_REQUEST" as const;
+export const ADD_MENTOR_SUCCESS = "mentors/ADD_MENTOR_SUCCESS" as const;
+export const ADD_MENTOR_FAILURE = "mentors/ADD_MENTOR_FAILURE" as const;
+
+
+export const GET_MENTOR_REQUEST = "mentors/GET_MENTOR_REQUEST" as const;
+export const GET_MENTOR_SUCCESS = "mentors/GET_MENTOR_SUCCESS" as const;
+export const GET_MENTOR_FAILURE = "mentors/GET_MENTOR_FAILURE" as const;
 
 
 // 액션 생성 함수
-export const addMentor = (pTitle: string, pInfo: string, mentorName: string, position: string, company: string, department: string) => ({
-  type: ADD_MENTOR,
-  payload: {
-    pTitle: pTitle,
-    pInfo: pInfo,
-    mentorName: mentorName,
-    position: position,
-    company: company,
-    department: department
-  }
+// 멘토 추가
+export const addMentorRequest = (payload: Mentor) => ({
+  type: ADD_MENTOR_REQUEST,
+  addMentorData: payload
+});
+
+export const addMentorSuccess = (data: Mentor) => ({
+  type: ADD_MENTOR_SUCCESS,
+  payload: data
+});
+
+export const addMentorFailure = (error: any) => ({
+  type: ADD_MENTOR_FAILURE,
+  errorReason: error
+});
+
+// 멘토 불러오기
+export const getMentorRequest = (uid?: number) => ({
+  type: GET_MENTOR_REQUEST,
+  uid: uid
+});
+export const getMentorSuccess = (data: any) => ({
+  type: GET_MENTOR_SUCCESS,
+  payload: data
+});
+export const getMentorFailure = (err: any) => ({
+  type: GET_MENTOR_FAILURE,
+  errorReason: err
 });
 
 
-// 액션의 타입스크립트 타입 선언
-type MentorsAction =
-  | ReturnType<typeof addMentor>
+
+// 액션의 타입 선언
+export type MentorAction =
+  | ReturnType<typeof addMentorRequest>
+  | ReturnType<typeof addMentorSuccess>
+  | ReturnType<typeof addMentorFailure>
+  | ReturnType<typeof getMentorRequest>
+  | ReturnType<typeof getMentorSuccess>
+  | ReturnType<typeof getMentorFailure>
 
 
 // 상태를 위한 타입 선언
 export type Mentor = {
-  pTitle: string;
-  pInfo: string;
-  mentorName: string;
-  position: string;
-  company: string;
-  department: string;
+  id: number,
+  occupations: string,
+  userField: string,
+  name: string,
+  company: string,
+  department: string,
+  userInfo: string,
+  userCareer: string,
+  userETC: string,
+  role: string
 }
-type MentorsState = Mentor[];
+
+export type MentorState = {
+  mentors: Mentor[],
+  errorReason: string
+}
 
 
 // 초깃값 설정
-const initialState: MentorsState = [
-  {
-    pTitle: "IT개발",
-    pInfo: "Java React Python HTML/CSS",
-    mentorName: "박보영",
-    position: "멘토",
-    company: "nc소프트",
-    department: "기획팀",
-  }
-];
+const initialState: MentorState = {
+  mentors: [],
+  errorReason: '에러 발생'
+};
 
 
 // 리듀서 구현
-function mentors(state: MentorsState = initialState, action: MentorsAction): MentorsState{
-  switch (action.type){
-    case ADD_MENTOR:
-      return state.concat({
-        pTitle: action.payload.pTitle,
-        pInfo: action.payload.pInfo,
-        mentorName: action.payload.mentorName,
-        position: action.payload.position,
-        company: action.payload.company,
-        department: action.payload.department
-      });
+function mentor(state: MentorState = initialState, action: MentorAction): MentorState{
+  switch (action.type) {
+    case ADD_MENTOR_REQUEST:
+      return {
+        ...state
+      }
+    case ADD_MENTOR_SUCCESS:
+      return {
+        ...state,
+        mentors: [action.payload, ...state.mentors]
+      }
+    case ADD_MENTOR_FAILURE:
+      return {
+        ...state,
+        errorReason: action.errorReason
+      }
+    case GET_MENTOR_REQUEST:
+      return {
+        ...state
+      }
+    case GET_MENTOR_SUCCESS:
+      return {
+        ...state,
+        mentors: action.payload.data
+      }
+    case GET_MENTOR_FAILURE:
+      return {
+        ...state,
+        errorReason: action.errorReason
+      }
     default:
-      return state;
+      return {
+        ...state
+      };
   }
 }
 
-export default mentors;
+
+export default mentor;

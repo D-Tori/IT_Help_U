@@ -79,7 +79,7 @@ function BoardForm() {
         <Form.Label>내용</Form.Label>
         <Form.Control value={content} onChange={onChangeDesc} as="textarea" rows="3" />
       </Form.Group>
-      <button type="submit">작성완료</button>
+      <button  type="submit">작성완료</button>
     </Form>
   )
 }
