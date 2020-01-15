@@ -63,7 +63,7 @@ function* addBoard (payload: ReturnType<typeof actions.addBoardRequest>) {
 };
 
 function* watchAddBoard() {
-  yield takeEvery(actions.GET_BOARD_REQUEST, loadBoard);
+  yield takeEvery(actions.ADD_BOARD_REQUEST, addBoard);
 };
 
 

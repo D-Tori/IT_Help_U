@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import BoardDetailContent from './BoardDetailContent';
 import IdDateComponent from '../../common/IdDateComponent';
 import styled from 'styled-components';
 import MenuTitle from '../../common/MenuTitle';
 import BoardComment from './BoardComment';
 import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { getBoardRequest } from '../../../modules/boards';
-import useBoards from '../../../hooks/useBoards';
+
 
 const BoardDetailStyle = styled.div`
   margin: 0 auto;
@@ -56,11 +54,6 @@ const BoardContainer = styled.div`
 function BoardDetailPage () {
 
   let {id} = useParams();
-
-  let sid: number =  Number(id);
-
-  const dispatch = useDispatch();
-
   const [isAdd, setIsAdd] = useState(false);
 
   const onClickHandler = () => {

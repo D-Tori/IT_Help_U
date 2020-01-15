@@ -4,9 +4,6 @@ import MenuTitle from '../../common/MenuTitle';
 import styled from 'styled-components';
 import SubmitBtn from '../../common/SubmitBtn';
 import ProjectComment from './ProjectComment';
-import { useParams } from 'react-router-dom';
-import useProjects from '../../../hooks/useProjects';
-import { Project } from '../../../modules/projects';
 
 
 const PageViewContainer = styled.div`
@@ -24,10 +21,6 @@ const PageViewContainer = styled.div`
 
 
 function ProjectDetailPage () {
-
-  const { id } = useParams();
-
-  const projects = useProjects();
 
   return(
       <PageViewContainer>

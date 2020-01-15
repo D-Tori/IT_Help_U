@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import BoardList from './BoardList';
 import MenuTitle from '../common/MenuTitle';
-import { getBoardRequest } from '../../modules/boards';
-import { useDispatch } from 'react-redux';
-import useBoards from '../../hooks/useBoards';
+
 
 
 const PageViewContainer = styled.div`
