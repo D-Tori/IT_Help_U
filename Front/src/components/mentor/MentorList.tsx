@@ -1,46 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MentorItem from './MentorItem';
 import Row from 'react-bootstrap/Row';
 import useMentors from '../../hooks/useMentors';
+import { useDispatch } from 'react-redux';
+import { getMentorRequest } from '../../modules/mentors';
+
 
 function MentorList() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getMentorRequest());
+  }, []);
+
   const mentors = useMentors();
 
   return(
     <ListStyle>
       <Row>
-        {mentors.map(mentor => (
+        {mentors.mentors.map(mentor => (
           <MentorItem mentor={mentor} />
         ))}
 
-        {mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
-        ))}
-
-        {mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
-        ))}
-
-        {mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
-        ))}
-
-        {mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
-        ))}
-
-        {mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
-        ))}
-
-        {mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
-        ))}
-
-        {mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
-        ))}
 
       </Row>
     </ListStyle>
