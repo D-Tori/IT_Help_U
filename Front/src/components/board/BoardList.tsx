@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import BoardItem from './BoardItem';
 
 import useBoards from '../../hooks/useBoards';
 import { useDispatch } from 'react-redux';
-import { getBoardRequest, Board, BoardsState } from '../../modules/boards';
+import { getBoardRequest, BoardsState } from '../../modules/boards';
 
 
 const BoardListContainer = styled.div`
@@ -27,14 +27,19 @@ type BoardPropsType = {
 function BoardList () {
 
   const dispatch = useDispatch();
+  const boardState = useBoards();
+
+
+  const initFetch = useCallback(() => {
+    dispatch(getBoardRequest());
+  }, [dispatch]);
 
 
   useEffect(() => {
-    dispatch(getBoardRequest());
+    initFetch();
   }, []);
 
-  const boards = useBoards();
-  console.log('state에 boards', boards);
+  const boards = boardState.boards;
 
 
   return(
@@ -49,3 +54,5 @@ function BoardList () {
 }
 
 export default BoardList;
+
+

@@ -1,3 +1,4 @@
+
 // 액션 Type
 
 // 보드 추가
@@ -58,27 +59,31 @@ export type BoardAction =
 
 // 상태를 위한 타입 설정
 export type Board = {
-  id: number,
+  id?: number,
   title: string,
   content: string,
-  category: string[],
-  views: number,
-  comments: number[],
-  likes: number,
-  user: string
+  category?: string,
+  views?: number,
+  comments?: number[],
+  likes?: number,
+  buser: string
 }
 
 
 export type BoardsState = {
   boards: Board[];
-  errorReason: string
+  errorReason: string,
+  isAddPosted: boolean,
+  isAddPosting: boolean,
 }
 
 // 초기값 설정
 
 const initialState: BoardsState = {
   boards: [],
-  errorReason: ''
+  errorReason: '',
+  isAddPosted: false,
+  isAddPosting: false,
 };
 
 
@@ -87,12 +92,15 @@ function board(state: BoardsState = initialState, action: BoardAction): BoardsSt
   switch (action.type) {
     case ADD_BOARD_REQUEST:
       return {
-        ...state
+        ...state,
+        isAddPosting: true
       }
     case ADD_BOARD_SUCCESS:
       return {
         ...state,
-        boards: [action.payload, ...state.boards]
+        boards: [action.payload, ...state.boards],
+        isAddPosting: false,
+        isAddPosted: true
       };
     case ADD_BOARD_FAILURE:
       return {
@@ -106,7 +114,8 @@ function board(state: BoardsState = initialState, action: BoardAction): BoardsSt
     case GET_BOARD_SUCCESS:
       return {
         ...state,
-        boards: action.payload.data
+        boards: action.payload.data,
+        isAddPosted: false
       };
     case GET_BOARD_FAILURE:
       return {

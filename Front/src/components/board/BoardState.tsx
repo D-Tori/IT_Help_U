@@ -27,9 +27,9 @@ const ItemState = styled.div`
 `;
 
 type BoardStateType = {
-  view: number,
-  comment: number,
-  like: number
+  view?: number,
+  comment?: number,
+  like?: number
 }
 
 function BoardState({view, comment, like}: BoardStateType) {
