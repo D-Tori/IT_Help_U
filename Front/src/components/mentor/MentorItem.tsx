@@ -21,15 +21,15 @@ function MentorItem({ mentor }: MentorItemProps){
               </Link>
             </div>
             <div className="primary-info-container">
-              <div className="primary-title"> {mentor.pTitle} </div>
-              <div className="primary-detail-info"> {mentor.pInfo} </div>
+              <div className="primary-title"> {mentor.occupations} </div>
+              <div className="primary-detail-info"> {mentor.userField} </div>
             </div>
           </div>
           <div className="bottom">
             <div className="mentor-info-container">
               <div className="name">
-                <span className="mentor-name"> {mentor.mentorName} </span>
-                <span className="position"> {mentor.position} </span>
+                <span className="mentor-name"> {mentor.name} </span>
+                <span className="position"> {mentor.role} </span>
               </div>
               <div className="job">
                 <div className="company"> {mentor.company} </div>
