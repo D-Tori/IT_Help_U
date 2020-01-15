@@ -9,7 +9,7 @@ import '@y0c/react-datepicker/assets/styles/calendar.scss';
 import 'dayjs/locale/ko';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Badge from './Badge';
 import IdDateComponent from '../common/IdDateComponent';
 
 import BoardState from './BoardState';
 import { Board } from '../../modules/boards';
 import { useRouteMatch, Link } from 'react-router-dom';
+import Badge from './Badge';
 
 
 const TitleWrapper = styled.div`
@@ -84,23 +84,26 @@ type BoardItemType = {
 
 function BoardItem({ board }: BoardItemType) {
   let { url } = useRouteMatch();
-  console.log(url);
+
+  let numberOfComments = board.comments ? board.comments.length : 0;
+  let categorySlice = board.category !== undefined ? board.category.split(',') : undefined;
+  let category = categorySlice ? (categorySlice.map((category, index) => (
+    <Badge category={category} key={index}/>
+  ))) : <></>
   return (
     <BoardItemContainer>
       <TitleWrapper>
         <span>#{board.id}</span>
         <Link key={board.id} to={`${url}/${board.id}`}><h5>{board.title}</h5></Link>
-        {/* <div>
-          {board.category.map(category => (
-            <Badge category={category}/>
-          ))}
-        </div> */}
+        <div>
+          {category}
+        </div>
       </TitleWrapper>
       <AvatarContainer>
         <div className="id-date-container">
-          <IdDateComponent user={board.user} imgBool={false} />
+          <IdDateComponent user={board.buser} imgBool={false} />
         </div>
-        <BoardState view={board.views} comment={board.comments.length} like={board.likes} />
+        <BoardState view={board.views} comment={numberOfComments} like={board.likes} />
       </AvatarContainer>
     </BoardItemContainer>
   )
