@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
 import mariadb from 'mariadb';
 import cors from 'cors';
-import { response } from 'express';
 
 dotenv.config();
 
@@ -51,6 +50,26 @@ async function getBoardList() {
   }
 }
 
+async function addBoard(data) {
+  let conn;
+  console.log('board : ', data);
+  let title = data.title;
+  let category = data.category;
+  let content = data.content;
+  let user = data.buser;
+  try {
+    conn = await pool.getConnection();
+    const rows = await conn.query(`INSERT INTO board (title, category, content, buser)
+                    VALUES ('${title}', '${category}', '${content}', '${buser}'); `) ;
+    return rows;
+  } catch (err) {
+    throw err;
+  } finally {
+    if (conn) conn.release(); //release to pool
+  }
+}
+
+
 
 app.get('/', (req, res) => res.send("hello world"));
 app.get('/board/:id', (req, res) => {
@@ -70,4 +89,9 @@ app.get('/board', (req, res) => {
     res.send(200, result);
   })
 });
+app.post('/board', (req, res) => {
+  const data = req.body;
+  const rs = addBoard(data);
+  res.status(200).json({msg: '성공', resultSet: rs});
+})
 app.listen(port, () => console.log(`Example app listening on port ${port}`))
