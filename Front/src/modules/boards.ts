@@ -11,44 +11,66 @@ export const GET_BOARD_REQUEST = 'boards/GET_BOARD_REQUEST' as const;
 export const GET_BOARD_SUCCESS = 'boards/GET_BOARD_SUCCESS' as const;
 export const GET_BOARD_FAILURE = 'boards/GET_BOARD_FAILURE' as const;
 
+// 보드 삭제하기
+export const DELETE_BOARD_REQUEST = 'boards/DELETE_BOARD_REQUEST' as const;
+export const DELETE_BOARD_SUCCESS = 'boards/DELETE_BOARD_SUCCESS' as const;
+export const DELETE_BOARD_FAILURE = 'boards/DELETE_BOARD_FAILURE' as const;
 
 
 // 액션 생성 함수
 
 // 보드 추가
-export const addBoardRequest = (payload: Board) => ({
+export const addBoardRequest = (data: Board) => ({
   type: ADD_BOARD_REQUEST,
-  addBoardData: payload
+  addData: data
 });
 
-export const addBoardSuccess = (data: Board) => ({
+export const addBoardSuccess = (data: any) => ({
   type: ADD_BOARD_SUCCESS,
   payload: data
 });
 
-export const addBoardFailure = (error: any) => ({
+export const addBoardFailure = (err: any) => ({
   type: ADD_BOARD_FAILURE,
-  errorReason: error
+  err: err
 });
 
 
 // 보드 불러오기
-export const getBoardRequest = (id?: number) => ({
+export const getBoardRequest = (payload?: number) => ({
   type: GET_BOARD_REQUEST,
-  id: id
+  id: payload
 });
 export const getBoardSuccess = (data: any) => ({
   type: GET_BOARD_SUCCESS,
   payload: data
 });
-export const getBoardFailure = (err: any) => ({
+export const getBoardFailure = (payload: any) => ({
   type: GET_BOARD_FAILURE,
-  errorReason: err
+  err: payload
+});
+
+// 보드 삭제
+
+export const deleteBoardRequest = (payload: number) => ({
+  type: DELETE_BOARD_REQUEST,
+  payload: payload
+});
+export const deleteBoardSuccess = (payload: any) => ({
+  type: DELETE_BOARD_SUCCESS,
+  payload: payload
+});
+export const deleteBoardFailure = (payload: any) => ({
+  type: DELETE_BOARD_FAILURE,
+  payload: payload
 });
 
 // 액션들의 타입 정의
 
 export type BoardAction =
+  | ReturnType<typeof deleteBoardRequest>
+  | ReturnType<typeof deleteBoardSuccess>
+  | ReturnType<typeof deleteBoardFailure>
   | ReturnType<typeof addBoardRequest>
   | ReturnType<typeof addBoardSuccess>
   | ReturnType<typeof addBoardFailure>
@@ -62,11 +84,11 @@ export type Board = {
   id?: number,
   title: string,
   content: string,
-  category?: string,
-  views?: number,
+  tags: string[],
+  view_count?: number,
   comments?: number[],
-  likes?: number,
-  buser: string
+  like_count?: number,
+  writer: string
 }
 
 
@@ -98,29 +120,39 @@ function board(state: BoardsState = initialState, action: BoardAction): BoardsSt
     case ADD_BOARD_SUCCESS:
       return {
         ...state,
-        boards: [action.payload, ...state.boards],
         isAddPosting: false,
         isAddPosted: true
       };
     case ADD_BOARD_FAILURE:
       return {
         ...state,
-        errorReason: action.errorReason
+        isAddPosting: false,
+        isAddPosted: false,
+        errorReason: action.err
       }
     case GET_BOARD_REQUEST:
       return {
-        ...state
-      }
+        ...state,
+      };
     case GET_BOARD_SUCCESS:
       return {
         ...state,
-        boards: action.payload.data,
-        isAddPosted: false
+        boards: action.payload.data
       };
     case GET_BOARD_FAILURE:
       return {
         ...state,
-        errorReason: action.errorReason
+        errorReason: action.err
+      };
+    case DELETE_BOARD_SUCCESS:
+      return {
+        ...state,
+        boards: action.payload.data
+      };
+    case DELETE_BOARD_FAILURE:
+      return {
+        ...state,
+        errorReason: action.payload
       }
     default:
       return { ...state };

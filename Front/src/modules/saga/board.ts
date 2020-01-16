@@ -4,6 +4,10 @@ import axios from 'axios';
 import * as actions from '../boards';
 
 
+// axios 객체 생성
+const boardAPI = axios.create({baseURL: 'http://localhost:5000'})
+
+
  // *********************** 게시글 가져오기 ************************  //
 /**
  * 게시글 가져오기 API 요청 메소드
@@ -11,7 +15,7 @@ import * as actions from '../boards';
  * @returns Promise
  */
 function loadBoardApi (boardId?: number) {
-  return axios.get(boardId ? `/board/${boardId}` : '/board', {
+  return boardAPI.get(boardId ? `/board/${boardId}` : '/board', {
     withCredentials: true
   });
 };
@@ -48,17 +52,17 @@ function* watchLoadBoard() {
 
 
 function addBoardApi(board: actions.Board) {
-  return axios.post('/board', board, )
+  return boardAPI.post('/board', board, )
 }
 
 function* addBoard (payload: ReturnType<typeof actions.addBoardRequest>) {
   try{
-    const { addBoardData } = payload;
-    const data = yield call(addBoardApi, addBoardData);
+    const { addData } = payload;
+    const data = yield call(addBoardApi, addData);
     console.log('addBoard의 성공 여부', data);
-    yield put({type: actions.ADD_BOARD_SUCCESS, payload: data});
+    yield put(actions.addBoardSuccess(data));
   }catch(err) {
-    yield put({type: actions.addBoardFailure, errorReason: err});
+    yield put(actions.addBoardFailure(err));
   }
 };
 
