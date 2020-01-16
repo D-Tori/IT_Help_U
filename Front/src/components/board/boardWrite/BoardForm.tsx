@@ -14,7 +14,7 @@ import useBoards from '../../../hooks/useBoards';
 function BoardForm() {
 
   const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
+  const [tag, setTag] = useState('');
   const [content, setContent] = useState('');
   const addBoard = useAddBoard();
   const boardState = useBoards();
@@ -26,8 +26,8 @@ function BoardForm() {
   const onChangeTitle = (e: ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
   };
-  const onChangeCategory = (e: ChangeEvent<HTMLInputElement>) => {
-    setCategory(e.target.value);
+  const onChangeTag = (e: ChangeEvent<HTMLInputElement>) => {
+    setTag(e.target.value);
   };
   const onChangeDesc = (e: ChangeEvent<HTMLInputElement>) => {
     setContent(e.target.value);
@@ -35,16 +35,16 @@ function BoardForm() {
 
   const board: Board = {
     title: title,
-    category: category,
+    tags: tag.split(','),
     content: content,
-    buser: "학",
+    writer: "학",
   }
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     addBoard(board);
     setTitle('');
-    setCategory('');
+    setTag('');
     setContent('');
   };
 
@@ -73,7 +73,7 @@ function BoardForm() {
       </Form.Group>
       <Form.Group controlId="ControlInputCategory">
         <Form.Label>관련 기술(프로그램)</Form.Label>
-        <Form.Control value={category} onChange={onChangeCategory} placeholder=",로 구분합니다." />
+        <Form.Control value={tag} onChange={onChangeTag} placeholder=",로 구분합니다." />
       </Form.Group>
       <Form.Group controlId="ControlTextAreaContent">
         <Form.Label>내용</Form.Label>

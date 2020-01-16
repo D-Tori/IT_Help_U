@@ -4,12 +4,11 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   colors: {
-    ligtMainColor: '#4a47d5',
-    mainColor: '#5457ff',
+    mainColor: '#FACC2E ',
     pointColor: '#0489B1',
     whiteColor: '#fff',
     headFontColor: '#1a1a1a',
-    descFontColor: '#334E68',
+    descFontColor: '#5F4C0B',
     smalldescColor: '#80818D'
   },
   font: ['Lato', 'sans-serif'],

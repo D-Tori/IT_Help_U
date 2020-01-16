@@ -22,19 +22,19 @@ import styled from 'styled-components';
 const GlobalStyle = styled.div`
     font-family: ${props => props.theme.font[0]};
     font-size: ${props => props.theme.fontSize.medium};
-    h1, h2, h3, h4, h5, h6 {
-      font-size: ${props => props.theme.fontSize.xLarge};
+    h2, h3, h4, h5, h6 {
+      font-size: 14px;
       margin: 0;
+    }
+    h1 {
+      font-size: 24px;
     }
     li {
       list-style: none;
     }
-    width: ${props => props.theme.width.normalWidth};
+    width: auto;
     margin: 0 auto;
     min-height: 100vh;
-    @media (max-width: 767px) {
-      width: ${props => props.theme.width.fullWidth};
-    }
 `;
 
 

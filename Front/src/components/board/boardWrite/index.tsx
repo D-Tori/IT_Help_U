@@ -8,6 +8,8 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  width: ${props => props.theme.width.formWidth};
+  margin : 0 auto;
 `;
 
 function BoardWritePage() {

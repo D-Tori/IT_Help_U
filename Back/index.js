@@ -11,7 +11,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded( {extended : false } ));
 
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000', // 허락하고자 하는 요청 주소
+  credentials: true, // true로 하면 설정한 내용을 response 헤더에 추가 해줍니다.
+};
+
+
+app.use(cors(corsOptions));
 
 const pool = mariadb.createPool({
   user: process.env.USER,
@@ -24,7 +30,7 @@ const pool = mariadb.createPool({
 
 
 
-async function getUserList(id) {
+async function getBoard(id) {
   let conn;
   try {
     conn = await pool.getConnection();
@@ -41,7 +47,9 @@ async function getBoardList() {
   let conn;
   try {
     conn = await pool.getConnection();
-    const rows = await conn.query(`select * from board `);
+    const rows = await conn.query(`select user.name as writer,
+     board.title, board.tag, board.content, board.view_count,
+     board.like_count, board.id from board inner join user on board.writer_id = user.id`);
     return rows;
   } catch (err) {
     throw err;
@@ -56,11 +64,12 @@ async function addBoard(data) {
   let title = data.title;
   let category = data.category;
   let content = data.content;
-  let user = data.buser;
+  let writerId = data.writer;
   try {
     conn = await pool.getConnection();
-    const rows = await conn.query(`INSERT INTO board (title, category, content, buser)
-                    VALUES ('${title}', '${category}', '${content}', '${buser}'); `) ;
+    const payload = await conn.query(`SELECT id FROM user WHERE id = ${writerId}`)
+    const rows = await conn.query(`INSERT INTO board (title, category, content, writer)
+                    VALUES ('${title}', '${category}', '${content}', '${writer}'); `) ;
     return rows;
   } catch (err) {
     throw err;
@@ -90,21 +99,21 @@ async function getMentorList() {
 app.get('/', (req, res) => res.send("hello world"));
 app.get('/board/:id', (req, res) => {
   const id = req.params.id;
-  const rs = getUserList(id);
+  const rs = getBoard(id);
   rs.then((result) => {
     console.log('result : ', result);
     res.header("Access-Control-Allow-Origin", "*");
     res.send(200, result);
   })
 });
+
 app.get('/board', (req, res) => {
   const rs = getBoardList();
   rs.then((result) => {
-    console.log('result : ', result);
-    res.header("Access-Control-Allow-Origin", "*");
-    res.send(200, result);
-  })
-});
+    result
+    res.status(200).json(result);
+})});
+
 app.post('/board', (req, res) => {
   const data = req.body;
   const rs = addBoard(data);
@@ -125,4 +134,4 @@ app.get('/mentors', (req, res) => {
 })
 
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`))
+app.listen(port, () => console.log(`Example app listening on port ${port}`));

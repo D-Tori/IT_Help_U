@@ -85,7 +85,7 @@ const NavbarStyle = styled.div`
     margin: 0 5px;
 
     &:hover {
-      color: #5F4C0B
+      color: ${props => props.theme.colors.pointColor};
       text-decoration: none;
     }
   }
