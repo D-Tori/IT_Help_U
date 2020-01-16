@@ -14,15 +14,16 @@ const TitleWrapper = styled.div`
   flex-direction: column;
   width: 100%;
 
-
-  h5 {
-    display: flex;
+  h5 a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.headFontColor};
+    &:hover {
+      color: ${props => props.theme.colors.pointColor}
+    }
   }
 
-  h5 a {
-    display: flex;
-    font-size: 14px;
-    margin: 5px;
+  span {
+    color: ${props => props.theme.colors.descFontColor};
   }
 
   .avatar-wrap {
@@ -32,33 +33,33 @@ const TitleWrapper = styled.div`
     align-items: center;
   }
 
-  span {
-    font-size: 13px;
-    color: #bbb;
-  }
-
 
   @media (max-width: 767px) {
-    margin-bottom: 10px;
+
   }
 
 `;
 
 const AvatarContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
+  width: 100%;
 
   .id-date-container {
     display: flex;
-    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .board-state-content {
+    width: 100%;
+    margin-right: 5px;
   }
 
   @media (max-width: 767px) {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
     width: 100%;
   }
 `
@@ -67,7 +68,7 @@ const BoardItemContainer = styled.li`
   display: flex;
   width: 100%;
   border: 1px solid #ddd;
-  border-left: 3px solid #5457ff;
+  border-left: 3px solid ${props => props.theme.colors.pointColor};
   padding: 10px;
   justify-content: space-between;
 
@@ -86,24 +87,26 @@ function BoardItem({ board }: BoardItemType) {
   let { url } = useRouteMatch();
 
   let numberOfComments = board.comments ? board.comments.length : 0;
-  let categorySlice = board.category !== undefined ? board.category.split(',') : undefined;
-  let category = categorySlice ? (categorySlice.map((category, index) => (
-    <Badge category={category} key={index}/>
-  ))) : <></>
+
+  console.log(board);
+
+
   return (
     <BoardItemContainer>
       <TitleWrapper>
         <span>#{board.id}</span>
-        <Link key={board.id} to={`${url}/${board.id}`}><h5>{board.title}</h5></Link>
-        <div>
-          {category}
+        <h5><Link key={board.id} to={`${url}/${board.id}`}>{board.title}</Link></h5>
+        <div style={{marginTop: "10px"}}>
+          <Badge tag="하이" />
         </div>
       </TitleWrapper>
       <AvatarContainer>
-        <div className="id-date-container">
-          <IdDateComponent user={board.buser} imgBool={false} />
+        <div className="board-state-content">
+          <BoardState view={board.view_count} comment={numberOfComments} like={board.like_count} />
         </div>
-        <BoardState view={board.views} comment={numberOfComments} like={board.likes} />
+        <div className="id-date-container">
+          <IdDateComponent user={board.writer} imgBool={false} />
+        </div>
       </AvatarContainer>
     </BoardItemContainer>
   )

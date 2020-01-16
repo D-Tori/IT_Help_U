@@ -12,17 +12,16 @@ const ItemState = styled.div`
   align-content: center;
   justify-content: space-around;
   height: 24px;
-  width: 100%;
   .board-icon {
     width: 24px;
     height: 24px;
 
   }
-  // span {
-  //   margin-left: 5px;
-  // }
+  span {
+    margin: 0 5px;
+  }
   @media(max-width:767px) {
-    margin-top: 10px;
+    width: 100%;
   }
 `;
 

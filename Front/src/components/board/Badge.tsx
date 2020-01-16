@@ -21,18 +21,14 @@ const BadgeStyle = styled.button`
 `;
 
 type categoryItemType = {
-  category: string;
+  tag: string;
 }
 
-function Badge({category}: categoryItemType) {
+function Badge({tag}: categoryItemType) {
   return (
-    <BadgeStyle>{category}</BadgeStyle>
+    <BadgeStyle>{tag}</BadgeStyle>
   )
 }
 
-Badge.defaultProps = {
-  name: 'React',
-  color: 'red'
-}
 
 export default Badge;

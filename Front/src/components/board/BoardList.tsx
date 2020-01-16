@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import BoardItem from './BoardItem';
 
@@ -20,34 +20,27 @@ const BoardListContainer = styled.div`
   }
 `;
 
-type BoardPropsType = {
-  boards: BoardsState
-}
-
 function BoardList () {
 
   const dispatch = useDispatch();
   const boardState = useBoards();
-
-
-  const initFetch = useCallback(() => {
-    dispatch(getBoardRequest());
-  }, [dispatch]);
-
-
-  useEffect(() => {
-    initFetch();
-  }, []);
-
   const boards = boardState.boards;
 
+  useEffect(() => {
+    dispatch(getBoardRequest());
+  }, []);
+
+
+
+  console.log('boards : ', boards);
 
   return(
     <BoardListContainer>
       <ul>
-        {boards.map((board, index) => (
+        {boards ? boards.map((board, index) => (
           <BoardItem board={board} key={index} />
-        ))}
+        )) : <p>게시글이 없습니다.</p>
+        }
       </ul>
     </BoardListContainer>
   )
