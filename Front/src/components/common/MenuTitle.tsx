@@ -20,7 +20,6 @@ const StyleMenu = styled.div`
     font-size: ${props => props.theme.fontSize.xLarge}
     color: ${props => props.theme.colors.headFontColor};
     font-weight: ${props => props.theme.fontWeight.mainTitle};
-
   }
   .btn-container {
     display: flex;
