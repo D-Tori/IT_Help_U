@@ -55,15 +55,20 @@ export type MentorAction =
 // 상태를 위한 타입 선언
 export type Mentor = {
   id: number,
-  occupations: string,
-  userField: string,
+  email: string,
+  password: string,
   name: string,
+  role: string,
+  field: string,
   company: string,
   department: string,
-  userInfo: string,
-  userCareer: string,
-  userETC: string,
-  role: string
+  school: string,
+  major: string,
+  information: string,
+  career: string,
+  etc: string,
+  image: string,
+  signup_type: string
 }
 
 export type MentorState = {

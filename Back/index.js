@@ -85,7 +85,7 @@ async function getMentorList() {
   let conn;
   try {
     conn = await pool.getConnection();
-    const rows = await conn.query(`select * from Users where role = 'Mentor';`)
+    const rows = await conn.query(`select * from user where role = 'Mentor';`)
     return rows;
   } catch (err) {
     throw err;
