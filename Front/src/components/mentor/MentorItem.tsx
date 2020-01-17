@@ -21,8 +21,8 @@ function MentorItem({ mentor }: MentorItemProps){
               </Link>
             </div>
             <div className="primary-info-container">
-              <div className="primary-title"> {mentor.occupations} </div>
-              <div className="primary-detail-info"> {mentor.userField} </div>
+              <div className="primary-title"> IT 개발 </div>
+              <div className="primary-detail-info"> {mentor.field} </div>
             </div>
           </div>
           <div className="bottom">
