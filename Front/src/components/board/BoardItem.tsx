@@ -53,13 +53,14 @@ const AvatarContainer = styled.div`
   }
 
   .board-state-content {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
     margin-right: 5px;
   }
 
   @media (max-width: 767px) {
     flex-direction: row;
-    justify-content: flex-start;
     width: 100%;
   }
 `

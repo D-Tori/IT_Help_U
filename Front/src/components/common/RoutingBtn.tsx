@@ -11,7 +11,7 @@ type BtnType = {
 const BackBtnStyle = styled.button`
   display: flex;
   font-size: ${props => props.theme.fontSize.medium};
-  background-color: ${props => props.theme.colors.pointColor};
+  background-color: ${props => props.theme.colors.pointColor2};
   font-weight: ${props => props.theme.fontWeight.emphasis};
   color: ${props => props.theme.colors.whiteColor};
   border: none;

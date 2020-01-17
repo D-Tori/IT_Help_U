@@ -11,13 +11,15 @@ type BadgesProps = {
 
 const BadgeStyle = styled.button`
   display: inline;
-  background-color: #5457ff
+  background-color: ${props => props.theme.colors.pointColor}
   font-size: 12px;
   color: #fff;
   border-radius: 4px;
-  padding: 5px 10px;
   border: none;
   margin-right: 5px;
+  &:hover {
+    background-color: ${props => props.theme.colors.lightPointColor}
+  }
 `;
 
 type categoryItemType = {
