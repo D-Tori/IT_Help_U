@@ -47,9 +47,9 @@ async function getBoardList() {
   let conn;
   try {
     conn = await pool.getConnection();
-    const rows = await conn.query(`select user.name as writer,
+    const rows = await conn.query(`SELECT user.name AS writer,
      board.title, board.tag, board.content, board.view_count,
-     board.like_count, board.id from board inner join user on board.writer_id = user.id`);
+     board.like_count, board.id FROM board INNER JOIN user ON board.writer_id = user.id`);
     return rows;
   } catch (err) {
     throw err;
