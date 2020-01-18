@@ -13,6 +13,7 @@ import logo from '../../images/header1_1.png';
 const NavbarStyle = styled.div`
 
   display: flex;
+  width: auto;
 
   .navbar {
     width: 100%;
@@ -32,7 +33,7 @@ const NavbarStyle = styled.div`
     background-color: #0489B1;
     border: none;
     &:hover {
-      background-color: #4a47d5;
+      background-color: ${props => props.theme.colors.lightPointColor}
     }
   }
 
@@ -85,7 +86,7 @@ const NavbarStyle = styled.div`
     margin: 0 5px;
 
     &:hover {
-      color: #5F4C0B
+      color: ${props => props.theme.colors.pointColor};
       text-decoration: none;
     }
   }

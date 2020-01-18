@@ -11,28 +11,26 @@ type BadgesProps = {
 
 const BadgeStyle = styled.button`
   display: inline;
-  background-color: #5457ff
+  background-color: ${props => props.theme.colors.pointColor}
   font-size: 12px;
   color: #fff;
   border-radius: 4px;
-  padding: 5px 10px;
   border: none;
   margin-right: 5px;
+  &:hover {
+    background-color: ${props => props.theme.colors.lightPointColor}
+  }
 `;
 
 type categoryItemType = {
-  category: string;
+  tag: string;
 }
 
-function Badge({category}: categoryItemType) {
+function Badge({tag}: categoryItemType) {
   return (
-    <BadgeStyle>{category}</BadgeStyle>
+    <BadgeStyle>{tag}</BadgeStyle>
   )
 }
 
-Badge.defaultProps = {
-  name: 'React',
-  color: 'red'
-}
 
 export default Badge;
