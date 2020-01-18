@@ -7,7 +7,6 @@ import Projects from './components/project/index';
 import SignUp from './components/signUp/';
 import ResetPw from './components/myPage/passWord/ResetPwPage';
 import Mentors from './components/mentor/';
-import MentorDetail from './components/mentor/detail/';
 import MenteeProfile from './components/myPage/menteeProfile/';
 import Question from './components/mentor/question/';
 import Questioner from './components/questioner/';
@@ -48,8 +47,7 @@ const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/signUp" component={SignUp} />
           <Route path="/myPage/resetPw" component={ResetPw} />
-          <Route exact path="/mentors" component={Mentors} />
-          <Route path="/mentors/detail" component={MentorDetail} />
+          <Route path="/mentors" component={Mentors} />
 
           {/* board */}
           <Route path="/boards">

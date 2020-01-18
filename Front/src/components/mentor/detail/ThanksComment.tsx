@@ -5,7 +5,7 @@ import Image from 'react-bootstrap/Image';
 
 function ThanksComment() {
   return(
-    <Comment>
+    <ContentBox>
       <div className="menteeInfo">
         <div className="imgContainer">
           <Image className="img" src={MenteeImg} roundedCircle />
@@ -19,13 +19,13 @@ function ThanksComment() {
         많은 경험들이 더 필요하겠어요.
         더 많이 생각하고 고민하고 경험해보겠습니다!
       </div>
-    </Comment>
+    </ContentBox>
   );
 }
 
 export default ThanksComment;
 
-const Comment = styled.div`
+const ContentBox = styled.div`
   margin: 20px 0 44px 0;
   width: 100%;
   padding: 0 15px;

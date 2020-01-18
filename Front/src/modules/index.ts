@@ -1,13 +1,13 @@
 // 루트 리듀서
 import { combineReducers } from 'redux';
 import board from './boards';
-import mentors from './mentors';
+import user from './user';
 import project from './projects';
 
 const rootReducer = combineReducers({
   board,
   project,
-  mentors
+  user
 });
 
 export default rootReducer;

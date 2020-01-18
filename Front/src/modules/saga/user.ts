@@ -1,15 +1,15 @@
 import { all, fork, call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
-import * as actions from '../mentors';
+import * as actions from '../user';
 
 
 /** *************************멘토 정보 가져오기 *************************
  * 멘토 정보 가져오기 API 요청 메소드
- * @param uid 유저 id
+ * @param id 유저 id
  * @returns Promise
  */
-function loadMentorApi () {
-  return axios.get('/mentors', { withCredentials: true });
+function loadMentorApi (id?: number) {
+  return axios.get(id ? `/mentors/${id}` : '/mentors', { withCredentials: true });
 };
 
 

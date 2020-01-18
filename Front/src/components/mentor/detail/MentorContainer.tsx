@@ -4,13 +4,14 @@ import MentorInfo from './MentorInfo';
 import MentorDetailInfo from './MentorDetailInfo';
 import MentorThanks from './MentorThanks';
 
+
 function MentorContainer(){
   return(
-    <ContainerStyled>
+    <ContentBox>
       <MentorInfo />
       <MentorDetailInfo />
       <MentorThanks />
-    </ContainerStyled>
+    </ContentBox>
   );
 }
 
@@ -18,7 +19,7 @@ function MentorContainer(){
 
 export default MentorContainer;
 
-const ContainerStyled = styled.div`
+const ContentBox = styled.div`
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -33,5 +34,5 @@ const ContainerStyled = styled.div`
     width: auto;
     margin: 0 auto;
     padding-top: 81px
-  }  
+  }
 `

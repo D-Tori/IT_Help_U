@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MentorItem from './MentorItem';
 import Row from 'react-bootstrap/Row';
-import useMentors from '../../hooks/useMentors';
+import useMentors from '../../hooks/useUser';
 import { useDispatch } from 'react-redux';
-import { getMentorRequest } from '../../modules/mentors';
+import { getMentorRequest } from '../../modules/user';
 
 
 function MentorList() {
@@ -21,8 +21,6 @@ function MentorList() {
         {mentors.mentors.map(mentor => (
           <MentorItem mentor={mentor} />
         ))}
-
-
       </Row>
     </ListStyle>
   );
