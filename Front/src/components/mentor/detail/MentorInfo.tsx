@@ -4,10 +4,12 @@ import Image from 'react-bootstrap/Image';
 import MentorImg from '../../../images/mentor1.png';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import { Mentor } from '../../../modules/user';
+
 
 function MentorInfo() {
   return(
-    <Info>
+    <ContentBox>
       <div className="mentorImg">
         <Link to='/mentors/detail'>
           <Image className="img" src={MentorImg} roundedCircle />
@@ -16,12 +18,12 @@ function MentorInfo() {
       <div className="infoBox">
         <div className="name">
           <span className="profileName">
-            박보영
-            <small>멘토</small>
+            {/* {mentor.name} */}
+            {/* <small>{mentor.role}</small> */}
           </span>
         </div>
         <div className="job">
-          nc소프트 · 기획팀
+          {/* {mentor.company} · {mentor.department} */}
         </div>
         <div className="detail">
           <div className="detailInfo">
@@ -87,14 +89,14 @@ function MentorInfo() {
           </div>
         </div>
       </div>
-    </Info>
+    </ContentBox>
   );
 }
 
 
 export default MentorInfo
 
-const Info = styled.div`
+const ContentBox = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 35px 0;

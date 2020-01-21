@@ -3,20 +3,22 @@ import styled from 'styled-components';
 import Image from 'react-bootstrap/Image';
 import MentorImg from '../../images/mentor1.png';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
-import { Mentor } from '../../modules/mentors';
+import { useRouteMatch, Link } from 'react-router-dom';
+import { Mentor } from '../../modules/user';
 
 type MentorItemProps = {
   mentor: Mentor;
 };
 
 function MentorItem({ mentor }: MentorItemProps){
+  let { url } = useRouteMatch();
+
   return(
     <CardMentor>
       <div className="container">
           <div className="top">
             <div className="mentor-img">
-              <Link to='/mentors/detail'>
+              <Link key={mentor.id} to={`${url}/${mentor.id}`}>
                 <Image className="img" src={MentorImg} roundedCircle />
               </Link>
             </div>

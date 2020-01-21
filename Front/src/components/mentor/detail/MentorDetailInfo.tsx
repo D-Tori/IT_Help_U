@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 function MentorDetailInfo(){
   return(
-    <Detail>
+    <ContentBox>
       <div className="divider" />
       <div className="blockTitle">멘토 소개</div>
       <div className="block">
@@ -21,13 +21,13 @@ function MentorDetailInfo(){
       <div className="block">
         <p>안녕하세요 감사합니다 행복하세요</p>
       </div>
-    </Detail>
+    </ContentBox>
   );
 }
 
 export default MentorDetailInfo;
 
-const Detail = styled.div`
+const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -41,7 +41,7 @@ const Detail = styled.div`
     height: 1px;
     width: 100%;
   }
-  
+
   .blockTitle {
     display: flex;
     font-weight: bold;

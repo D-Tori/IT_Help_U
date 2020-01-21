@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 function MentorThanks() {
   return(
-    <Thanks>
+    <ContentBox>
       <div className="divider" />
       <div className="titleWrap">
         <div className="title">고맙습니다 </div>
@@ -19,13 +19,13 @@ function MentorThanks() {
       <div className="btnContainer">
         <Button className="btnMore">더 보기</Button>
       </div>
-    </Thanks>
+    </ContentBox>
   );
 }
 
 export default MentorThanks;
 
-const Thanks = styled.div`
+const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
