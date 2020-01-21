@@ -1,9 +1,10 @@
+var userController = require('./../controllers/user-controller'); 
+
 var express = require('express');
 var router = express.Router();
- 
 
-router.get('/login', function(req, res, next) {
-  
-});
- 
+
+router.post('/signUp', userController.registerUser);
+
+
 module.exports = router;

@@ -3,12 +3,14 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import boardRouter from './routes/board';
+import userRouter from './routes/user'
 
 dotenv.config();
 
 /* express 미들웨어 설정 */
 const express = require('express');
 const app = express();
+const port = process.env.PORT;
 
 app.use(express.json());
 app.use(express.urlencoded( {extended : false } ));
@@ -19,12 +21,12 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-const port = process.env.PORT;
+
 
 /* 라우팅 */
 app.use('/board', boardRouter);
 // app.use('/mentor', indexRouter);
-// app.use('/user', userRouter);
+app.use('/user', userRouter);
 
 
 
