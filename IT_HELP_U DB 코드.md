@@ -95,6 +95,16 @@ CREATE TABLE question (
 > * content : 질문 내용
 > * writer_id : 질문 작성자 아이디
 > * receiver_id : 질문을 받는 멘토의 아이디
+>
+> 
+>
+> * 1번 멘토가 답변한 수 구하기
+>
+> ```mariadb
+> SELECT COUNT(*) FROM question WHERE receiver_id IN(SELECT writer_id FROM question WHERE receiver_id = 1)
+> ```
+>
+> 
 
 
 

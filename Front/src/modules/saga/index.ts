@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 import boardSaga from './board';
-import mentorSaga from './mentor';
+import userSaga from './user';
 
 export default function* rootSaga() {
-  yield all([boardSaga(), mentorSaga()]);
+  yield all([boardSaga(), userSaga()]);
 }
