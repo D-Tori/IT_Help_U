@@ -18,8 +18,8 @@ function MentorList() {
   return(
     <ListStyle>
       <Row>
-        {mentors.mentors.map(mentor => (
-          <MentorItem mentor={mentor} />
+        {mentors.mentors.map((mentor, index) => (
+          <MentorItem mentor={mentor} key={index}/>
         ))}
       </Row>
     </ListStyle>

@@ -3,13 +3,17 @@ import axios from 'axios';
 import * as actions from '../user';
 
 
+// axios 객체 생성
+const mentorAPI = axios.create({baseURL: 'http://localhost:5000'})
+
+
 /** *************************멘토 정보 가져오기 *************************
  * 멘토 정보 가져오기 API 요청 메소드
  * @param id 유저 id
  * @returns Promise
  */
 function loadMentorApi (id?: number) {
-  return axios.get(id ? `/mentors/${id}` : '/mentors', { withCredentials: true });
+  return mentorAPI.get(id ? `/mentors/${id}` : '/mentors', { withCredentials: true });
 };
 
 
