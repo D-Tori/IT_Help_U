@@ -18,8 +18,7 @@ function BoardForm() {
   const [content, setContent] = useState('');
   const addBoard = useAddBoard();
   const boardState = useBoards();
-  const isAddPosted = boardState.isAddPosted;
-  console.log(isAddPosted);
+  const { isAddPosting } = boardState;
   const history = useHistory();
 
 
@@ -49,14 +48,10 @@ function BoardForm() {
   };
 
   useEffect(() => {
-    historyPush();
-  }, [isAddPosted]);
-
-  const historyPush = () => {
-    if(isAddPosted === true) {
+    if(isAddPosting) {
       history.push('/boards');
     }
-  }
+  }, [isAddPosting]);
 
   return (
     <Form onSubmit={onSubmit} >

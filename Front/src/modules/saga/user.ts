@@ -4,8 +4,27 @@ import * as actions from '../user';
 
 
 // axios 객체 생성
-const mentorAPI = axios.create({baseURL: 'http://localhost:5000'})
+const API = axios.create({baseURL: 'http://localhost:5000', withCredentials: true});
 
+/**
+ * 유저 회원 가입 API
+ * @param userData 유저 Form
+ * @returns Promise
+ */
+function signUpUserApi (userData: actions.UserFormType) {
+  return API.post('/user/signUp', userData);
+}
+
+function* signUpUser (payload: ReturnType<typeof actions.addUserRequest>){
+  try {
+    const { addData } = payload;
+    const data = yield call(signUpUserApi, addData);
+    console.log('addUser의 성공 여부', data);
+    yield put(actions.addUserSuccess(data));
+  }catch(err) {
+    yield put(actions.addUserFailure(err));
+  }
+};
 
 /** *************************멘토 정보 가져오기 *************************
  * 멘토 정보 가져오기 API 요청 메소드
@@ -13,7 +32,7 @@ const mentorAPI = axios.create({baseURL: 'http://localhost:5000'})
  * @returns Promise
  */
 function loadMentorApi (id?: number) {
-  return mentorAPI.get(id ? `/mentors/${id}` : '/mentors', { withCredentials: true });
+  return API.get(id ? `/mentors/${id}` : '/mentors');
 };
 
 
@@ -38,8 +57,9 @@ function* loadMentor (payload: ReturnType<typeof actions.getMentorRequest>) {
  * 멘토 불러오기 Watcher
  * @yield takeEvery(Action type, Generator funtion)
  */
- function* watchLoadMentor() {
+ function* watchUser() {
   yield takeEvery(actions.GET_MENTOR_REQUEST, loadMentor);
+  yield takeEvery(actions.ADD_USER_REQUEST, signUpUser);
 };
 
 
@@ -49,6 +69,6 @@ function* loadMentor (payload: ReturnType<typeof actions.getMentorRequest>) {
  */
  export default function* mentorSaga() {
   yield all([
-    fork(watchLoadMentor),
+    fork(watchUser)
   ]);
 }

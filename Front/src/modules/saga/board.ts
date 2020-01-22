@@ -39,20 +39,11 @@ function* loadBoard (payload: ReturnType<typeof actions.getBoardRequest>) {
 }
 
 
-/**
- * 게시글 불러오기 Watcher
- * @yield takeEvery(Action type, Generator funtion)
- */
-function* watchLoadBoard() {
-  yield takeEvery(actions.GET_BOARD_REQUEST, loadBoard);
-};
-
-
 // *********************** 게시글 생성 ************************  //
 
 
 function addBoardApi(board: actions.Board) {
-  return boardAPI.post('/board', board, )
+  return boardAPI.post('/board', board )
 }
 
 function* addBoard (payload: ReturnType<typeof actions.addBoardRequest>) {
@@ -66,8 +57,9 @@ function* addBoard (payload: ReturnType<typeof actions.addBoardRequest>) {
   }
 };
 
-function* watchAddBoard() {
+function* watchBoard() {
   yield takeEvery(actions.ADD_BOARD_REQUEST, addBoard);
+  yield takeEvery(actions.GET_BOARD_REQUEST, loadBoard);
 };
 
 
@@ -78,7 +70,6 @@ function* watchAddBoard() {
  */
 export default function* boardSaga() {
   yield all([
-    fork(watchLoadBoard),
-    fork(watchAddBoard)
+    fork(watchBoard)
   ]);
 }
