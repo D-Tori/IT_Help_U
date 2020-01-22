@@ -3,11 +3,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import boardRouter from './routes/board';
-<<<<<<< HEAD
 import userRouter from './routes/user'
-=======
 import mentorRouter from './routes/mentor';
->>>>>>> f483ac7dc43e25d80587dc8ed0ea5df3063c85a1
 
 dotenv.config();
 
@@ -29,7 +26,7 @@ app.use(cors(corsOptions));
 
 /* 라우팅 */
 app.use('/board', boardRouter);
-// app.use('/mentors', mentorRouter);
+app.use('/mentors', mentorRouter);
 app.use('/user', userRouter);
 
 

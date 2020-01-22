@@ -20,7 +20,7 @@ exports.registerUser = (req, res) => {
     } catch (err) {
       return err;
     } finally {
-      // if (conn) conn.release();
+      if (conn) conn.release();
     }
   };
 
@@ -33,7 +33,7 @@ exports.registerUser = (req, res) => {
     } catch (err) {
       return err;
     } finally {
-      // if (conn) conn.release();
+      if (conn) conn.release();
     }
   };
 
