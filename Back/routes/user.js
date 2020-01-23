@@ -8,5 +8,7 @@ router.post('/signUp', userController.registerUser);
 
 router.post('/login', userController.login);
 
+router.get('/mypage', userController.isAuthorized);
+
 
 module.exports = router;
