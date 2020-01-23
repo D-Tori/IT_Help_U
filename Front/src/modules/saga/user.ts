@@ -6,6 +6,22 @@ import * as actions from '../user';
 // axios 객체 생성
 const API = axios.create({baseURL: 'http://localhost:5000', withCredentials: true});
 
+
+function loginUserApi (userData: actions.UserFormType) {
+  return API.post('/user/login', userData);
+}
+
+function* loginUser (payload: ReturnType<typeof actions.loginUserRequest>){
+  try {
+    const { addData } = payload;
+    const data = yield call(loginUserApi, addData);
+    console.log('login 여부', data);
+    yield put(actions.loginUserSuccess(data));
+  }catch(err) {
+    yield put(actions.loginUserFailure(err));
+  }
+}
+
 /**
  * 유저 회원 가입 API
  * @param userData 유저 Form
@@ -60,6 +76,7 @@ function* loadMentor (payload: ReturnType<typeof actions.getMentorRequest>) {
  function* watchUser() {
   yield takeEvery(actions.GET_MENTOR_REQUEST, loadMentor);
   yield takeEvery(actions.ADD_USER_REQUEST, signUpUser);
+  yield takeEvery(actions.LOGIN_USER_REQUEST, loginUser);
 };
 
 
@@ -67,7 +84,7 @@ function* loadMentor (payload: ReturnType<typeof actions.getMentorRequest>) {
  * mentor saga 생성
  * @yield all([..., fork(Watcher())])
  */
- export default function* mentorSaga() {
+ export default function* userSaga() {
   yield all([
     fork(watchUser)
   ]);

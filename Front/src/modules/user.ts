@@ -132,10 +132,9 @@ export type UserFormType = {
   password: string,
 }
 
-export type LoginUserType = {
+export type CurrentUserType = {
   name: string,
   nickname?: string,
-  profileImage?: null,
   email: string,
 }
 
@@ -143,7 +142,7 @@ export type LoginUserType = {
 export type MentorState = {
   mentors: Mentor[],
   mentee: Mentee[],
-  me: LoginUserType | null,
+  me: CurrentUserType | null,
   errorReason: string,
   isSigningUp: boolean,
   isSignedUp: boolean,
@@ -188,11 +187,15 @@ function reducer(state: MentorState = initialState, action: UserAction): MentorS
         isLoging: true
       }
     case LOGIN_USER_SUCCESS:
+      if(action.payload.data.result === 'ok') {
+        localStorage.setItem('token', action.payload.data.token);
+        console.log('token : ',localStorage.token);
+      }
       return {
         ...state,
         isLoggedin: true,
         isLoging: false,
-        me: action.payload,
+        me: action.payload.data,
       }
     case LOGIN_USER_FAILURE:
       return {
